@@ -1,0 +1,5 @@
+docker rm -f $(docker ps -a -q)
+docker run --name warehouse-mysql -e MYSQL_ROOT_PASSWORD=admin -e MYSQL_DATABASE=app -e MYSQL_USER=root-e MYSQL_PASSWORD=admin -d mysql:5.6
+docker build -f Dockerfile -t docker .
+docker run -p 80:8080 --name warehouse-app --link warehouse-mysql:mysql -d docker
+docker rm -f $(docker ps -a -q)

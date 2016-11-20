@@ -1,0 +1,17 @@
+@font-face {
+	font-family : bicubik; 
+	src: url(D:/AGENCY/fonts/bicubik.ttf);
+	font-style: normal;
+   font-weight: normal;
+}
+
+@font-face {
+	font-family: "RobotoMono";
+	src: url("../fonts/Roboto_Mono/RobotoMono-Medium.ttf") format("truetype");
+	
+}
+
+@font-face {
+    font-family: Pompadur; /* Имя шрифта */
+    src: url(fonts/pompadur.ttf); /* Путь к файлу со шрифтом */
+   }

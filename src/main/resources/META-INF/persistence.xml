@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+
+    <persistence-unit name="DB_property_connection">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="javax.persistence.jdbc.driver"   value="com.mysql.jdbc.Driver" />
+
+            <property name="javax.persistence.jdbc.url"      value="jdbc:mysql://localhost:3306/app?serverTimezone=America/New_York"/>
+            <property name="javax.persistence.jdbc.user"     value="root" />
+            <property name="javax.persistence.jdbc.password" value="admin" />
+
+            <!--<property name="javax.persistence.jdbc.url"      value="jdbc:mysql://warehouse-mysql:3306/demo"/>-->
+            <!--<property name="javax.persistence.jdbc.user"     value="demo_user" />-->
+            <!--<property name="javax.persistence.jdbc.password" value="demo_pass" />-->
+
+            <!-- true - Отображение на консоль запросов к базе-->
+            <property name="hibernate.show_sql"              value="true" />
+            <property name="hibernate.dialect"               value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto"          value="update"/> <!--    create-drop-->
+
+        </properties>
+    </persistence-unit>
+
+    <persistence-unit name="DB_initializer_server">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <properties>
+            <property name="javax.persistence.jdbc.driver"   value="com.mysql.jdbc.Driver" />
+
+            <!--<property name="javax.persistence.jdbc.url"      value="jdbc:mysql://localhost:3306/app?serverTimezone=America/New_York"/>-->
+            <!--<property name="javax.persistence.jdbc.user"     value="root" />-->
+            <!--<property name="javax.persistence.jdbc.password" value="admin" />-->
+
+            <property name="javax.persistence.jdbc.url"      value="jdbc:mysql://warehouse-mysql:3306/demo"/>
+            <property name="javax.persistence.jdbc.user"     value="demo_user" />
+            <property name="javax.persistence.jdbc.password" value="demo_pass" />
+
+            <!-- true - Отображение на консоль запросов к базе-->
+            <property name="hibernate.show_sql"              value="true" />
+            <property name="hibernate.dialect"               value="org.hibernate.dialect.MySQLDialect"/>
+            <property name="hibernate.hbm2ddl.auto"          value="create-drop"/> <!--    -->
+
+        </properties>
+    </persistence-unit>
+
+
+
+
+
+
+</persistence>

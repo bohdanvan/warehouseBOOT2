@@ -1,0 +1,147 @@
+<div>
+    <a class="hiddenanchor" id="signup"></a>
+    <a class="hiddenanchor" id="signin"></a>
+
+
+    <div class="login_wrapper">
+
+        <div id="logIn" class="animate form login_form">
+
+            <section class="login_content">
+                <form action="/log" method="post">
+                    <h1>Login Form
+
+
+                    </h1>
+
+                    <div>
+                        <input name="username" type="text" class="form-control" placeholder="Login" required=""/>
+                    </div>
+                    <div>
+                        <input name="password" type="password" class="form-control" placeholder="Password" required=""/>
+                    </div>
+                    <div>
+
+                        <input type="hidden"
+                               name="${_csrf.parameterName}"
+                               value="${_csrf.token}"/>
+
+                        <button type="submit" class="btn btn-default submit">Log in</button>
+                        <a class="reset_pass" href="/">Lost your password?</a>
+                    </div>
+
+                    <#if error?exists>
+                        <div style="margin-top: 5px; color: red">
+                            <small>Wrong Login or Password</small>
+                        </div>
+
+                    </#if>
+
+                    <div class="clearfix"></div>
+
+                    <div class="separator">
+                        <p class="change_link">New to site?
+                            <a href="#signup" class="to_register"> Create Account </a>
+                        </p>
+
+                        <div class="clearfix"></div>
+                        <br/>
+
+                        <div>
+                            <h1><i class="fa fa-cube"></i> azemex</h1>
+                            <p>©2016 All Rights Reserved. <a href="#">Privacy and Terms</a></p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+        </div>
+
+
+        <div id="register" class="animate form registration_form">
+            <section class="login_content">
+                <form action="/registr/user/new">
+                    <h1>Create Account</h1>
+                    <div>
+                        <input type="text" class="form-control" placeholder="login" required=""/>
+                    </div>
+                    <div>
+                        <input type="email" class="form-control" placeholder="Email" required=""/>
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" placeholder="Password" required=""/>
+                    </div>
+                    <div>
+                        <input type="password" class="form-control" placeholder="Repit Password" required=""/>
+                    </div>
+                    <div>
+                        <a class="btn btn-default submit" href="/registration">Submit</a>
+                    </div>
+
+                    <div class="clearfix"></div>
+
+                    <div class="separator">
+                        <p class="change_link">Already a member ?
+                            <a href="#signin" class="to_register toLogIn"> Log in </a>
+                            <!--<a href="#" class="toLogIn"> | password recovery </a>-->
+                        </p>
+
+
+                        <div class="clearfix"></div>
+                        <br/>
+
+                        <div>
+                            <h1><i class="fa fa-cube"></i> azemex </h1>
+                            <p>©2016 All Rights Reserved. <a href="#">Privacy and Terms</a></p>
+                        </div>
+                    </div>
+                </form>
+            </section>
+
+        </div>
+
+
+        <!--<div id="recover" class="animate form recover_form">-->
+
+        <!--<section class="login_content">-->
+        <!--<form action="/recover" method="post">-->
+        <!--<h1>Recover Account</h1>-->
+        <!--<div>-->
+        <!--<input name="username" type="text" class="form-control" placeholder="login" required=""/>-->
+        <!--</div>-->
+        <!--<button type="submit" class="btn btn-default submit">Send email</button>-->
+        <!--</form>-->
+        <!--<a href="#signup" class="to_register"> Create Account </a>-->
+
+        <!--<a href="#signin" class="to_register"> Log in </a>-->
+        <!--</section>-->
+        <!--</div>-->
+
+
+    </div>
+</div>
+
+
+<!--<script>-->
+<!--$( function() {-->
+<!--//        $( "#logIn" ).hide();-->
+<!--$( "#recover" ).hide();-->
+
+<!--var state = true;-->
+<!--$( ".toLogIn" ).on( "click", function() {-->
+
+
+<!--$( "#register" ).animate({-->
+<!--width: 0-->
+<!--}, 2000 );-->
+
+<!--$( "#recover" ).animate({-->
+
+
+<!--}, 2000 );-->
+
+<!--});-->
+
+<!--} );-->
+
+
+<!--</script>-->

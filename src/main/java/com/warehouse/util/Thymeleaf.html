@@ -1,0 +1,231 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+
+
+
+
+    <title></title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/thvsjsp.css" th:href="@{/css/thvsjsp.css}"/>
+
+</head>
+
+<body>
+
+<h2>This is a Thymeleaf template</h2>
+
+
+
+<p>
+    <img th:src="@{/image/${image_id}}" />     images
+</p>
+
+/////////////////////////////////////////////////////////////////////////////////
+
+<form action="/incDel/new" th:action="@{/incDel/new}" th:object="${incDel}" method="post">
+    <table>
+        <tr>
+            <td>Number:</td>
+            <td><input type="text" th:field="*{number}"/></td>
+        </tr>
+
+        <tr>
+            <td>
+                <button type="submit">Submit</button>
+            </td>
+        <tr/>
+    </table>
+</form>
+
+
+
+
+<form action="#" th:object="${user}" th:action="@{/subscribeth}">
+
+    <fieldset>
+
+        <div>
+            <label for="login" th:text="#{user.login}">Login: </label>
+            <input type="text" th:field="*{login}" />
+        </div>
+        <div>
+            <label th:text="#{subscription.type}">Type: </label>
+            <ul>
+                <li th:each="type : ${allTypes}">
+                    <input type="radio" th:field="*{subscriptionType}" th:value="${type}" />
+                    <label th:for="${#ids.prev('subscriptionType')}"
+                           th:text="#{|subscriptionType.${type}|}">First type</label>
+                </li>
+                <li th:remove="all"><input type="radio" /> <label>Second Type</label></li>
+            </ul>
+        </div>
+
+        <div class="submit">
+            <button type="submit" name="save" th:text="#{subscription.submit}">Subscribe me!</button>
+        </div>
+
+    </fieldset>
+
+</form>
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+<table>
+    <tr>
+        <th>SNO</th>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>CITY</th>
+        <th>COUNTRY</th>
+    </tr>
+    <tr th:each="emp,iterationStatus  : ${employees}">
+        <td th:text="${iterationStatus.count}">1</td>
+        <td th:text="${emp.id}">001</td>
+        <td th:text="${emp.name}">Name</td>
+        <td th:text="${emp.city}">City</td>
+        <td th:text="${emp.country}">Country</td>
+    </tr>
+</table>
+
+
+<table>
+    <thead>
+    <tr>
+        <th th:text="#{msgs.headers.name}">Name</th>
+        <th th:text="#{msgs.headers.price}">Price</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="prod: ${allProducts}">
+        <td th:text="${prod.name}">Oranges</td>
+        <td th:text="${#numbers.formatDecimal(prod.price, 1, 2)}">0.99</td>
+    </tr>
+    </tbody>
+</table>
+
+
+
+<td style="white-space: nowrap">
+
+
+    <span th:if="${linea.estado} == 'Iniciado'" class="label label-success" th:text="#{label.glineas.estado.iniciado}"></span>
+    <span th:if="${linea.estado} == 'Finalizado'" class="label label-danger" th:text="#{label.glineas.estado.finalizado}"></span>
+    <span th:if="${linea.estado} == 'Configuracion'" class="label label-warning" th:text="#{label.glineas.estado.configurado}"></span>
+
+</td>
+
+You conditional operator contains 3 results. It should have 2 like this.
+
+condition ? first_expression : second_expression;
+
+In your situation. I assume linea.estado is a boolean value
+
+<td style="white-space: nowrap">
+    <span th:class="${linea.estado} ? 'label label-success' : 'label label-danger'"
+          th:text="${linea.estado}? #{label.glineas.estado.iniciado} : #{label.glineas.estado.finalizado}">
+    </span>
+</td>
+
+<span th:class="'label label-' + ((${linea.estado} == 'SUCCESS') ? 'success' : (${linea.estado} == 'DANGER') ? 'danger' : 'warning')"
+      th:text="...">
+</span>
+
+<span th:if="${linea.estado} == 'SUCCESS'" class="label label-success" th:text="#{label.glineas.estado.iniciado}"></span>
+<span th:if="${linea.estado} == 'DANGER'" class="label label-danger" th:text="#{label.glineas.estado.finalizado}"></span>
+<span th:if="${linea.estado} == 'WARN'" class="label label-warning" th:text="#{label.glineas.estado.configurado}"></span>
+
+<p th:if="${user != null and list.size() gt 0}">
+    <a th:href="@{/hire/invite/} + ${f.id}" class="btn waves-effect">Show List</a>
+</p>
+
+
+
+<div th:switch="${user.role}">
+    <p th:case="'admin'">User is an administrator</p>
+    <p th:case="#{roles.manager}">User is a manager</p>
+    <p th:case="*">User is some other thing</p>
+</div>
+
+
+
+
+
+<tr th:if="${id==1 and mobNumber==1}" height="40" valign="top">
+    //some code here
+</tr>
+
+
+
+
+<a href="test.html" th:href="@{/profile/writer(id=${writer.id})}"
+   th:if="${not #strings.startsWith(writer.name,'K')}">Profile</a>
+
+1. For "if" condition, Thymeleaf provides th:if.
+2. th:if="${not #strings.startsWith(writer.name,'K')} means that if writer name does not start with letter 'K', it displays the anchor otherwise not.
+Output
+<a href="/concretepage-1/profile/writer?id=1">Profile</a>
+
+
+
+
+
+Thymeleaf "unless" using th:unless
+
+<p th:text="${writer.location}"
+   th:unless="${#strings.endsWith(writer.location,'ya')}">location</p>
+
+1. "unless" condition is negative counterpart of "if" condition. It is used by syntax th:unless.
+2. th:unless="${#strings.endsWith(writer.location,'ya')} means that if writer location ends with 'ya', it displays the text.
+Output
+<p>Mathura</p>
+
+
+-------------------------------------------------------------------------------------------------------------
+
+http://www.concretepage.com/thymeleaf/thymeleaf-javascript-inline-example-with-variable
+
+<script th:inline="javascript">
+
+    /*<![CDATA[*/
+    var user = /*[[${session.userName}]]*/ 'User Name';
+    var address = /*[[${session.address}]]*/ null;
+
+    /*[+
+     var extraMsg  = 'Thymeleaf javascript example.';
+     +]*/
+
+    /*[+
+     var msg  = 'My village name, ' + [[${session.address.villageName}]];
+     +]*/
+
+    /*[- */
+    var data  = 'This is a non-working data.';
+    /* -]*/
+
+    /*]]>*/
+
+</script>
+</head>
+<body>
+<p th:text="${session.userName}">User Name</p>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>

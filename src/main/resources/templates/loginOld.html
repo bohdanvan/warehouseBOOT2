@@ -1,0 +1,23 @@
+<form action="/log" th:action="@{/log}" method="post" xmlns:th="http://www.w3.org/1999/xhtml">  <!-- -->
+    <div><label> User Name : <input type="text" th:name="username"/> </label></div>
+    <div><label> Password: <input type="password" th:name="password"/> </label></div>
+    <input type="hidden"
+           name="${_csrf.parameterName}"
+           value="${_csrf.token}"/>
+    <div><input type="submit" value="Sign In"/></div>
+
+</form>
+
+<br/>
+<h2>Form 2 </h2>
+<br/>
+
+<form action="/log" method="post">  <!-- -->
+    <div><label> User Name : <input type="text" name="username"/> </label></div>
+    <div><label> Password: <input type="password" name="password"/> </label></div>
+    <input type="hidden"
+           name="${_csrf.parameterName}"
+           value="${_csrf.token}"/>
+    <div><input type="submit" value="Sign In"/></div>
+
+</form>

@@ -1,47 +1,34 @@
-# Windows image file caches
-Thumbs.db
-ehthumbs.db
+# Created by .ignore support plugin (hsz.mobi)
+.gitignore
 
-# Folder config file
-Desktop.ini
-
-# Recycle Bin used on file shares
-$RECYCLE.BIN/
-
-# Windows Installer files
-*.cab
-*.msi
-*.msm
-*.msp
-
-# Windows shortcuts
-*.lnk
-
-# =========================
-# Operating System Files
-# =========================
-
-# OSX
-# =========================
-
-.DS_Store
-.AppleDouble
-.LSOverride
-
-# Thumbnails
-._*
-
-# Files that might appear in the root of a volume
-.DocumentRevisions-V100
-.fseventsd
-.Spotlight-V100
-.TemporaryItems
-.Trashes
-.VolumeIcon.icns
-
-# Directories potentially created on remote AFP share
-.AppleDB
-.AppleDesktop
-Network Trash Folder
-Temporary Items
-.apdisk
+src/main/webapp/WEB-INF/
+"src/main/webapp/static/img/Logo_orange - \320\272\320\276\320\277\320\270\321\217.png"
+src/main/webapp/static/img/Logo_orange.png
+src/main/webapp/static/img/Logo_orange_small.png
+src/main/webapp/static/img/logos/turkish_post.jpg
+src/main/webapp/static/img/logos/uae_post.png
+src/main/webapp/static/img/logos/ups.png
+src/main/webapp/static/img/logos/visa.png
+src/main/webapp/static/img/logos/wordpress.jpg
+src/main/webapp/static/img/map-image.png
+src/main/webapp/static/img/media.jpg
+src/main/webapp/static/img/picture.jpg
+src/main/webapp/static/img/portfolio/
+src/main/webapp/static/img/prod-1.jpg
+src/main/webapp/static/img/prod-2.jpg
+src/main/webapp/static/img/prod-3.jpg
+src/main/webapp/static/img/prod-4.jpg
+src/main/webapp/static/img/prod-5.jpg
+src/main/webapp/static/img/team/
+src/main/webapp/static/img/user.png
+src/main/webapp/static/img/vent_left_smol.png
+src/main/webapp/static/img/vent_right_smol.png
+src/main/webapp/static/js/
+src/main/webapp/static/less/
+src/main/webapp/static/video/
+src/test/
+target/
+view
+warehouse.iml
+Would skip repository wr/
+src/main/resources/templates/admin/content/a/

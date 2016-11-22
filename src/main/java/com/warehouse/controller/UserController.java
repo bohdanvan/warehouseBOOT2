@@ -1,6 +1,7 @@
 package com.warehouse.controller;
 
 import com.warehouse.model.IncDel;
+import com.warehouse.model.User;
 import com.warehouse.model.UserRepository;
 import com.warehouse.service.IncDelRepository;
 import com.warehouse.service.IncDelService;
@@ -8,12 +9,19 @@ import com.warehouse.service.LangRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.*;
-
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
@@ -23,8 +31,8 @@ import javax.validation.Valid;
  * Created by user on 06.10.2016.
  */
 @Controller
-public class IncDelController {
-    final static Logger log4j = LoggerFactory.getLogger(IncDelController.class);
+public class UserController {
+    final static Logger log4j = LoggerFactory.getLogger(UserController.class);
 
     @Autowired
     IncDelRepository incDelRepository;
@@ -40,36 +48,71 @@ public class IncDelController {
     HttpServletRequest httpServletRequest;
 
 
-    @GetMapping("/incDel/new")
-    public String newDelivery(Model model) {
+    @GetMapping("/user/new")
+    public ModelAndView userNewGet(ModelAndView model) {
 
-        model.addAttribute("topTitle", "New Delivery");
-        model.addAttribute("sideBarTitle", "Admin Panel");
-        model.addAttribute("sideBarSubTitle", "General");
 
-        IncDel incDel = new IncDel();
-        incDel.setSupplier("supplieR ");
-        model.addAttribute("incDel",incDel);
-
-        return "admin";
+        model.setViewName("admin");
+        return model;
     }
 
-    @PostMapping("/incDel/new")
-    public String newIncDelReg(Model model,@ModelAttribute(name="incDel") IncDel incDel /* @Valid IncDel incDel*/) {
+    @PostMapping("/user/new")
+    public ModelAndView userNewPost(ModelAndView model,
+                                    @Valid User user ,
+                                    BindingResult errors,
+                                    @RequestParam("passwordRepit") String passwordRepit) {
 
-        incDelRepository.save(incDel);
-//        IncDel newIncDel =
-//        incDelService.addIncDel(incDel);
-//        model.addAttribute("incDel", newIncDel);
-//        incDelRepository.save(incDel);
 
-        return "admin";
-    }
+       if(!errors.hasErrors()) {
+
+           try {
+               User userF = userRepository.findByUserName(user.getUserName());
+               model.addObject("error", "Login "+userF.getUserName() +"already registred ");
+               model.setViewName("loginReset");
+
+           } catch (Exception ex) {
+
+               if ((user.getPassword()).equals(passwordRepit)) {
+
+                   user.addRole("ROLE_USER");
+                   userRepository.save(user);
+                   final AuthenticationManager am = new SampleAuthenticationManager();
+
+                   Authentication request = new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword());
+                   Authentication resultat = am.authenticate(request);
+                   SecurityContextHolder.getContext().setAuthentication(resultat);
+
+                   model.addObject("pass", true);
+                   model.addObject("congratulation", "Congratulation you was registred in system. Please open below link ");
+                   model.setViewName("redirect:/admin");
+
+               } else {
+                   model.addObject("error", "password incorrect");
+//                   model.setViewName("redirect:/log#signup");
+                   model.setViewName("loginReset");
+
+               }
+           }
+       }else {
+
+           model.setViewName("loginReset");
+       }
+
+
+        return model;
+        }
+
+
+
+
+
+
 
     @ModelAttribute("urlReq")
     public String urlReq() {
         return String.valueOf(httpServletRequest.getRequestURL());
     }
+
     @ModelAttribute("uriReq")
     public String uriReq() {
         return String.valueOf(httpServletRequest.getRequestURI());

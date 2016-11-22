@@ -10,7 +10,7 @@
 
     <title>AZEMEX 24h delivery</title>
 
-    <#include "static/cssHTML.html">
+    <#include "static/cssROOT.html">
     <#include "static/fonts.html">
 
 
@@ -20,11 +20,11 @@
 
 <body>
 
-    <#include "navigation/${locale}.html">
+    <#include "root/navigation/${locale}.html">
 
     <#include "header.html">
 
-    <#include "about/${locale}.html">
+    <#include "root/about/${locale}.html">
 
     <#include "portfolio.html">
 
@@ -32,14 +32,14 @@
 
     <#include "clientsS.html">
 
-    <#include "contact/${locale}.html">
+    <#include "root/contact/${locale}.html">
 
     <#include "footer.html">
 
 
-    <#include "modal/truck/${locale}.html">
-    <#include "modal/ship/${locale}.html">
-    <#include "modal/plane/${locale}.html">
+    <#include "root/modal/truck/${locale}.html">
+    <#include "root/modal/ship/${locale}.html">
+    <#include "root/modal/plane/${locale}.html">
 
     <#include "static/scriptsGr.html">
     <#--<#include "static/scripts.html">-->

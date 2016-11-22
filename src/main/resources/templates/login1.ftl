@@ -19,9 +19,9 @@
 
 
 
-     <#include "login/eng.html">
+     <#include "login/${locale}.html">
 
-     <#include "static/scripts.html">
+     <#--<#include "static/scripts.html">-->
 
 
 

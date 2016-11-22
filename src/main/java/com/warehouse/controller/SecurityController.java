@@ -20,6 +20,7 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -30,6 +31,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import javax.validation.Valid;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -45,6 +47,8 @@ public class SecurityController {
     @Autowired
     HttpSession httpSession;
     @Autowired
+    HttpServletRequest httpServletRequest;
+    @Autowired
     UserRepository userRepository;
 
 //    AuthenticationManager
@@ -53,6 +57,7 @@ public class SecurityController {
     public String log(Model model) {
 
         model.addAttribute("user",new User());
+
         return "login";
     }
 
@@ -65,8 +70,9 @@ public class SecurityController {
 
     @PostMapping("/log")
     public ModelAndView logPOST(
-                          @RequestParam String username,
-                          @RequestParam String password,
+            @Valid User user,
+            BindingResult errors,
+
                           HttpServletRequest httpServletRequest,
                           HttpServletResponse httpServletResponse,
                           HttpSession httpSession)
@@ -76,11 +82,12 @@ public class SecurityController {
 
         try {
 
-            Authentication request = new UsernamePasswordAuthenticationToken(username, password);
+            Authentication request = new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword());
             Authentication result = am.authenticate(request);
             SecurityContextHolder.getContext().setAuthentication(result);
 
             model.setViewName("redirect:/admin");
+//            model.setViewName("admin");
 
 
         } catch (AuthenticationException e) {
@@ -100,18 +107,21 @@ public class SecurityController {
 //            }
 //
 
-            model.setViewName("redirect:/log");
-//            model.setViewName("login");
+//            model.setViewName("redirect:/log");
+            model.setViewName("login");
 
         }catch (Exception ex){
 
             model.addObject("error",ex.toString() );
-            model.setViewName("redirect:/log");
-//            model.setViewName("login");
+//            model.setViewName("redirect:/log");
+            model.setViewName("login");
         }
 
         return model;
     }
+
+
+
 
     @RequestMapping("/admin")
     public ModelAndView adminPage(ModelAndView model) {
@@ -140,6 +150,12 @@ public class SecurityController {
 //        return new ModelAndView("redirect:/abc.htm")  // как вариант проверить работоспособность
         return model;
     }
+
+
+
+
+
+
 
     @ModelAttribute("locale")
     public String locale() {
@@ -183,6 +199,19 @@ public class SecurityController {
 
         return userName;
     }
+
+
+
+
+    @ModelAttribute("urlReq")
+    public String urlReq() {
+        return String.valueOf(httpServletRequest.getRequestURL());
+    }
+    @ModelAttribute("uriReq")
+    public String uriReq() {
+        return String.valueOf(httpServletRequest.getRequestURI());
+    }
+
 
     @ModelAttribute("url")
     public String url() {

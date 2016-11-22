@@ -1,6 +1,6 @@
 <div class="row" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml">
-    <div class="col-lg-1 col-md-1 col-sm-0 col-xs-0"></div>
-    <div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
 
         <div class="x_panel">
@@ -8,9 +8,16 @@
             <div class="x_title">
                 <h2>
                     customs declaration CN23
-
+                    <#if id?exists>
+                        <span th:if="${id} != null">
+                        ${id} <span th:text="${id}">
+                        </span>
+                    </span>
+                    </#if>
                 </h2>
-
+<#if congratulation?exists>
+    ${congratulation}
+</#if>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -34,7 +41,7 @@
             <div class="x_content">
 
 
-                <form method="POST" action="incDel/new" class="form-horizontal ">  <!--form-label-left input_mask-->
+                <form method="POST" name="incDel" action="/incDel/new" class="form-horizontal ">  <!--form-label-left input_mask   th:object="${incDel}" th:action="@{/incDel/new}-->
 
 
                     <div class="row" style="margin-top:5px">
@@ -45,21 +52,33 @@
                             Supplier
                         </label>
                         <div class="col-md-4 col-sm-4 col-xs-6">
+
                             <input type="text" class="form-control" required="required"
-                                   placeholder="Supplier company name" name="supplier"/>
+                                   placeholder="Supplier company name" name="supplier" th:field="*{supplier}"/>
                         </div>
 
                         <div class="col-md-4 col-sm-4 col-xs-6">
                             <input type="text" class="form-control" required="required"
-                                   placeholder="Tracking number your orderIncDel on supplier"
+                                   placeholder="Currier Company delivery tracking number"
                                    name="currierTrackNumber"/>
                         </div>
-                        <label class="col-md-2 col-sm-2 col-xs-6">Tracking #</label>
+                        <label class="col-md-2 col-sm-2 col-xs-6">Tracking
+                            <a href="#" data-toggle="tooltip" title="'
+                                Important ! ">
+                                <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i>
+                            </a>
+                        </label>
                     </div>
 
 
                     <div class="row" style="margin-top:5px">
-                        <label class="control-label col-md-2 col-sm-2 col-xs-6">Adress </label>
+                        <label class="control-label col-md-2 col-sm-2 col-xs-6">
+                            <a href="#" data-toggle="tooltip" title="
+                                Full adress your supplier">
+                                <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i>
+                            </a>
+                            Adress
+                        </label>
                         <div class="col-md-4 col-sm-4 col-xs-6">
                             <input type="text" class="form-control" required="required"
                                    placeholder="City Street House Room">
@@ -69,47 +88,57 @@
                             <input type="text" class="form-control" required="required"
                                    placeholder="Invoice number from supplier" name="supplierInvoice"/>
                         </div>
-                        <label class="col-md-2 col-sm-2 col-xs-6">Invoice #</label>
+                        <label class="col-md-2 col-sm-2 col-xs-6">Invoice
+                            <a href="#" data-toggle="tooltip" title="
+                                Number invoice from suppler ">
+                                <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i>
+                            </a></label>
                     </div>
 
+                    <div class="ln_solid"></div>
 
                     <div class="row" style="margin-top:2%">
 
-                        <div class="col-md-2">
-                            Shipping Type : &nbsp;&nbsp;&nbsp;
-                        </div>
-
-                        <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback">
+                        <label class="col-md-2 text-right">
                             <a href="#" data-toggle="tooltip" title="
                                 Select the way how you want to send the goods">
                                 <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>
+                            &nbsp; Shipping Type :
+                        </label>
+
+                        <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback text-center">
+
 
                             <input type="radio" name="shippingType" value="air" checked="true"/>
-                            <i class="fa fa-plane" aria-hidden="true"> </i> &nbsp;air&nbsp;
-
+                            <i class="fa fa-plane fa-2x" aria-hidden="true"> </i> &nbsp;air&nbsp;
+                            &nbsp;&nbsp;&nbsp;&nbsp;
                             <input type="radio" name="shippingType" value="sea"/>
-                            <i class="fa fa-ship" aria-hidden="true"> </i>&nbsp;sea &nbsp;
+                            <i class="fa fa-ship fa-2x" aria-hidden="true"> </i>&nbsp;sea &nbsp;
 
-
+                            &nbsp;&nbsp;&nbsp;&nbsp;
                             <input type="radio" name="shippingType" value="land"/>
-                            <i class="fa fa-truck" aria-hidden="true"></i>&nbsp;truck&nbsp;
+                            <i class="fa fa-truck fa-2x" aria-hidden="true"></i>&nbsp;truck&nbsp;
 
                         </div>
 
-                        <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+                        <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback text-center">
+
+                            <input type="radio" name="customsType" value="post" checked="true"/>
+                            <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>&nbsp; Post &nbsp;
+
+                            &nbsp;&nbsp;&nbsp;&nbsp;
+                            <input type="radio" name="customsType" value="official" disabled="true"/>
+                            <i class="fa fa-university fa-2x" aria-hidden="true"></i> &nbsp;Official&nbsp;
+
+
+                        </div>
+                        <label class="col-md-2">
+
+                            Customs Type : &nbsp;
                             <a href="#" data-toggle="tooltip" title="
                                 Please select the type of customs clearance">
                                 <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>
-                            Customs Type : &nbsp;&nbsp;&nbsp;
-                            <input type="radio" name="customsType" value="post" checked="true"/>
-                            <i class="fa fa-envelope" aria-hidden="true"></i>&nbsp; Post &nbsp;
-
-
-                            <input type="radio" name="customsType" value="official" disabled="true"/>
-                            <i class="fa fa-university" aria-hidden="true"></i> &nbsp;Official&nbsp;
-
-
-                        </div>
+                        </label>
 
                     </div>
 
@@ -124,7 +153,7 @@
                             Add New Product
                         </button>
 
-                        <button type="button" class="btn btn-default btn-md">Add Invoice</button>
+                        <a type="button" class="btn btn-default btn-md">Add Invoice</a>
 
 
                         <div class="col-md-12 col-sm-12 col-xs-12">
@@ -193,12 +222,15 @@
                         <div class="form-group">
                             <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3" style="margin-top:1%">
 
+                                <input type="hidden" name="${_csrf.parameterName}"
+                                       value="${_csrf.token}" />
+
                                 <button type="reset" class="btn btn-primary">Cancel</button>
                                 <button type="submit" class="btn btn-success">Submit</button>
                             </div>
                         </div>
 
-</div>
+                    </div>
                 </form>
 
 
@@ -208,9 +240,8 @@
 
 
     </div>
-    <div class="col-lg-2 col-md-2 "></div>
-</div>
-<!--</div>-->
+
+</div> <!--</row>-->
 
 
 <!-- Modal -->

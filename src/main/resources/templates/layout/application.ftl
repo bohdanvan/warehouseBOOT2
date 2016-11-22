@@ -1,3 +1,5 @@
+<#macro layout title record>
+
 <!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
@@ -7,19 +9,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title> Admin Panel | </title>
+    <title> Azemex| ${title} ${record} </title>
 
-    <!-- Bootstrap -->
-    <link href="${url}css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
-    <link href="${url}css/font-awesome.min.css" rel="stylesheet">
-    <!-- NProgress -->
-    <link href="${url}css/nprogress.css" rel="stylesheet">
-    <!-- Animate.css -->
-    <link href="${url}/css/animate.min.css" rel="stylesheet">
 
-    <!-- Custom Theme Style -->
-    <link href="${url}css/custom.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../static/css/bootstrap.min.css" th:href="@{../css/bootstrap.min.css}"/>
+
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../static/font-awesome/css/font-awesome.min.css" th:href="@{../css/font-awesome.min.css}"/>
+
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../static/css/nprogress.css" th:href="@{../css/nprogress.css}"/>
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../static/css/animate.min.css" th:href="@{../css/animate.min.css}"/>
+
+
+
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../css/custom.min.css" th:href="@{../css/custom.min.css}"/>
+
+    <
+
+
+
 </head>
 
 <body class="login">
@@ -29,39 +42,40 @@
 
 
 
+
     <div class="login_wrapper">
 
         <div id="logIn" class="animate form login_form">
 
             <section class="login_content">
-                <form action="/log" method="post">
-                    <h1>Login Form
+                <form action="/log" th:action="@{/log}"method="post" th:object="${user}">
 
-
-                    </h1>
-
+                    <h1>${title}</h1>
                     <div>
-                        <input name="username" type="text" class="form-control" placeholder="Login" required=""/>
+                        <input name="userName" th:field="*{userName}" type="text" class="form-control" placeholder="login" required=""/>
                     </div>
+
                     <div>
-                        <input name="password" type="password" class="form-control" placeholder="Password" required=""/>
+                        <input type="password" th:field="*{password}" class="form-control" placeholder="Password" required=""/>
                     </div>
+
                     <div>
 
-                        <input type="hidden"
-                               name="${_csrf.parameterName}"
-                               value="${_csrf.token}"/>
+                        <input type="hidden" name="${_csrf.parameterName}"
+                               value="${_csrf.token}" />
+
 
                         <button type="submit" class="btn btn-default submit">Log in</button>
                         <a class="reset_pass" href="/">Lost your password?</a>
                     </div>
 
-                    <#if error?exists>
-                        <div style="margin-top: 5px; color: red">
-                            <small>Wrong Login or Password</small>
-                        </div>
 
-                    </#if>
+
+
+
+
+
+
 
                     <div class="clearfix"></div>
 
@@ -86,9 +100,6 @@
 
         <div id="register" class="animate form registration_form">
             <section class="login_content">
-
-
-
                 <form action="/user/new" th:action="@{/user/new}" th:object="${user}" method="post">
                     <h1>Create Account</h1>
                     <div>
@@ -107,15 +118,14 @@
                         <button type="submit" class="btn btn-default submit">Submit</button>
                     </div>
 
+                    <!--<span th:if="${student.gender} == 'M'" th:text="Male" />-->
+                    <!--<span th:unless="${student.gender} == 'M'" th:text="Female" />-->
+
+
                     <input type="hidden"
                            name="${_csrf.parameterName}"
                            value="${_csrf.token}"/>
-                    <#if error?exists>
-                        <div style="margin-top: 5px; color: red">
-                            ${error}
-                        </div>
 
-                    </#if>
                     <div class="clearfix"></div>
 
                     <div class="separator">
@@ -139,22 +149,6 @@
         </div>
 
 
-        <!--<div id="recover" class="animate form recover_form">-->
-
-            <!--<section class="login_content">-->
-                <!--<form action="/recover" method="post">-->
-                    <!--<h1>Recover Account</h1>-->
-                    <!--<div>-->
-                        <!--<input name="username" type="text" class="form-control" placeholder="login" required=""/>-->
-                    <!--</div>-->
-                    <!--<button type="submit" class="btn btn-default submit">Send email</button>-->
-                <!--</form>-->
-                <!--<a href="#signup" class="to_register"> Create Account </a>-->
-
-                <!--<a href="#signin" class="to_register"> Log in </a>-->
-            <!--</section>-->
-        <!--</div>-->
-
 
 
 
@@ -163,34 +157,10 @@
 
 
 
-<!--<script>-->
-    <!--$( function() {-->
-<!--//        $( "#logIn" ).hide();-->
-        <!--$( "#recover" ).hide();-->
-
-        <!--var state = true;-->
-        <!--$( ".toLogIn" ).on( "click", function() {-->
-
-
-
-            <!--$( "#register" ).animate({-->
-                <!--width: 0-->
-            <!--}, 2000 );-->
-
-            <!--$( "#recover" ).animate({-->
-
-
-            <!--}, 2000 );-->
-
-        <!--});-->
-
-    <!--} );-->
-
-
-
-<!--</script>-->
-
-
 
 </body>
 </html>
+
+</#macro>
+
+

@@ -70,7 +70,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         ds.setUrl("jdbc:mysql://localhost:3306/app" + url);
         ds.setUsername("root");
         ds.setPassword("admin");
-
+//
 //        ds.setUrl("jdbc:mysql://warehouse-mysql:3306/demo");
 //        ds.setUsername("demo_user");
 //        ds.setPassword("demo_pass");
@@ -101,7 +101,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
-        registry.addViewController("/login").setViewName("login");
+//        registry.addViewController("/login").setViewName("login");
         registry.addViewController("/403").setViewName("403");
     }
 

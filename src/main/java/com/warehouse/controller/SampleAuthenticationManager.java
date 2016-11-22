@@ -40,9 +40,6 @@ public class SampleAuthenticationManager implements AuthenticationManager {
         List<UserRole> userRoleList = null;
         try {
 
-
-
-
             EntityManagerFactory emf = Persistence.createEntityManagerFactory("DB_property_connection");
             EntityManager em = emf.createEntityManager();
 

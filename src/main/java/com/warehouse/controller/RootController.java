@@ -1,6 +1,7 @@
 package com.warehouse.controller;
 
 import com.warehouse.model.IncDel;
+import com.warehouse.model.User;
 import com.warehouse.model.UserRepository;
 import com.warehouse.service.LangRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -28,6 +29,8 @@ public class RootController {
 
     @Autowired
     HttpSession httpSession;
+    @Autowired
+    HttpServletRequest httpServletRequest;
 
     String localess[] = Locale.getISOCountries();
     String localeLang = Locale.getDefault().getISO3Language();
@@ -47,10 +50,21 @@ public class RootController {
         return "root";
     }
 
+    @RequestMapping("/layout")
+    public ModelAndView layout(ModelAndView model) {
+        model.addObject("user", new User());
+
+        model.setViewName("layout");
+
+        return model;
+    }
+
+
     @RequestMapping("/admin/{id}")
-    public ModelAndView fixed(ModelAndView model, @RequestParam String id) {
+    public ModelAndView fixed(ModelAndView model, @PathVariable String id) {
 
         if (id == "fixed") {
+            model.addObject("id", id);
             model.setViewName("fixed_sidebar");
         }
         if (id == "admin2") {
@@ -59,8 +73,6 @@ public class RootController {
 
         return model;
     }
-
-
 
 
 //        try {
@@ -103,6 +115,19 @@ public class RootController {
 
 
     ///////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+    @ModelAttribute("urlReq")
+    public String urlReq() {
+        return String.valueOf(httpServletRequest.getRequestURL());
+    }
+
+    @ModelAttribute("uriReq")
+    public String uriReq() {
+        return String.valueOf(httpServletRequest.getRequestURI());
+    }
+
+
     @ModelAttribute("url")
     public String url() {
 

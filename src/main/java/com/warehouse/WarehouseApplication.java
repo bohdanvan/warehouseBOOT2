@@ -53,33 +53,31 @@ public class WarehouseApplication /*extends SpringBootServletInitializer*/ {
         for (String beanName : beanNames) {
             System.out.println(beanName);
         }
-//
+
 //		EntityManagerFactory emf = Persistence.createEntityManagerFactory("DB_initializer_server");
 //		EntityManager em = emf.createEntityManager();
-//
+
 //		em.getTransaction().begin();
-//
+
 //        OrderIncDel orderIncDel = new OrderIncDel();
 //        em.persist(orderIncDel);
-//
+
 //        UserRole userRole = new UserRole();
 //        em.persist(userRole);
 //
 //		User user = new User();
-//		user.setUserName("m");
+//		user.setUserName("admin");
 //		user.setPassword("admin");
 //        user.setEnabled(true);
-////        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
-////		user.setPassword(passwordEncoder.encode("makena"));
+//        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
+//		user.setPassword(passwordEncoder.encode("makena"));
 //        user.addRole("ROLE_ADMIN");
 //		user.setEmail("email@email.com");
-////
+
 //		em.persist(user);
 //
 //        IncDel incDel = new IncDel();
 //        em.persist(incDel);
-//
-//
 //
 //        Logger logger = new Logger();
 //        em.persist(logger);
@@ -87,11 +85,9 @@ public class WarehouseApplication /*extends SpringBootServletInitializer*/ {
 //        Language language = new Language();
 //        em.persist(language);
 //
-//
 //		em.getTransaction().commit();
 
-
-        System.out.println(" ================================= Initialize Spring Boot complite");
+        System.out.println(" ====================================== Initialize models complite==================================================");
     }
 
 

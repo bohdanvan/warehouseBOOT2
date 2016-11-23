@@ -55,8 +55,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .antMatchers("/admin").access("hasRole('ROLE_ADMIN')")
                 .anyRequest().permitAll()
                 .and()
-                .formLogin()
-                .usernameParameter("username").passwordParameter("password")
+                .formLogin()/*.loginPage("/log")*/
+                .usernameParameter("userName").passwordParameter("password")
                 .and()
                 .logout().logoutSuccessUrl("/login?logout")  /* что означает ?logout*/
                 .and()

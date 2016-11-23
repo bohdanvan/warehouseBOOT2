@@ -138,6 +138,7 @@ public class SecurityController {
             model.addObject("usersList", userRepository.findAll());
         }catch (Exception ex){}
 
+        model.addObject("user",new User());
         model.setViewName("admin");
         return model;
     }

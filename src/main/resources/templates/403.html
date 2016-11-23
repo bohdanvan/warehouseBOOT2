@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link href="css/app.css"rel="stylesheet"
+          type="text/css"/>
+    <title>Security Warning</title>
+</head>
+<body class="security-app">
+<div class="details">
+    <h2>Authentication is failed </h2>
+    <a href="http://www.programming-free.com/2016/01/spring-security-spring-data-jpa.html" class="button green small">Tutorial</a>
+    <a href="https://github.com/priyadb/SpringSecurityJdbcApp/archive/master.zip"
+       class="button red small">Download</a>
+</div>
+<div class="lc-block">
+    <div class="alert-danger">
+        <h3>You do not have permission to access this page!</h3>
+    </div>
+    <form action="/logout" method="post">
+        <input type="submit" class="button red big" value="Sign in as different user" /> <input
+            type="hidden" name="${_csrf.parameterName}" value="${_csrf.token}" />
+    </form>
+</div>
+</body>
+</html>
+
+

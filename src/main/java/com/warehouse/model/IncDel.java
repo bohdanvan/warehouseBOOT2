@@ -4,7 +4,9 @@ package com.warehouse.model;
 import javax.persistence.*;
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 
 @Entity
@@ -34,13 +36,15 @@ public class IncDel implements Serializable {
     private String shippingType;
     private long lastIdForRegistration;
 
-//    @OneToMany(mappedBy = "incDelJOIN", cascade = CascadeType.ALL, orphanRemoval = true)
-    @OneToMany(targetEntity = OrderIncDel.class)
-    private List<OrderIncDel> ordersListJOIN = new ArrayList<>();
+    //    @OneToMany(mappedBy = "incDelJOIN", cascade = CascadeType.ALL, orphanRemoval = true)
+//    @OneToMany(targetEntity = OrderIncDel.class)
+//    private List<OrderIncDel> ordersListJOIN = new ArrayList<>();
+    @OneToMany(mappedBy = "incDelJOIN")
+    private Set<OrderIncDel> ordersHashSetJOIN = new HashSet<>();
 
-    public void addOrder(OrderIncDel orderIncDel){
+    public void addOrder(OrderIncDel orderIncDel) {
 
-        ordersListJOIN.add(orderIncDel);
+        ordersHashSetJOIN.add(orderIncDel);
     }
 //    @ManyToOne/*(fetch = FetchType.EAGER)*/
 //    private User userJOIN;
@@ -66,12 +70,12 @@ public class IncDel implements Serializable {
     public IncDel() {
     }
 
-    public List<OrderIncDel> getOrdersListJOIN() {
-        return ordersListJOIN;
+    public Set<OrderIncDel> getOrdersHashSetJOIN() {
+        return ordersHashSetJOIN;
     }
 
-    public void setOrdersListJOIN(List<OrderIncDel> ordersList) {
-        this.ordersListJOIN = ordersList;
+    public void setOrdersHashSetJOIN(Set<OrderIncDel> ordersListJOIN) {
+        this.ordersHashSetJOIN = ordersListJOIN;
     }
 
     public long getId() {

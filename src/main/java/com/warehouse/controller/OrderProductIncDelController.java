@@ -6,11 +6,14 @@ import com.warehouse.model.UserRepository;
 import com.warehouse.service.IncDelRepository;
 import com.warehouse.service.IncDelService;
 import com.warehouse.service.LangRepository;
+import com.warehouse.service.OrderIncDelRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -23,7 +26,8 @@ import java.util.Collection;
  * Created by user on 06.10.2016.
  */
 @RestController
-@RequestMapping("incDel/product/{incDelNumber}")
+//@RequestMapping("incDel/orderProduct/{incDelNumber}/{productName}/{qty}/{price}")
+@RequestMapping("incDel/orderProduct/{incDelNumber}")
 public class OrderProductIncDelController {
     final static Logger log4j = LoggerFactory.getLogger(OrderProductIncDelController.class);
 
@@ -31,6 +35,8 @@ public class OrderProductIncDelController {
     IncDelRepository incDelRepository;
     @Autowired
     IncDelService incDelService;
+    @Autowired
+    OrderIncDelRepository orderIncDelRepository;
     @Autowired
     LangRepository langRepository;
     @Autowired
@@ -40,23 +46,56 @@ public class OrderProductIncDelController {
     @Autowired
     HttpServletRequest httpServletRequest;
 
+
+
+
     @RequestMapping
-    Collection<OrderIncDel>  showAll() {
+    Collection<OrderIncDel>  ordersIncDel(@PathVariable String incDelNumber )
+                                         /* @PathVariable String productName,
+                                          @PathVariable String qty,
+                                          @PathVariable String price) */{ /*@RequestParam (name = "incDelNumber")String incDelNumber2*/
 
-        return ;
+        IncDel incDel = incDelRepository.findByNumber(incDelNumber).orElseThrow(() -> new IncDelNotFoundExeption(incDelNumber));
+
+        OrderIncDel orderIncDel = new OrderIncDel();   // FIXME: 24.11.2016   это добавление должно быть в POST - +   orderIncDel.setUrl("url");
+        orderIncDel.setProductName("productName");
+        orderIncDel.setUrl("url");
+        orderIncDel.setQty(10);
+        orderIncDel.setPrice(100);
+
+        orderIncDel.setIncDelJOIN(incDel);
+        orderIncDelRepository.save(orderIncDel);
+
+        return orderIncDelRepository.findByIncDelJOIN(incDel);
     }
 
-    @PostMapping("/incDel/new")
-    public String newIncDelReg(Model model,@ModelAttribute(name="incDel") IncDel incDel /* @Valid IncDel incDel*/) {
 
-        incDelRepository.save(incDel);
-//        IncDel newIncDel =
-//        incDelService.addIncDel(incDel);
-//        model.addAttribute("incDel", newIncDel);
-//        incDelRepository.save(incDel);
+    @RequestMapping(method = RequestMethod.POST)
+    public void addOrder (@PathVariable String incDelNumber, @RequestBody OrderIncDel orderIncDel){
 
-        return "admin";
+
+        IncDel incDel = incDelRepository.findByNumber(incDelNumber)
+                .orElseThrow(() -> new IncDelNotFoundExeption(incDelNumber)); //
+        orderIncDel.setIncDelJOIN(incDel);
+        orderIncDelRepository.save(orderIncDel);
     }
+
+
+
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    class IncDelNotFoundExeption extends RuntimeException{
+        public IncDelNotFoundExeption(String incDelNumber){
+            super("could not found : " + incDelNumber +" number");
+        }
+
+    }
+
+
+
+
+
+
+
 
     @ModelAttribute("urlReq")
     public String urlReq() {
@@ -138,6 +177,11 @@ public class OrderProductIncDelController {
 
 
 }
+
+
+
+
+
 
 
 

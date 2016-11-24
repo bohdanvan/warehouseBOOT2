@@ -1,3 +1,5 @@
+
+
 var module = angular.module('app', ['ngResource']);
 
 module.factory('OrdersIncDel', function ($resource) {
@@ -5,11 +7,11 @@ module.factory('OrdersIncDel', function ($resource) {
 })
     .controller('incDelFormAddNewOrderControllerAng', function ($scope, OrdersIncDel) {
         var url = function () {
-            return {incDelNumber: $scope.incDelNumber || "incDel1"};
+            return {incDelNumber: $scope.incDelNumber || "init"};
         }
 
         var update = function () {
-            $scope.incDelProductsList = OrdersIncDel.query(url());
+            $scope.orderstIncDelList = OrdersIncDel.query(url());
         };
 
 
@@ -29,4 +31,4 @@ module.factory('OrdersIncDel', function ($resource) {
         };
         update();
 
-     });
+    });

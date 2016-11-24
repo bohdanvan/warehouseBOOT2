@@ -1,8 +1,9 @@
 package com.warehouse;
 
 
-import com.warehouse.model.User;
-import com.warehouse.model.UserRepository;
+import com.warehouse.model.*;
+import com.warehouse.service.IncDelRepository;
+import com.warehouse.service.OrderIncDelRepository;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -13,6 +14,9 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 import java.util.Arrays;
 
 
@@ -28,9 +32,10 @@ public class WarehouseApplication /*extends SpringBootServletInitializer*/ {
         return application.sources(WarehouseApplication.class);
     }*/
 
-//    @Bean
-//    CommandLineRunner init(UserRepository userRepository) {
-//        return (evt) -> {
+    @Bean
+    CommandLineRunner init(UserRepository userRepository, IncDelRepository incDelRepository, OrderIncDelRepository orderIncDelRepository
+                           ) {
+        return (evt) -> {
 //            User user = new User();
 //            user.setUserName("admin");
 //            user.setPassword("adminka");
@@ -38,8 +43,20 @@ public class WarehouseApplication /*extends SpringBootServletInitializer*/ {
 //            user.addRole("ROLE_ADMIN");
 //            user.setEmail("email@email.com");
 //            userRepository.save(user);
-//        };
-//    }
+
+//            IncDel incDel = new IncDel();
+//            incDel.setNumber("number init");
+//            incDelRepository.save(incDel);
+//
+//            OrderIncDel orderIncDel = new OrderIncDel();
+//            orderIncDel.setProductName("product to order init");
+//            orderIncDel.setIncDelJOIN(incDel);
+//            orderIncDelRepository.save(orderIncDel);
+
+
+
+        };
+    }
 
     public static void main(String[] args) {
 //        SpringApplication.run(WarehouseApplication.class, args);
@@ -52,38 +69,48 @@ public class WarehouseApplication /*extends SpringBootServletInitializer*/ {
             System.out.println(beanName);
         }
 
-//		EntityManagerFactory emf = Persistence.createEntityManagerFactory("DB_initializer_server");
-//		EntityManager em = emf.createEntityManager();
+		EntityManagerFactory emf = Persistence.createEntityManagerFactory("DB_initializer_server");
+		EntityManager em = emf.createEntityManager();
 
-//		em.getTransaction().begin();
+		em.getTransaction().begin();
 
-//        OrderIncDel orderIncDel = new OrderIncDel();
-//        em.persist(orderIncDel);
 
-//        UserRole userRole = new UserRole();
-//        em.persist(userRole);
-//
-//		User user = new User();
-//		user.setUserName("admin");
-//		user.setPassword("admin");
-//        user.setEnabled(true);
+
+        UserRole userRole = new UserRole();
+        em.persist(userRole);
+
+		User user = new User();
+		user.setUserName("admin");
+		user.setPassword("admin");
+        user.setEnabled(true);
 //        PasswordEncoder passwordEncoder = new BCryptPasswordEncoder();
 //		user.setPassword(passwordEncoder.encode("makena"));
-//        user.addRole("ROLE_ADMIN");
-//		user.setEmail("email@email.com");
+        user.addRole("ROLE_ADMIN");
+		user.setEmail("email@email.com");
 
-//		em.persist(user);
-//
-//        IncDel incDel = new IncDel();
-//        em.persist(incDel);
-//
-//        Logger logger = new Logger();
-//        em.persist(logger);
-//
-//        Language language = new Language();
-//        em.persist(language);
-//
-//		em.getTransaction().commit();
+		em.persist(user);
+
+        IncDel incDel = new IncDel();
+        incDel.setNumber("init");
+        em.persist(incDel);
+
+            OrderIncDel orderIncDel = new OrderIncDel();
+            orderIncDel.setProductName("product name");// FIXME: 24.11.2016 Change to productName
+            orderIncDel.setIncDelJOIN(incDel);
+            em.persist(orderIncDel);
+
+        OrderIncDel orderIncDel2 = new OrderIncDel();
+        orderIncDel2.setProductName("product name 2");// FIXME: 24.11.2016 Change to productName
+        orderIncDel2.setIncDelJOIN(incDel);
+        em.persist(orderIncDel2);
+
+        Logger logger = new Logger();
+        em.persist(logger);
+
+        Language language = new Language();
+        em.persist(language);
+
+		em.getTransaction().commit();
 
         System.out.println(" ====================================== Initialize models complite==================================================");
     }

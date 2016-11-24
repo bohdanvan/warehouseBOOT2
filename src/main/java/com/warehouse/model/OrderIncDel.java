@@ -1,8 +1,8 @@
 package com.warehouse.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by user on 19.11.2016.
@@ -19,14 +19,26 @@ public class OrderIncDel {
     private int qty;
     private int price;
 
-
-//    @ManyToOne(targetEntity = IncDel.class)/*(fetch = FetchType.EAGER)*/
-//    IncDel incDelJOIN;
+    @JsonIgnore
+    @ManyToOne/*(targetEntity = IncDel.class)/*(fetch = FetchType.EAGER)*/
+    private IncDel incDelJOIN;
 
 
     public OrderIncDel() {
     }
 
+    public OrderIncDel(String productName, String url) {  // FIXME: 24.11.2016 DELETE this constr
+        this.productName = productName;
+        this.url = url;
+    }
+
+    public IncDel getIncDelJOIN() {
+        return incDelJOIN;
+    }
+
+    public void setIncDelJOIN(IncDel incDelJOIN) {
+        this.incDelJOIN = incDelJOIN;
+    }
 
     public long getId() {
         return id;

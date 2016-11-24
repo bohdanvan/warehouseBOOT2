@@ -1,4 +1,5 @@
-<div class="row" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml" ng-contoller="incDelFormNewControllerAng">
+<div class="row" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml"
+     ng-contoller="incDelFormAddNewOrderControllerAng">
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
@@ -15,9 +16,9 @@
                     </span>
                     </#if>
                 </h2>
-<#if congratulation?exists>
-    ${congratulation}
-</#if>
+                <#if congratulation?exists>
+                    ${congratulation}
+                </#if>
 
                 <ul class="nav navbar-right panel_toolbox">
                     <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
@@ -41,7 +42,8 @@
             <div class="x_content">
 
 
-                <form method="POST" name="incDel" action="/incDel/new" class="form-horizontal ">  <!--form-label-left input_mask   th:object="${incDel}" th:action="@{/incDel/new}-->
+                <form method="POST" name="incDel" action="/incDel/new" class="form-horizontal ">
+                    <!--form-label-left input_mask   th:object="${incDel}" th:action="@{/incDel/new}-->
 
 
                     <div class="row" style="margin-top:5px">
@@ -189,28 +191,54 @@
                                 </thead>
 
                                 <tbody>
-                                <tr class="even pointer">
-                                    <td class="a-center ">
-                                        <input type="checkbox" class="flat" name="table_records">
-                                    </td>
-                                    <td class=" ">Shoes</td>
-                                    <td class=" ">www.amazon.com/%#@@232123</td>
-                                    <td class=" ">2 </i></td>
-                                    <td class=" "><i class="fa fa-usd" aria-hidden="true"></i>
-                                        340
-                                    </td>
-                                    <td class=" "><i class="fa fa-usd" aria-hidden="true"></i>
-                                        680
-                                    </td>
-                                    <td class="a-right a-right ">Paid</td>
-                                    <td class="last">
-                                        <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
-                                        <a href="#" style="margin-left: 10px"><i class="fa fa-trash-o"
-                                                                                 aria-hidden="true"></i></a>
 
-                                    </td>
-                                </tr>
+                                <div ng-repeat="order in orderstIncDelList">
 
+                                    <tr class="even pointer">
+                                        <td class="a-center ">
+                                            <input type="checkbox" class="flat" name="table_records">
+                                        </td>
+                                        <td class=" ">${{order.productName}}</td>
+                                        <td class=" ">${{order.url}}</td>
+                                        <td class=" ">${{order.qty}} </i></td>
+                                        <td class=" "><i class="fa fa-usd" aria-hidden="true"></i>
+                                            340
+                                        </td>
+                                        <td class=" "><i class="fa fa-usd" aria-hidden="true"></i>
+                                            680
+                                        </td>
+                                        <td class="a-right a-right ">Paid</td>
+                                        <td class="last">
+                                            <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                                            <a href="#" style="margin-left: 10px"><i class="fa fa-trash-o"
+                                                                                     aria-hidden="true"></i></a>
+
+                                        </td>
+                                    </tr>
+
+
+                                    <!--<tr class="even pointer">-->
+                                        <!--<td class="a-center ">-->
+                                            <!--<input type="checkbox" class="flat" name="table_records">-->
+                                        <!--</td>-->
+                                        <!--<td class=" ">Shoes</td>-->
+                                        <!--<td class=" ">www.amazon.com/%#@@232123</td>-->
+                                        <!--<td class=" ">2 </i></td>-->
+                                        <!--<td class=" "><i class="fa fa-usd" aria-hidden="true"></i>-->
+                                            <!--340-->
+                                        <!--</td>-->
+                                        <!--<td class=" "><i class="fa fa-usd" aria-hidden="true"></i>-->
+                                            <!--680-->
+                                        <!--</td>-->
+                                        <!--<td class="a-right a-right ">Paid</td>-->
+                                        <!--<td class="last">-->
+                                            <!--<a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>-->
+                                            <!--<a href="#" style="margin-left: 10px"><i class="fa fa-trash-o"-->
+                                                                                     <!--aria-hidden="true"></i></a>-->
+
+                                        <!--</td>-->
+                                    <!--</tr>-->
+                                </div>
                                 </tbody>
                             </table>
                         </div>
@@ -223,7 +251,7 @@
                             <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3" style="margin-top:1%">
 
                                 <input type="hidden" name="${_csrf.parameterName}"
-                                       value="${_csrf.token}" />
+                                       value="${_csrf.token}"/>
 
                                 <button type="reset" class="btn btn-primary">Cancel</button>
                                 <button type="submit" class="btn btn-success">Submit</button>
@@ -259,49 +287,49 @@
             <div class="modal-body">
 
 
-                <form action="/product/new/">
+                <!--<form action="/product/new/">-->
 
-                    <div class="row">
-                        <div class="form-group">
-
-                        </div>
-                        <label for="sel1" class="control-label col-md-2 col-sm-2 col-xs-6">Product </label>
-
-                        <div class="col-md-5 col-sm-4 col-xs-6">
-                            <select class="form-control" id="sel1">
-                                <option>Close</option>
-                                <option>Shoes</option>
-
-                            </select>
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-4">
-                            <input type="text" class="form-control" required="required"
-                                   placeholder="qty" name="qty"/>
-                        </div>
-                        <div class="col-md-2 col-sm-2 col-xs-4">
-                            <input type="text" class="form-control" required="required"
-                                   placeholder="usd" name="price"/>
-                        </div>
-
-
-                        <label for="url" class="control-label col-md-2 col-sm-2 col-xs-2"
-                               style="margin-top:2%">URL </label>
-                        <div class="col-md-10 col-sm-10 col-xs-10" style="margin-top:2%">
-                            <input id="url" type="text" class="form-control" required="required"
-                                   placeholder=" enter the website link to your product " name="price"/>
-                        </div>
-
-                        <!--<a href="#" data-toggle="tooltip" title="add new product">-->
-                        <!--<i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>-->
-                    </div>
-                    <br/>
-
-                    <div class="modal-footer">
-                        <button type="submit" class="btn btn-default">Add</button>
-                        <button type="button" class="btn " data-dismiss="modal">Close</button>
+                <div class="row">
+                    <div class="form-group">
 
                     </div>
-                </form>
+                    <label for="sel1" class="control-label col-md-2 col-sm-2 col-xs-6">Product </label>
+
+                    <div class="col-md-5 col-sm-4 col-xs-6">
+                        <select class="form-control" id="sel1" ng-modal="productName">
+                            <option>Close</option>
+                            <option>Shoes</option>
+
+                        </select>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-4">
+                        <input type="text" class="form-control" required="required"
+                               placeholder="qty" name="qty" ng-modal="qty"/>
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-4">
+                        <input type="text" class="form-control" required="required"
+                               placeholder="usd" name="price" ng-modal="price"/>
+                    </div>
+
+
+                    <label for="url" class="control-label col-md-2 col-sm-2 col-xs-2"
+                           style="margin-top:2%">URL </label>
+                    <div class="col-md-10 col-sm-10 col-xs-10" style="margin-top:2%">
+                        <input id="url" type="text" class="form-control" required="required"
+                               placeholder=" enter the website link to your product " name="url" ng-modal="url"/>
+                    </div>
+
+                    <!--<a href="#" data-toggle="tooltip" title="add new product">-->
+                    <!--<i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>-->
+                </div>
+                <br/>
+
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-default" ng-click="add()" ng-enter="update()">Add Product</button>
+                    <button type="button" class="btn " data-dismiss="modal">Close</button>
+
+                </div>
+                <!--</form>-->
 
 
             </div>   <!--modal body end-->

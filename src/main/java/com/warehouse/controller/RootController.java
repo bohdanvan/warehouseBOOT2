@@ -50,29 +50,24 @@ public class RootController {
         return "root";
     }
 
-    @RequestMapping("/layout")
-    public ModelAndView layout(ModelAndView model) {
-        model.addObject("user", new User());
-
-        model.setViewName("layout");
-
-        return model;
-    }
 
 
-    @RequestMapping("/admin/{id}")
-    public ModelAndView fixed(ModelAndView model, @PathVariable String id) {
 
-        if (id == "fixed") {
-            model.addObject("id", id);
-            model.setViewName("fixed_sidebar");
-        }
-        if (id == "admin2") {
-            model.setViewName("admin2");
-        }
+//    @RequestMapping("/admin/html")
+@RequestMapping("/html")
+public ModelAndView fixed(ModelAndView model) {
 
-        return model;
-    }
+//        if (id == "fixed") {
+//            model.addObject("id", id);
+//            model.setViewName("fixed_sidebar");
+//        }
+//        if (id == "admin2") {
+//            model.setViewName("admin2");
+//        }
+    model.addObject("incDel", new IncDel());
+    model.setViewName("adminHTML");
+    return model;
+}
 
 
 //        try {
@@ -193,3 +188,14 @@ public class RootController {
 
 
 }
+
+
+//
+//    @RequestMapping("/layout")
+//    public ModelAndView layout(ModelAndView model) {
+//        model.addObject("user", new User());
+//
+//        model.setViewName("layout");
+//
+//        return model;
+//    }

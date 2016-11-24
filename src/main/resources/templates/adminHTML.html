@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html ng-app="app" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org"> <!-- -->
+
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- Meta, title, CSS, favicons, etc. -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Admin panel </title>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+    <script src="https://code.angularjs.org/1.3.9/angular.js"></script>
+    <script src="https://code.angularjs.org/1.3.9/angular-route.js"></script>
+    <script src="https://code.angularjs.org/1.3.9/angular-resource.js"></script>
+
+    <!--<script th:src="@{../static/js/customs/appPublic.js}"></script>-->
+    <script src="../static/js/customs/appPublic.js"></script>
+
+    <!--<link rel="stylesheet" type="text/css" media="all"-->
+          <!--href="${url}css/bootstrap.min.css" th:href="@{../css/bootstrap.min.css}"/>-->
+ <link rel="stylesheet" type="text/css" media="all"
+          href="../static/css/bootstrap.min.css" />
+
+
+</head>
+
+<body class="nav-md"  ng-controller="Ctrl">
+
+<input ng-model="id" placeholder="id"/><br/>
+<input ng-model="productName" placeholder="product"/><br/>
+<input ng-model="qty" placeholder="qty"/><br/>
+<input ng-model="price" placeholder="price"/><br/>
+
+<button type="submit" ng-click="update()" ng-enter="update()">update</button>
+<button ng-click="add()">add</button>
+<button ng-click="sendGet()" >sendGET</button>
+
+
+<p>id :{{id}}</p>
+<p>productName :{{productName}}</p>
+<p>qty :{{qty}}</p>
+<p>price :{{price}}</p>
+
+
+
+
+<div>is User Registr {{checkIsUserRegistr}}</div> <br/>
+<p> controllerR :{{controllerR}}</p>
+<p> url :{{url}}</p>
+<p> var update :{{message}}</p>
+<p> addF :{{addF}}</p>
+<p> updateF :{{updateF}}</p>
+
+<p> Save :{{saveF}}</p>
+<p> Order List :{{orderstIncDelList}}</p>
+<p> sendF :{{resp}}</p>
+<p> sendPOST :{{respPost}}</p>
+
+
+
+<div class="table-responsive" style="margin-top:5px">
+    <table class="table table-striped jambo_table bulk_action">
+        <thead>
+        <tr class="headings">
+            <th>
+                <input type="checkbox" id="check-all" class="flat">
+                <input type="hidden" name="id"/>
+            </th>
+
+
+            <th class="column-title">productName</th>
+            <th class="column-title">url</th>
+            <th class="column-title">qty</th>
+            <th class="column-title">price <i class="fa fa-usd"
+                                              aria-hidden="true"></i>
+            </th>
+            <th class="column-title">Amount</th>
+            <th class="column-title">Status</th>
+            <th class="column-title no-link last">
+                <span
+                    class="nobr">Action</span>
+            </th>
+            <!--<th class="bulk-actions" colspan="7">-->
+                <!--<a class="antoo" style="color:#fff; font-weight:500;">Bulk-->
+                    <!--Actions ( <span-->
+                            <!--class="action-cnt"> </span> ) <i-->
+                            <!--class="fa fa-chevron-down"></i></a>-->
+            <!--</th>-->
+        </tr>
+        </thead>
+
+        <tbody>
+
+
+
+            <tr class="even pointer" ng-repeat="order in orderstIncDelList">
+
+                <td class="a-center ">
+                    <input type="checkbox" class="flat" name="table_records">
+                </td>
+
+                <td >${{order.productName}}</td>
+                <td >${{order.url}}</td>
+                <td >${{order.qty}} </i></td>
+                <td ><i class="fa fa-usd" aria-hidden="true"></i>
+                    340
+                </td>
+                <td class=" "><i class="fa fa-usd" aria-hidden="true"></i>
+                    680
+                </td>
+                <td class="a-right a-right ">Paid</td>
+                <td class="last">
+                    <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+                    <a href="#" style="margin-left: 10px"><i
+                            class="fa fa-trash-o"
+                            aria-hidden="true"></i></a>
+
+                </td>
+            </tr>
+
+
+            <!--<tr class="even pointer">-->
+            <!--<td class="a-center ">-->
+            <!--<input type="checkbox" class="flat" name="table_records">-->
+            <!--</td>-->
+            <!--<td class=" ">Shoes</td>-->
+            <!--<td class=" ">www.amazon.com/%#@@232123</td>-->
+            <!--<td class=" ">2 </i></td>-->
+            <!--<td class=" "><i class="fa fa-usd" aria-hidden="true"></i>-->
+            <!--340-->
+            <!--</td>-->
+            <!--<td class=" "><i class="fa fa-usd" aria-hidden="true"></i>-->
+            <!--680-->
+            <!--</td>-->
+            <!--<td class="a-right a-right ">Paid</td>-->
+            <!--<td class="last">-->
+            <!--<a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>-->
+            <!--<a href="#" style="margin-left: 10px"><i class="fa fa-trash-o"-->
+            <!--aria-hidden="true"></i></a>-->
+
+            <!--</td>-->
+            <!--</tr>-->
+
+        </tbody>
+    </table>
+</div>
+
+
+</body>
+</html>
+

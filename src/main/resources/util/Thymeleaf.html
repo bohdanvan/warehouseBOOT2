@@ -50,7 +50,10 @@
 </form>
 
 
+<ul>
+    <li style="color:red;" th:each="err : ${#fields.errors('userName')}" th:text="${err}" ></li>
 
+</ul>
 
 <form action="#" th:object="${user}" th:action="@{/subscribeth}">
 

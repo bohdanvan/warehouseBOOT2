@@ -12,6 +12,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -46,23 +47,22 @@ public class IncDelController {
         model.addAttribute("topTitle", "New Delivery");
         model.addAttribute("sideBarTitle", "Admin Panel");
         model.addAttribute("sideBarSubTitle", "General");
+        model.addAttribute("switch", "incDel");
 
-        IncDel incDel = new IncDel();
-        incDel.setSupplier("supplieR ");
-        model.addAttribute("incDel",incDel);
+
+        model.addAttribute("incDel",new IncDel());
 
         return "admin";
     }
 
     @PostMapping("/incDel/new")
-    public String newIncDelReg(Model model,@ModelAttribute(name="incDel") IncDel incDel /* @Valid IncDel incDel*/) {
+    public String newIncDelReg(Model model ,@Valid IncDel incDel,BindingResult errors) {
 
+        if(!errors.hasErrors()) {
+
+            model.addAttribute("error", " add succefull ");
+        }
         incDelRepository.save(incDel);
-//        IncDel newIncDel =
-//        incDelService.addIncDel(incDel);
-//        model.addAttribute("incDel", newIncDel);
-//        incDelRepository.save(incDel);
-
         return "admin";
     }
 
@@ -80,6 +80,7 @@ public class IncDelController {
     public String url() {
         return "../";
     }
+
 
 
     @ModelAttribute("type")

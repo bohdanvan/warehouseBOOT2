@@ -14,16 +14,16 @@
 
 
     <link rel="stylesheet" type="text/css" media="all"
-    href="../static/css/bootstrap.min.css" th:href="@{../css/bootstrap.min.css}"/>
+          href="../static/css/bootstrap.min.css" th:href="@{../css/bootstrap.min.css}"/>
 
     <link rel="stylesheet" type="text/css" media="all"
           href="../static/font-awesome/css/font-awesome.min.css" th:href="@{../css/font-awesome.min.css}"/>
 
     <link rel="stylesheet" type="text/css" media="all"
-    href="../static/css/nprogress.css" th:href="@{../css/nprogress.css}"/>
+          href="../static/css/nprogress.css" th:href="@{../css/nprogress.css}"/>
 
     <link rel="stylesheet" type="text/css" media="all"
-    href="../css/customn.min.css" th:href="@{../css/custom.min.css}"/>
+          href="../css/customn.min.css" th:href="@{../css/custom.min.css}"/>
 
     <!--&lt;!&ndash;<script th:src="@{../static/js/customs/appPublic.js}"></script>&ndash;&gt;-->
     <!--<script src="../appPublic.js" th:src="@{../public/appPublic.js}"></script>-->
@@ -31,98 +31,81 @@
     <script src="../static/js/jquery.min.js" th:src="@{../js/jquery.min.js}"></script>
 
     <script src="../static/js/bootstrap.min.js" th:src="@{../js/bootstrap.min.js}"></script>
-
     <script src="../static/js/nprogress.js" th:src="@{../js/nprogress.js}"></script>
 
     <script src="../static/js/fastclick.js" th:src="@{../js/fastclick.js}"></script>
 
     <script src="../static/js/jquery.mCustomScrollbar.concat.min.js" th:src="@{../js/jquery.mCustomScrollbar.concat.min.js}"></script>
-    <!--<script src="../static/js/custom.min.js" th:src="@{../js/custom.min.js}"></script>-->
+    <script src="../static/js/custom.min.js" th:src="@{../js/custom.min.js}"></script>
 
-
-    <!--<link rel="stylesheet" type="text/css" media="all"-->
-          <!--href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
-
-
-    <!--<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>-->
 
     <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
     <!--<script src="https://code.angularjs.org/1.3.9/angular.js"></script>-->
     <!--<script src="https://code.angularjs.org/1.3.9/angular-route.js"></script>-->
     <!--<script src="https://code.angularjs.org/1.3.9/angular-resource.js"></script>-->
-    <!---->
+<!---->
     <!--<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>-->
-    <!---->
+<!---->
     <!--<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>-->
-
-    <!--<div th:include="admin/navigation :: top"></div>-->
-    <!--<div th:include="admin/navigation :: incDel"></div>-->
-    <!--<span th:text="${uriReq}"></span>-->
 
 </head>
 
-<body class="nav-md">
+
 <div class="container body">
     <div class="main_container">
         <div class="col-md-3 left_col menu_fixed">
             <div class="left_col scroll-view">
                 <div class="navbar nav_title" style="border: 0;">
-                    <a href="/admin" class="site_title"><i class="fa fa-cube" aria-hidden="false"></i>
-                        <span>AZEMEX</span></a>
-
+                    <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentellela Alela!</span></a>
                 </div>
 
                 <div class="clearfix"></div>
 
+                <!-- menu profile quick info -->
+                <div class="profile">
+                    <div class="profile_pic">
+                        <img src="images/img.jpg" alt="..." class="img-circle profile_img">
+                    </div>
+                    <div class="profile_info">
+                        <span>Welcome,</span>
+                        <h2>John Doe</h2>
+                    </div>
+                </div>
+                <!-- /menu profile quick info -->
 
-                <br/>
+                <br />
 
-                <div th:include="admin/sidebar :: eng"></div>
 
+                <div th:include="admin/sidebar :: ${locale}"></div>
 
             </div>
         </div>
 
-        <div th:include="admin/navigation :: eng"></div>
+        <div th:include="admin/navigation :: ${locale}"></div>
 
 
-            <div class="right_col" role="main">
-                <div class=" ">
-                    <div class="page-title">
-                        <div class="title_left">
-
-
-                        </div>
+        <!-- page content -->
+        <div class="right_col" role="main">
+            <div class="">
+                <div class="page-title">
+                    <div class="title_left">
+                        <h3>Fixed Sidebar <small> Just add class <strong>menu_fixed</strong></small></h3>
                     </div>
-                    <!-- page content -->
-                    <!--<#&#45;&#45;=========================================================================================&ndash;&gt;-->
-
-
-                    <div th:include="admin/content :: incDel"></div>
-
-
-
-
-                        <!--<#include "admin/incDel/${locale}.html">-->
-                            <!--<#&#45;&#45;============================================================================================&ndash;&gt;-->
-
                 </div>
             </div>
-
-            <!-- /page content -->
-
-
+        </div>
+        <!-- /page content -->
 
 
+        <div th:include="admin/footer :: ${locale}"></div>
 
 
-        <div th:include="admin/footer :: eng"></div>
     </div>
 </div>
 
 
 
 
-
 </body>
 </html>
+

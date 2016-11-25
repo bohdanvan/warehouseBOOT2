@@ -113,6 +113,12 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         return resolver;
     }*/
 
+
+    @Override
+    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/webjars/");
+    }
+
 //    @Override
 //    public void addResourceHandlers(ResourceHandlerRegistry registry) {
 //

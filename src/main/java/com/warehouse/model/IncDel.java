@@ -1,7 +1,10 @@
 package com.warehouse.model;
 
 
+import org.hibernate.validator.constraints.Length;
+
 import javax.persistence.*;
+import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -24,6 +27,7 @@ public class IncDel implements Serializable {
     private String employeeID;
     private String userID;                      // employee login
     private String date;
+    @Size(min = 2 , message = "size min 2 ")
     private String supplier;
     private String supplierInvoice;
     private String supplierPackList;

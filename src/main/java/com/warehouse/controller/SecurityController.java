@@ -139,6 +139,7 @@ public class SecurityController {
         }catch (Exception ex){}
 
         model.addObject("user",new User());
+        model.addObject("incDel",new IncDel());
         model.setViewName("admin");
         return model;
     }

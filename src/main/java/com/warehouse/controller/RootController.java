@@ -145,8 +145,10 @@ public ModelAndView fixed(ModelAndView model) {
 //        if (id == "admin2") {
 //            model.setViewName("admin2");
 //        }
+
     model.addObject("incDel", new IncDel());
-    model.setViewName("adminHTML");
+    model.addObject("user", new User());
+    model.setViewName("fixed_sidebar");
     return model;
 }
 

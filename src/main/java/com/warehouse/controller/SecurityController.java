@@ -256,41 +256,6 @@ public class SecurityController {
 
 
 //
-//model.addAttribute("req_getName",request.getName() );
-//        model.addAttribute("req_getPrincipal",request.getPrincipal().toString() );
-//        model.addAttribute("req_getCredentials",request.getCredentials().toString() );
-//        model.addAttribute("am",am.toString() );
-//        model.addAttribute("r3",result.toString() );
-//        model.addAttribute("r2",request.toString() );
-//        model.addAttribute("r4",httpServletRequest.authenticate(httpServletResponse) );
-//        model.addAttribute("changeSessionId",httpServletRequest.changeSessionId() );
-//        model.addAttribute("getAuthType",httpServletRequest.getAuthType() );
-//        model.addAttribute("getContextPath",httpServletRequest.getContextPath() );
-//        model.addAttribute("getCookies",httpServletRequest.getCookies() );
-//        model.addAttribute("getMethod",httpServletRequest.getMethod() );
-//        model.addAttribute("getPathInfo",httpServletRequest.getPathInfo() );
-//        model.addAttribute("getPathTranslated",httpServletRequest.getPathTranslated() );
-//        model.addAttribute("getQueryString",httpServletRequest.getQueryString() );
-//        model.addAttribute("getRequestedSessionId",httpServletRequest.getRequestedSessionId() );
-//        model.addAttribute("isRequestedSessionIdFromCookie",httpServletRequest.isRequestedSessionIdFromCookie() );
-//        model.addAttribute("isRequestedSessionIdFromURL",httpServletRequest.isRequestedSessionIdFromURL() );
-//        model.addAttribute("isUserInRole",httpServletRequest.isUserInRole("ADMIN") );
-//        model.addAttribute("isUserInRoleUser",httpServletRequest.isUserInRole("USER") );
-//        model.addAttribute("isUserInRoleROLE_ADMIN",httpServletRequest.isUserInRole("ROLE_ADMIN") );
-//        model.addAttribute("isUserInRoleROLE_USER",httpServletRequest.isUserInRole("ROLE_USER") );
-//
-//        model.addAttribute("isAsyncStarted",httpServletRequest.isAsyncStarted() );
-//        model.addAttribute("isAsyncSupported",httpServletRequest.isAsyncSupported() );
-//        model.addAttribute("isSecure",httpServletRequest.isSecure() );
-//        model.addAttribute("getRemoteUser",httpServletRequest.getRemoteUser() );
-//        model.addAttribute("getRequestURI",httpServletRequest.getRequestURI() );
-//        model.addAttribute("getRequestURL",httpServletRequest.getRequestURL() );
-////            model.addAttribute("r ",httpServletRequest );
-////            model.addAttribute("r ",httpServletRequest );
-//
-//        model.addAttribute("r5",httpServletResponse.toString() );
-//        model.addAttribute("http",httpSession.getLastAccessedTime() );
-//
-//        model.addAttribute("tryLogginCount",httpSession.getAttribute("tryLogginCount"));
+
 
 

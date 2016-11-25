@@ -1,0 +1,63 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>Good Thymes Virtual Grocery</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" media="all"
+          href="../../css/gtvg.css" th:href="@{/css/gtvg.css}" />
+</head>
+
+<body>
+
+
+<p>Today is: <span th:text="${today}">13 February 2011</span></p>
+<table>
+    <tr data-th-each="user : ${usersList}">
+        <td data-th-text="${user.userName}">...</td>
+        <td data-th-text="${user.enabled}">...</td>
+    </tr>
+</table>
+
+<!--
+<table>
+    <th:block th:each="user : ${users}">
+        <tr>
+            <td th:text="${user.userName}">...</td>
+            <td th:text="${user.enabled}">...</td>
+        </tr>
+        <tr>
+            <td colspan="2" th:text="${user.userName}">...</td>
+        </tr>
+    </th:block>
+</table>
+
+
+<table>
+    &lt;!&ndash;/*/ <th:block th:each="user : ${users}"> /*/&ndash;&gt;
+    <tr>
+        <td th:text="${user.userName}">...</td>
+        <td th:text="${user.enabled}">...</td>
+    </tr>
+    <tr>
+        <td colspan="2" th:text="${user.userName}">...</td>
+    </tr>
+    &lt;!&ndash;/*/ </th:block> /*/&ndash;&gt;
+</table>-->
+
+
+
+<div th:include="admin/sidebar/homeFragment :: copy"></div>
+
+<div th:include="homeFragment :: ${locale}"></div>
+
+<div th:include="testingData :: http"></div>
+
+
+
+
+</body>
+
+</html>

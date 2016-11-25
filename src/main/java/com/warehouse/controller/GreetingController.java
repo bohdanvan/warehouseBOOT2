@@ -37,8 +37,10 @@ public class GreetingController {
     @Autowired
     HttpSession httpSession;
 
+
+
     @RequestMapping("/resource")
-    public Map<String, Object> home() {
+    public Map<String, Object> resource() {
         Map<String, Object> model = new HashMap<String, Object>();
         model.put("id", UUID.randomUUID().toString());
         model.put("content", "Hello World");

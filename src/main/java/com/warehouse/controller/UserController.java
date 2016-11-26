@@ -26,6 +26,7 @@ import org.springframework.web.servlet.ModelAndView;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
  * Created by user on 06.10.2016.
@@ -33,7 +34,7 @@ import javax.validation.Valid;
 @Controller
 public class UserController {
     final static Logger log4j = LoggerFactory.getLogger(UserController.class);
-
+    private final AtomicLong counter = new AtomicLong();
     @Autowired
     IncDelRepository incDelRepository;
     @Autowired
@@ -67,6 +68,7 @@ public class UserController {
 
            try {
                User userF = userRepository.findByUserName(user.getUserName());
+               log4j.error("user already registred");
                model.addObject("error", "Login "+userF.getUserName() +"already registred ");
                model.setViewName("loginReset");
 

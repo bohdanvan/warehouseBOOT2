@@ -123,26 +123,7 @@ public class SecurityController {
 
 
 
-    @RequestMapping("/admin")
-    public ModelAndView adminPage(ModelAndView model) {
 
-        try {  // FIXME: 14.11.2016  language
-            if (httpSession.isNew()) {
-                httpSession.setAttribute("locale", "eng");
-            }
-        } catch (Exception n) {
-            httpSession.setAttribute("locale", "rus");
-        }
-
-        try {
-            model.addObject("usersList", userRepository.findAll());
-        }catch (Exception ex){}
-
-        model.addObject("user",new User());
-        model.addObject("incDel",new IncDel());
-        model.setViewName("admin");
-        return model;
-    }
 
     @RequestMapping("/logout")
     public ModelAndView logout(HttpServletRequest req) throws ServletException {
@@ -152,6 +133,14 @@ public class SecurityController {
 //        return new ModelAndView("redirect:/abc.htm")  // как вариант проверить работоспособность
         return model;
     }
+
+
+
+
+
+
+
+
 
 
 

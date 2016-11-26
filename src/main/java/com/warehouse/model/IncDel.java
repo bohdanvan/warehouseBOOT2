@@ -27,7 +27,6 @@ public class IncDel implements Serializable {
     private String employeeID;
     private String userID;                      // employee login
     private String date;
-    @Size(min = 2 , message = "size min 2 ")
     private String supplier;
     private String supplierInvoice;
     private String supplierPackList;
@@ -72,6 +71,10 @@ public class IncDel implements Serializable {
 
 
     public IncDel() {
+    }
+
+    public IncDel(String number) {
+        this.number = number;
     }
 
     public Set<OrderIncDel> getOrdersHashSetJOIN() {
@@ -267,6 +270,34 @@ public class IncDel implements Serializable {
     }
 
 
+    @Override
+    public String toString() {
+        return "IncDel{" +
+                "id=" + id +
+                ", number='" + number + '\'' +
+                ", weight=" + weight +
+                ", volWeight=" + volWeight +
+                ", boxQty=" + boxQty +
+                ", warehouseID='" + warehouseID + '\'' +
+                ", destinationFROM='" + destinationFROM + '\'' +
+                ", employeeID='" + employeeID + '\'' +
+                ", userID='" + userID + '\'' +
+                ", date='" + date + '\'' +
+                ", supplier='" + supplier + '\'' +
+                ", supplierInvoice='" + supplierInvoice + '\'' +
+                ", supplierPackList='" + supplierPackList + '\'' +
+                ", currierCompany='" + currierCompany + '\'' +
+                ", currierTrackNumber='" + currierTrackNumber + '\'' +
+                ", infoComment='" + infoComment + '\'' +
+                ", infoStop='" + infoStop + '\'' +
+                ", status='" + status + '\'' +
+                ", customsType='" + customsType + '\'' +
+                ", shippingType='" + shippingType + '\'' +
+                ", lastIdForRegistration=" + lastIdForRegistration +
+                ", ordersHashSetJOIN=" + ordersHashSetJOIN +
+                ", loggersListJOIN=" + loggersListJOIN +
+                '}';
+    }
 }
 
 

@@ -307,14 +307,21 @@
                             </div>
                             <label for="sel1" class="control-label col-md-2 col-sm-2 col-xs-6">Product </label>
 
-                            <!--<div class="col-md-5 col-sm-4 col-xs-6">-->
+
+                            <div class="col-md-5 col-sm-4 col-xs-6">
+
+                                <select th:field="*{productName}">
+                                    <option th:each="product : ${productsList}" th:value="${product}" th:text="${product}">Product</option>
+                                </select>
+
                                 <!--<div class="form-control" id="sel1" ng-modal="productName" th:field="*{productName}">-->
                                     <!--<div>-->
                                         <!--<option></option>-->
                                         <!--<option>Shoes</option>-->
                                     <!--</div>-->
                                     <!--</select>-->
-                                <!--</div>-->
+                                </div>
+
                                 <div class="col-md-2 col-sm-2 col-xs-4">
                                     <input type="text"
                                            class="form-control"

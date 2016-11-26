@@ -199,13 +199,23 @@ public class IncDelController {
 //        }
 //    }
 
+
+    @ModelAttribute("productsList")
+    public List<String> productsList() {
+        List<String> productsList = new ArrayList<>();
+        productsList.add("Shoes");
+        productsList.add("Strings");
+        productsList.add("Shorts");
+        return productsList;
+    }
+
     @ModelAttribute("ordersIncDelList")
     public List<OrderIncDel> ordersIncDelList() {
 
-        try{
+        try {
             IncDel incDel = incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString());
             return (List<OrderIncDel>) orderIncDelRepository.findByIncDelJOIN(incDel);
-        }catch (NullPointerException ex){
+        } catch (NullPointerException ex) {
             OrderIncDel orderIncDel = new OrderIncDel();
             orderIncDel.setProductName("here must be your product");
             List<OrderIncDel> ordersIncDelList = new ArrayList<>();
@@ -214,6 +224,7 @@ public class IncDelController {
         }
 
     }
+
     @ModelAttribute("orderIncDel")
     public OrderIncDel orderIncDel() {
         return new OrderIncDel();

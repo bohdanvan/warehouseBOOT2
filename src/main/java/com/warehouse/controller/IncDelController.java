@@ -52,27 +52,35 @@ public class IncDelController {
     @GetMapping("/incDel/new")
     public String newDelivery(Model model) {
 
-        model.addAttribute("topTitle", "New Delivery");
-        model.addAttribute("sideBarTitle", "Admin Panel");
-        model.addAttribute("sideBarSubTitle", "General");
-        model.addAttribute("switch", "incDel");
+        IncDel incDel = new IncDel();
+        incDel.setNumber(String.valueOf(System.nanoTime()));
+        incDelRepository.save(incDel);
+        model.addAttribute("incDel", incDel);
 
-//        IncDel incDel = new IncDel();
-//        incDel.setNumber(String.valueOf(System.nanoTime()));
-        model.addAttribute("incDel", new IncDel());
-        log4j.info("Create new IncDel ");
+        log4j.info("incDel was saved / number is : " + incDel.getNumber());
+        httpSession.setAttribute("incDelNumber", incDel.getNumber());
+        log4j.info("http incDelNumber set :" + httpSession.getAttribute("incDelNumber").toString());
+
+//        model.addAttribute("incDel", new IncDel());
+//        log4j.info("Create new IncDel ");
 //        log4j.info("IncDel set number / GET " + incDel.getNumber());
 //        incDelRepository.save(incDel);
 
-
-        if (null == httpSession.getAttribute("incDelNumber")) {
-            log4j.warn("http incDelNumber set : null");
-        } else {
-
-        }
+//        if (null != httpSession.getAttribute("incDelNumber")) {
+//            httpSession.removeAttribute("incDelNumber");
+//            log4j.warn("http incDelNumber  : "+httpSession.getAttribute("incDelNumber").toString()+" was remove");
+//
+//        } else {
+//
+//        }
 
         return "admin";
     }
+
+//    model.addAttribute("topTitle", "New Delivery");
+//    model.addAttribute("sideBarTitle", "Admin Panel");
+//    model.addAttribute("sideBarSubTitle", "General");
+//    model.addAttribute("switch", "incDel");
 
 
     @PostMapping("/incDel/new")
@@ -83,11 +91,8 @@ public class IncDelController {
             log4j.info("errors == 0 ");
             log4j.info(errors.toString());
 
-            incDel.setNumber(getPrincipal() + "-" + System.nanoTime());
+//            incDel.setNumber(getPrincipal() + "-" + System.nanoTime());
             incDelRepository.save(incDel);
-            log4j.info("incDel was saved / number is : " + incDel.getNumber());
-            httpSession.setAttribute("incDelNumber", incDel.getNumber());
-            log4j.info("http incDelNumber set :" + httpSession.getAttribute("incDelNumber").toString());
 
 
         } else {
@@ -95,8 +100,22 @@ public class IncDelController {
 
         }
 
-        incDel.setBoxQty(1);
+        return "admin";
+    }
 
+
+    @GetMapping("incDel/registred")
+    ModelAndView registred(ModelAndView modal) {
+
+        try {
+            modal.addObject("incDel", incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString()));
+        } catch (NullPointerException nex) {
+            log4j.error(nex.toString());
+        }
+
+        modal.setViewName("admin");
+        return modal;
+    }
 
 //
 ////        IncDel incDelF = incDelRepository.findByNumber(incDel.getNumber()).orElse(new IncDel("test"));
@@ -130,9 +149,6 @@ public class IncDelController {
 //            model.addAttribute("error", " Nullpointer ex : "+ex.toString());
 //        }
 
-        return "admin";
-    }
-
 
     @PostMapping("incDel/orderProduct/add")
     ModelAndView addOrderToIncDel(ModelAndView modal, @Valid OrderIncDel orderIncDel, IncDel incDel) {
@@ -148,20 +164,17 @@ public class IncDelController {
             log4j.warn(ex.toString());
 
         }
-        modal.setViewName("redirect:/incDel/new");
+        modal.addObject("incDel", incDel);
+        modal.setViewName("redirect:/incDel/registred");
         return modal;
     }
 
-    @GetMapping("incDel/registred/")
-    ModelAndView registred(ModelAndView modal) {
 
-        try {
-            modal.addObject("incDel", incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString()));
-        } catch (NullPointerException nex) {
-            log4j.error(nex.toString());
-        }
-
-        modal.setViewName("admin");
+    @GetMapping("/incDel/orderProduct/del")
+    ModelAndView delOrderFromIncDel(ModelAndView modal, @RequestParam String orderId) {
+        log4j.info(" @PathVariable String orderId : " + orderId);
+        orderIncDelRepository.delete(Long.valueOf(orderId));
+        modal.setViewName("redirect:/incDel/registred");
         return modal;
     }
 

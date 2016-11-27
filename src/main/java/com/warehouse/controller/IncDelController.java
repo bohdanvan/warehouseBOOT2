@@ -48,18 +48,19 @@ public class IncDelController {
     @Autowired
     HttpServletRequest httpServletRequest;
 
+    private final String INCDEL_PATH = "/incDel/new";
 
     @GetMapping("/incDel/new")
     public String newDelivery(Model model) {
+        model.addAttribute("incDel", new IncDel());
 
-        IncDel incDel = new IncDel();
-        incDel.setNumber(String.valueOf(System.nanoTime()));
-        incDelRepository.save(incDel);
-        model.addAttribute("incDel", incDel);
 
-        log4j.info("incDel was saved / number is : " + incDel.getNumber());
-        httpSession.setAttribute("incDelNumber", incDel.getNumber());
-        log4j.info("http incDelNumber set :" + httpSession.getAttribute("incDelNumber").toString());
+
+
+
+
+
+
 
 //        model.addAttribute("incDel", new IncDel());
 //        log4j.info("Create new IncDel ");
@@ -88,19 +89,25 @@ public class IncDelController {
 
 
         if (errors.getErrorCount() == 0) {
-            log4j.info("errors == 0 ");
+            log4j.info("errors == 0");
             log4j.info(errors.toString());
 
-//            incDel.setNumber(getPrincipal() + "-" + System.nanoTime());
-            incDelRepository.save(incDel);
 
+             incDel.setNumber(String.valueOf(System.nanoTime()));
+             incDelRepository.save(incDel);
 
+             httpSession.setAttribute("incDelNumber", incDel.getNumber());                                incDelRepository.save(incDel);
+             log4j.info("http incDelNumber set :" + httpSession.getAttribute("incDelNumber").toString());
+              return "redirect:/incDel/registred";
         } else {
+
             log4j.warn(errors.toString());
+            return "admin";
+
 
         }
 
-        return "admin";
+
     }
 
 
@@ -112,6 +119,14 @@ public class IncDelController {
         } catch (NullPointerException nex) {
             log4j.error(nex.toString());
         }
+
+        modal.setViewName("admin");
+        return modal;
+    }
+
+    @PostMapping("incDel/registred")
+    ModelAndView registredPOST(ModelAndView modal) {
+
 
         modal.setViewName("admin");
         return modal;
@@ -152,12 +167,30 @@ public class IncDelController {
 
     @PostMapping("incDel/orderProduct/add")
     ModelAndView addOrderToIncDel(ModelAndView modal, @Valid OrderIncDel orderIncDel, IncDel incDel) {
-
+        int qtyProductQty = 0;
         log4j.info("Start orderProduct/add");
         try {
             incDel = incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString());
             orderIncDel.setIncDelJOIN(incDel);
             orderIncDelRepository.save(orderIncDel);
+
+
+            for (OrderIncDel order : orderIncDelRepository.findByIncDelJOIN(incDel)
+                    ) {
+                qtyProductQty += order.getQty();
+            }
+
+            httpSession.setAttribute("qtyProductQty", qtyProductQty);
+            log4j.info("httpSession qtyProductQty set : " + qtyProductQty);
+//            modal.addObject("qtyProductQty", qtyProductQty);
+
+            if (qtyProductQty == 0) {
+                log4j.error("qtyProductQty = 0 ");
+            } else {
+                log4j.info("qtyProductQty  : " + qtyProductQty);
+            }
+
+
         } catch (NullPointerException ne) {
             log4j.warn(" @PostMapping incDel/orderProduct/add : " + ne.toString());
         } catch (Exception ex) {
@@ -165,7 +198,9 @@ public class IncDelController {
 
         }
         modal.addObject("incDel", incDel);
+//        modal.setViewName("forward:/incDel/registred");
         modal.setViewName("redirect:/incDel/registred");
+//        modal.setViewName("admin");
         return modal;
     }
 
@@ -202,7 +237,7 @@ public class IncDelController {
     }
 
 
-//    @ModelAttribute("incDel")
+    //    @ModelAttribute("incDel")
 //    public IncDel incDel() {
 //        try{
 //            return incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString());
@@ -211,7 +246,24 @@ public class IncDelController {
 //            return new IncDel("Generate automaticly");
 //        }
 //    }
+    @ModelAttribute("qtyProductQty")
+    public int qtyProductQty() {
+        try {
+            return (int) httpSession.getAttribute("qtyProductQty");
+        } catch (NullPointerException ex) {
+            return 0;
+        }
 
+    }
+
+    @ModelAttribute("httpIncDel")
+    public IncDel httpIncDel(IncDel incDel) {
+        try {
+            return incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString());
+        } catch (NullPointerException nex) {
+            return new IncDel("incDel not found ");
+        }
+    }
 
     @ModelAttribute("productsList")
     public List<String> productsList() {
@@ -245,12 +297,38 @@ public class IncDelController {
 
     @ModelAttribute("urlReq")
     public String urlReq() {
+        log4j.info("urlReq : " + httpServletRequest.getRequestURL());
         return String.valueOf(httpServletRequest.getRequestURL());
     }
 
     @ModelAttribute("uriReq")
     public String uriReq() {
-        return String.valueOf(httpServletRequest.getRequestURI());
+
+
+        log4j.info("uriReq : " + httpServletRequest.getRequestURI());
+
+        return String.valueOf(
+                httpServletRequest.getRequestURI());
+    }
+
+    @ModelAttribute("uriReqSecondParametr")
+    public String uriReqSecondParametr() {
+
+        String uri = httpServletRequest.getRequestURI();
+        int positionSearchingCh = 0;
+        String result;
+        char[] chArray = uri.toCharArray();
+        for (int i = 1; i < chArray.length; i++) {
+            if (chArray[i] == '/') {
+                positionSearchingCh = i;
+            }
+        }
+        result = uri.substring(positionSearchingCh + 1, uri.length());
+
+        httpSession.setAttribute("uriReqSecondParametr", result);
+        log4j.info("httpSession set uriReqSecondParametr: " + result);
+
+        return result;
     }
 
 
@@ -286,7 +364,7 @@ public class IncDelController {
         } catch (Exception ex) {
             httpSession.setAttribute("locale", "rus");
         }
-
+        log4j.info("locale :" + (String) httpSession.getAttribute("locale"));
         return (String) httpSession.getAttribute("locale");
     }
 
@@ -306,6 +384,7 @@ public class IncDelController {
 //        if (userName.toUpperCase().equals("ANONYMOUSUSER")) {
 //            userName = "";
 //        }
+        log4j.info("principal : " + userName);
         return userName;
     }
 
@@ -319,6 +398,7 @@ public class IncDelController {
         } else {
             userName = principal.toString();
         }
+        log4j.info("getPrincipal :" + userName);
         return userName;
     }
 

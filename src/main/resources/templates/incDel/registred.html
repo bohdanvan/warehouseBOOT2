@@ -1,0 +1,317 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+
+<div th:fragment="frag (client,eng )">
+
+    <!-- top tiles -->
+    <div class="row tile_count">
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Delivery Number</span>
+            <div class="count" th:text="${httpIncDel.id}">
+
+            </div>
+            <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-clock-o"></i> Destination </span>
+            <div class="count">UKR.2.F </div>
+            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-cubes"></i> Total Qty </span>
+            <div class="count green" th:text="${qtyProductQty}"></div>
+            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-cube"></i> Total Weight </span>
+            <div class="count">0</div>
+            <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-cube"></i> Total Volume Weight</span>
+            <div class="count">0</div>
+            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+        </div>
+        <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+            <span class="count_top"><i class="fa fa-user"></i> Total Summ</span>
+            <div class="count">0 </div>
+            <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+        </div >
+    </div>
+    <!-- /top tiles -->
+
+    <div class="row" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml"
+         ng-contoller="Ctrl">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+            <div class="x_panel">
+
+                <div class="x_title">
+
+
+
+
+                    <h2> customs declaration CN23 #  <span th:text="${incDel.number}"></span> </h2>
+
+                    <!--<br/>-->
+                    <!--<span th:text="${error}"></span>-->
+                    <!--<ul>-->
+                        <!--<li th:each="err : ${#fields.errors('*')}" th:text="${err}"/>-->
+                    <!--</ul>-->
+
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Settings 1</a>
+                                </li>
+                                <li><a href="#">Settings 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>  <!-- x-title -->
+
+
+                <div class="x_content">
+
+
+
+
+
+                        <div class="container">
+
+                            <!-- Trigger the modal with a button -->
+                            <button type="button" class="btn btn-default btn-md" data-toggle="modal"
+                                    data-target="#myModal">
+                                Add New Product
+                            </button>
+
+                            <a type="button" class="btn btn-default btn-md">Add Invoice</a>
+
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+
+
+                            </div>
+
+
+                            <div class="table-responsive" style="margin-top:5px">
+                                <table class="table table-striped jambo_table bulk_action">
+                                    <thead>
+                                    <tr class="headings">
+                                        <th class="column-title">num</th>
+                                        <th class="column-title">product Name</th>
+                                        <th class="column-title">url</th>
+                                        <th class="column-title">qty</th>
+                                        <th class="column-title">price</th>
+
+                                        <th class="column-title">
+                                            <i class="fa fa-usd" aria-hidden="true"></i>
+                                            Amount
+                                        </th>
+                                        <th class="column-title">Status</th>
+                                        <th class="column-title no-link last"><span class="nobr">Action</span>
+                                        </th>
+                                        <!--<th class="bulk-actions" colspan="7">-->
+                                        <!--<a class="antoo" style="color:#fff; font-weight:500;">Bulk Actions ( <span-->
+                                        <!--class="action-cnt"> </span> ) <i class="fa fa-chevron-down"></i></a>-->
+                                        <!--</th>-->
+                                    </tr>
+                                    </thead>
+
+                                    <tbody>
+
+                                    <!--<div ng-repeat="order in ordersIncDelList">-->
+
+
+                                    <tr th:each="order,iterationStatus  : ${ordersIncDelList} ">
+
+                                        <td th:text="${iterationStatus.count}">1</td>
+                                        <td class=" " th:text="${order.productName}"></td>
+                                        <td class=" " th:text="${order.url}"></td>
+                                        <td class=" " th:text="${order.qty}"></td>
+                                        <td class=" " th:text="${order.price}">
+                                            <i class="fa fa-usd" aria-hidden="true"></i>
+
+                                        </td>
+                                        <td class=" "><i class="fa fa-usd" aria-hidden="true"></i>
+                                            680
+                                        </td>
+                                        <td class="a-right a-right ">Paid</td>
+                                        <td class="last">
+                                            <a href="#"><i class="fa fa-pencil" aria-hidden="true"></i></a>
+
+                                            <a th:href="@{'/incDel/orderProduct/del'(orderId=${order.id})}"
+
+                                               style="margin-left: 10px"><i class="fa fa-trash-o"
+                                                                            aria-hidden="true"></i></a>
+
+                                        </td>
+
+                                    </tr>
+
+
+                                    <!--</div>   ng-reapit -->
+                                    </tbody>
+                                </table>
+                            </div>
+
+
+                            <div class="ln_solid"></div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3" style="margin-top:1%">
+
+                                    <!--<input type="text" name="id" th:field="*{id}"/>-->
+                                    <!--<input type="text" name="number" th:field="*{number}"/>-->
+                                    <input type="hidden" name="${_csrf.parameterName}"
+                                           value="${_csrf.token}"/>
+
+                                    <span th:text="${info}"></span>
+
+                                    <button type="reset" class="btn btn-primary">Cancel</button>
+                                    <button type="submit" class="btn btn-success">Submit</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+
+
+                </div> <!-- x-content -->
+
+            </div>   <!-- x-panel -->
+
+
+        </div>
+
+    </div> <!--</row>-->
+
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog" ng-controller="Ctrl">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title">Add New Product Form</h4>
+                </div><!--modal-header-->
+
+                <div class="modal-body">
+
+
+                    <form method="POST" name="incDel" action="#" class="form-horizontal "
+                          th:object="${orderIncDel}" th:action="@{orderProduct/add}">
+
+                        <div class="row">
+                            <div class="form-group">
+
+                            </div>
+                            <label for="sel1" class="control-label col-md-2 col-sm-2 col-xs-6">Product </label>
+
+
+                            <div class="col-md-5 col-sm-4 col-xs-6">
+
+                                <select class="form-control" th:field="*{productName}">
+                                    <option th:each="product : ${productsList}" th:value="${product}"
+                                            th:text="${product}">Product
+                                    </option>
+                                </select>
+
+                                <!--<div class="form-control" id="sel1" ng-modal="productName" th:field="*{productName}">-->
+                                <!--<div>-->
+                                <!--<option></option>-->
+                                <!--<option>Shoes</option>-->
+                                <!--</div>-->
+                                <!--</select>-->
+                            </div>
+
+                            <div class="col-md-2 col-sm-2 col-xs-4">
+                                <input type="text"
+                                       class="form-control"
+                                       required="required"
+                                       th:placeholder="qty"
+                                       name="qty"
+                                       ng-modal="qty"
+                                       th:field="*{qty}"/>
+                            </div>
+                            <div class="col-md-2 col-sm-2 col-xs-4">
+                                <input type="text"
+                                       class="form-control"
+                                       required="required"
+                                       th:placeholder="usd"
+                                       name="price"
+                                       ng-modal="price"
+                                       th:field="*{price}"/>
+                            </div>
+
+
+                            <label for="url" class="control-label col-md-2 col-sm-2 col-xs-2"
+                                   style="margin-top:2%">URL </label>
+                            <div class="col-md-10 col-sm-10 col-xs-10" style="margin-top:2%">
+                                <input id="url"
+                                       type="text" class="form-control" required="required"
+                                       placeholder=" enter the website link to your product "
+                                       name="url"
+                                       ng-modal="url"
+                                       th:field="*{url}"/>
+                            </div>
+
+                            <!--<a href="#" data-toggle="tooltip" title="add new product">-->
+                            <!--<i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>-->
+                        </div>
+                        <br/>
+
+                        <div class="modal-footer">
+                            <button type="submit"
+                                    class="btn btn-default"
+                                    ng-click="add()"
+                                    ng-enter="update()">
+                                Add Product
+                            </button>
+                            <button type="button" class="btn " data-dismiss="modal">Close</button>
+
+                        </div>
+                    </form>
+
+
+                </div>   <!--modal body end-->
+
+            </div>
+        </div>
+
+    </div>
+
+
+    <!--</div>-->
+
+
+
+
+
+
+</div> <!--////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+</body>
+
+</html>

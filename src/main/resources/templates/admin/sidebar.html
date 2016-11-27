@@ -15,7 +15,7 @@
                     <a><i class="fa fa-home"></i> Users <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
 
-                        <li><a href="/users">Users</a></li>
+                        <li><button href="/users">Users</button></li>
                         <li><a href="/newUser">Add User</a></li>
 
                     </ul>
@@ -157,7 +157,7 @@
                 <h4 class="panel-title">
 
                     <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        <i class="fa fa-user fa-2x"></i> Users <span class="fa fa-chevron-down"></span>
+                        <i class="fa fa-user"></i> Users <span class="fa fa-chevron-down"></span>
                     </a>
 
                 </h4>
@@ -166,11 +166,10 @@
             <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
                 <div class="panel-body">
                     <ul >
-
-                        <li><a href="/users"><i class="fa fa-arrow-right "></i> Users</a></li>
-                        <li><a href="/user/new"><i class="fa fa-arrow-right "></i>Add User</a></li>
-
+                        <li><a href="/users"><i class="fa fa-user "></i> Users</a></li>
+                        <li><a href="/user/new"><i class="fa fa-user "></i>Add User</a></li>
                     </ul>
+                    <input type="button" value="Load new document" onclick="newDoc()"/>
                 </div>
             </div>
         </div>
@@ -188,8 +187,8 @@
             <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
                 <div class="panel-body">
                     <ul >
-                        <li><a href="incDel/new">add new</a></li>
-                        <li><a href="incDel/all">all</a></li>
+                        <li><a href="/incDel/new" style="margin-top: 10%">add new</a></li>
+                        <li><a href="/incDel/all" style="margin-top: 10%">all</a></li>
 
                     </ul>
                     Description <a href="/"></a>

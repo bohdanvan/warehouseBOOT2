@@ -1,0 +1,250 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div th:fragment="eng">
+    <br/>
+    <h1> eng ${locale} </h1>
+</div> <!--////////////////////////////////////////////////////////////////////////////////////-->
+
+
+<div th:fragment="frag (client,eng)">
+    <span th:text="${uriReq}+' :: '+${locale}"></span>
+</div>
+<div th:fragment="frag (client,eng1)">
+
+
+    <div class="row">
+
+        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+
+
+            <div class="x_panel">
+
+                <div class="x_title">
+                    <h2>
+                        customs declaration CN23
+
+                        <span th:text="${incDel.id}"></span>
+                        /
+                        <span th:text="${incDel.number}"></span>
+
+
+                    </h2>
+                    <br/>
+                    <span th:text="${error}"></span>
+                    <ul>
+                        <li th:each="err : ${#fields.errors('*')}" th:text="${err}"/>
+                    </ul>
+
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Settings 1</a>
+                                </li>
+                                <li><a href="#">Settings 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>  <!-- x-title -->
+
+
+                <div class="x_content">
+
+                    <form method="POST" name="incDel" action="/incDel/new" class="form-horizontal "
+                          th:object="${incDel}" th:action="@{/incDel/new}">
+                        <!--form-label-left input_mask   -->
+
+                        <div class="row" style="margin-top:5px">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-6">
+                                <a href="#" data-toggle="tooltip" title="
+                                select the supplier of your product">
+                                    <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>
+                                Supplier
+                            </label>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+
+                                <input type="text" class="form-control" required="required"
+                                       placeholder="Supplier company name" name="supplier" th:field="*{supplier}"/>
+
+                                <ul>
+                                    <li style="color:red;" th:each="err : ${#fields.errors('supplier')}"
+                                        th:text="${err}"></li>
+
+                                </ul>
+                            </div>
+
+
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <input type="text" class="form-control" required="required"
+                                       placeholder="Currier Company delivery tracking number"
+                                       name="currierTrackNumber" th:field="*{currierTrackNumber}"/>
+                            </div>
+                            <label class="col-md-2 col-sm-2 col-xs-6">Tracking
+                                <a href="#" data-toggle="tooltip" title="'
+                                Important ! ">
+                                    <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i>
+                                </a>
+                            </label>
+                        </div>
+
+
+                        <div class="row" style="margin-top:5px">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-6">
+                                <a href="#" data-toggle="tooltip" title="
+                                Full adress your supplier">
+                                    <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i>
+                                </a>
+                                Adress
+                            </label>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <input type="text" class="form-control" required="required"
+                                       placeholder="City Street House Room" th:field="*{destinationFROM}">
+                            </div>
+
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <input type="text"
+                                       class="form-control"
+                                       required="required"
+                                       placeholder="Invoice number from supplier"
+                                       name="supplierInvoice"
+                                       th:field="*{supplierInvoice}"/>
+                            </div>
+                            <label class="col-md-2 col-sm-2 col-xs-6">Invoice
+                                <a href="#" data-toggle="tooltip" title="
+                                Number invoice from suppler ">
+                                    <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i>
+                                </a></label>
+                        </div>
+
+                        <div class="ln_solid"></div>
+
+                        <div class="row" style="margin-top:2%">
+
+                            <label class="col-md-2 text-right">
+                                <a href="#" data-toggle="tooltip" title="
+                                Select the way how you want to send the goods">
+                                    <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>
+                                &nbsp; Shipping Type :
+                            </label>
+
+                            <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback text-center">
+
+
+                                <input type="radio" name="shippingType" value="air" checked="true"/>
+                                <i class="fa fa-plane fa-2x" aria-hidden="true"> </i> &nbsp;air&nbsp;
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="shippingType" value="sea"/>
+                                <i class="fa fa-ship fa-2x" aria-hidden="true"> </i>&nbsp;sea &nbsp;
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="shippingType" value="land"/>
+                                <i class="fa fa-truck fa-2x" aria-hidden="true"></i>&nbsp;truck&nbsp;
+
+                            </div>
+
+                            <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback text-center">
+
+                                <input type="radio" name="customsType" value="post" checked="true"/>
+                                <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>&nbsp; Post &nbsp;
+
+                                &nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="customsType" value="official" disabled="true"/>
+                                <i class="fa fa-university fa-2x" aria-hidden="true"></i> &nbsp;Official&nbsp;
+
+
+                            </div>
+                            <label class="col-md-2">
+
+                                Customs Type : &nbsp;
+                                <a href="#" data-toggle="tooltip" title="
+                                Please select the type of customs clearance">
+                                    <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>
+                            </label>
+
+                        </div>
+
+
+                        <div class="ln_solid"></div>
+
+
+                        <div class="container">
+
+
+
+
+
+                            <div class="col-md-12 col-sm-12 col-xs-12">
+
+
+                            </div>
+
+
+
+
+
+                            <div class="ln_solid"></div>
+
+
+                            <div class="form-group">
+                                <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3" style="margin-top:1%">
+
+                                    <!--<input type="text" name="id" th:field="*{id}"/>-->
+                                    <!--<input type="text" name="number" th:field="*{number}"/>-->
+                                    <input type="hidden" name="${_csrf.parameterName}"
+                                           value="${_csrf.token}"/>
+
+                                    <span th:text="${info}"></span>
+
+                                    <button type="reset" class="btn btn-primary">Cancel</button>
+                                    <button type="submit" class="btn btn-success">Next</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    </form>
+
+
+                </div> <!-- x-content -->
+
+            </div>   <!-- x-panel -->
+
+
+        </div>
+
+    </div> <!--</row>-->
+
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+    <!--</div>-->
+
+
+</div> <!--////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+<div th:fragment="">
+
+</div> <!--////////////////////////////////////////////////////////////////////////////////////-->
+
+
+</body>
+
+</html>

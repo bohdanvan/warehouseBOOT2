@@ -112,10 +112,12 @@
                 <!--<div th:include="incDel/all :: frag (client,${locale})"> </div>-->
                 <!--</div>-->
 
-                <div th:if="${uriReq} == 'admin'">
-                    <div th:include="/incDel/all :: frag (client,${locale})"></div>
+                <!--<div th:if="${uriReq} == 'admin'">-->
 
-                </div>
+                    <!--<div th:include="/incDel/all :: frag (client,${locale})"></div>-->
+
+                <!--</div>-->
+
                 <div th:if="${uriReq} != 'admin'">
                     <div th:include="${uriReq} :: frag (client,${locale})"></div>
 

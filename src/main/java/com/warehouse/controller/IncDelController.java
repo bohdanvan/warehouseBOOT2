@@ -115,8 +115,11 @@ public class IncDelController {
     @GetMapping("/incDel/new")
     public String newDelivery(Model model) {
         model.addAttribute("incDel", new IncDel());
-
-
+         try {
+             httpSession.removeAttribute("incDelNumber");
+         }catch (Exception ex){
+             log4j.warn(" @GetMapping(/incDel/new) -  incDelNumber was not found :"+ex.toString() );
+         }
 //        model.addAttribute("incDel", new IncDel());
 //        log4j.info("Create new IncDel ");
 //        log4j.info("IncDel set number / GET " + incDel.getNumber());
@@ -174,7 +177,15 @@ public class IncDelController {
     ModelAndView registred(ModelAndView modal) {
 
         try {
-            modal.addObject("incDel", incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString()));
+            IncDel incDel = incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString());
+            modal.addObject("incDel",incDel );
+            int qty = 0 ;
+            for (OrderIncDel order:  orderIncDelRepository.findByIncDelJOIN(incDel)
+                 ) {
+                  qty += order.getQty();
+            }
+            modal.addObject("qtyProductQty",qty);
+            log4j.info("qtyProductQty refresh :"+qty );
         } catch (NullPointerException nex) {
             log4j.error("incDel/registred :" + nex.toString());
         }
@@ -182,6 +193,8 @@ public class IncDelController {
         modal.setViewName("admin");
         return modal;
     }
+
+
 
     @GetMapping("incDel/edit")
     ModelAndView registredParam(ModelAndView modal, @RequestParam String incDelNumber) {
@@ -312,8 +325,21 @@ public class IncDelController {
     @GetMapping("/incDel/orderProduct/del")
     ModelAndView delOrderFromIncDel(ModelAndView modal, @RequestParam String orderId) {
 
-        log4j.info(" @PathVariable String orderId : " + orderId);
+        OrderIncDel orderIncDel = orderIncDelRepository.getOne(Long.valueOf(orderId));
+        IncDel incDel = incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString());
+        double amount = incDel.getAmount()- orderIncDel.getAmount();
+
+        if(amount >= 0){
+            incDel.setAmount(amount);
+            incDelRepository.save(incDel);
+            log4j.info("incDel.amount set : "+ incDel.getAmount() );
+        }  else {
+            incDel.setAmount(0);
+            log4j.error("@GetMapping(/incDel/orderProduct/del)  - amount less then 0 :" +amount);
+        }
+        log4j.info("@RequestParam String orderId is :" + orderId);
         orderIncDelRepository.delete(Long.valueOf(orderId));
+
         modal.setViewName("redirect:/incDel/registred");
         return modal;
     }
@@ -322,7 +348,7 @@ public class IncDelController {
     @GetMapping("/incDel/succes")
     ModelAndView incDelSucces(ModelAndView modal, @RequestParam String incDelNumber) {
         httpSession.removeAttribute("incDelNumber");
-        log4j.info(" http - incDelNumber was removed");
+        log4j.info(" http - incDelNumber was removed :"+incDelNumber);
         modal.setViewName("redirect:/incDel/all");
         return modal;
     }

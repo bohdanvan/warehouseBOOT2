@@ -54,7 +54,7 @@ public class RootController  {
         } catch (Exception n) {
             httpSession.setAttribute("locale", "rus");
         }
-        return "admin";
+        return "redirect:/log";
 //        return "root";
     }
 

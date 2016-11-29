@@ -61,15 +61,15 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
 
-        String url =
-                "?useLegacyDatetimeCode=false&serverTimezone=America/New_York";
-        ds.setUrl("jdbc:mysql://localhost:3306/app" + url);
-        ds.setUsername("root");
-        ds.setPassword("admin");
+//        String url =
+//                "?useLegacyDatetimeCode=false&serverTimezone=America/New_York";
+//        ds.setUrl("jdbc:mysql://localhost:3306/app" + url);
+//        ds.setUsername("root");
+//        ds.setPassword("admin");
 
-//        ds.setUrl("jdbc:mysql://warehouse-mysql:3306/demo");
-//        ds.setUsername("demo_user");
-//        ds.setPassword("demo_pass");
+        ds.setUrl("jdbc:mysql://warehouse-mysql:3306/demo");
+        ds.setUsername("demo_user");
+        ds.setPassword("demo_pass");
 
         return ds;
     }

@@ -21,6 +21,7 @@ public class IncDel implements Serializable {
     private String number;
     private double weight;
     private double volWeight;
+    private double amount;
     private int boxQty;
     private String warehouseID;
     private String destinationFROM;
@@ -39,10 +40,10 @@ public class IncDel implements Serializable {
     private String shippingType;
     private long lastIdForRegistration;
 
-    //    @OneToMany(mappedBy = "incDelJOIN", cascade = CascadeType.ALL, orphanRemoval = true)
+        @OneToMany(mappedBy = "incDelJOIN", cascade = CascadeType.ALL, orphanRemoval = true)
 //    @OneToMany(targetEntity = OrderIncDel.class)
 //    private List<OrderIncDel> ordersListJOIN = new ArrayList<>();
-    @OneToMany(mappedBy = "incDelJOIN")
+//    @OneToMany(mappedBy = "incDelJOIN")
     private Set<OrderIncDel> ordersHashSetJOIN = new HashSet<>();
 
     public void addOrder(OrderIncDel orderIncDel) {
@@ -71,6 +72,14 @@ public class IncDel implements Serializable {
 
 
     public IncDel() {
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 
     public IncDel(String number) {

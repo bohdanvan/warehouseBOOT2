@@ -6,7 +6,7 @@
 <body>
 
 
-<div th:fragment="frag (client,eng )">
+<div th:fragment="frag (client,eng)">
 
     <!-- top tiles -->
     <div class="row tile_count">
@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <span class="count_top"><i class="fa fa-clock-o"></i> Destination </span>
-            <div class="count">UKR.2.F </div>
+            <div class="count">UK</div>
             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
         </div>
         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
@@ -39,14 +39,16 @@
         </div>
         <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
             <span class="count_top"><i class="fa fa-user"></i> Total Summ</span>
-            <div class="count">0 </div>
+            <div class="count" th:text="${amountIncDel}">
+
+            </div>
             <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
         </div >
     </div>
     <!-- /top tiles -->
 
-    <div class="row" xmlns:th="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/xhtml"
-         ng-contoller="Ctrl">
+    <div class="row" >
+
 
         <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
 
@@ -148,8 +150,9 @@
                                             <i class="fa fa-usd" aria-hidden="true"></i>
 
                                         </td>
-                                        <td class=" "><i class="fa fa-usd" aria-hidden="true"></i>
-                                            680
+                                        <td class=" " th:text="${order.amount}">
+                                            <i class="fa fa-usd" aria-hidden="true"></i>
+
                                         </td>
                                         <td class="a-right a-right ">Paid</td>
                                         <td class="last">
@@ -185,7 +188,12 @@
                                     <span th:text="${info}"></span>
 
                                     <button type="reset" class="btn btn-primary">Cancel</button>
-                                    <button type="submit" class="btn btn-success">Submit</button>
+                                    <!--<button type="submit" class="btn btn-success">Submit</button>-->
+                                    <a type="submit"
+                                       class="btn btn-success"
+                                       th:href="@{'/incDel/succes'(incDelNumber=${incDelNumber})}">
+                                        Submit
+                                    </a>
                                 </div>
                             </div>
 

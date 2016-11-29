@@ -18,6 +18,7 @@ import org.springframework.web.servlet.ModelAndView;
 
 
 import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 import java.util.ArrayList;
@@ -47,19 +48,73 @@ public class IncDelController {
     HttpSession httpSession;
     @Autowired
     HttpServletRequest httpServletRequest;
+    @Autowired
+    HttpServletResponse httpServletResponce;
 
     private final String INCDEL_PATH = "/incDel/new";
+
+    @ModelAttribute("data")
+    public String data() {
+        try {
+//            log4j.info("httpSession.getId() :" + httpSession.getId());
+//            log4j.info("httpSession.getMaxInactiveInterval() :" + String.valueOf(httpSession.getMaxInactiveInterval()));
+//            log4j.info("httpSession.getServletContext().getContextPath() :" + httpSession.getServletContext().getContextPath());
+//            log4j.info("httpSession.getServletContext().getServerInfo() :" + httpSession.getServletContext().getServerInfo());
+//            log4j.info("httpSession.getServletContext().getVirtualServerName() :" + httpSession.getServletContext().getVirtualServerName());
+//            log4j.info("httpSession.getServletContext().toString() :" + httpSession.getServletContext().toString());
+//        log4j.info(" :"+httpSession);
+
+//            log4j.info("httpServletRequest.getQueryString() :" + httpServletRequest.getQueryString());
+//            log4j.info("httpServletRequest.getAuthType() :" + httpServletRequest.getAuthType());
+//            log4j.info("httpServletRequest.getPathTranslated() :" + httpServletRequest.getPathTranslated());
+//            log4j.info("httpServletRequest.getPathInfo() :" + httpServletRequest.getPathInfo());
+            log4j.info("httpServletRequest.getContextPath() :" + httpServletRequest.getContextPath());
+            log4j.info("httpServletRequest.getServletPath() :" + httpServletRequest.getServletPath());
+            log4j.info("httpServletRequest.getLocale() :" + httpServletRequest.getLocale());
+            log4j.info("httpServletRequest.getRequestedSessionId() :" + httpServletRequest.getRequestedSessionId());
+//            log4j.info("httpServletRequest.getServerPort() :" + httpServletRequest.getServerPort());
+//            log4j.info("httpServletRequest.getLocalPort() :" + httpServletRequest.getLocalPort());
+            log4j.info("httpServletRequest.getRemotePort() :" + httpServletRequest.getRemotePort());
+            log4j.info("httpServletRequest.getUserPrincipal() :" + httpServletRequest.getUserPrincipal());
+            log4j.info("httpServletRequest.getRemoteUser() :" + httpServletRequest.getRemoteUser());
+//            log4j.info("httpServletRequest.getRemoteAddr() :" + httpServletRequest.getRemoteAddr());
+//            log4j.info("httpServletRequest.getRemoteHost() :" + httpServletRequest.getRemoteHost());
+//            log4j.info("httpServletRequest.getRemotePort() :" + httpServletRequest.getRemotePort());
+//            log4j.info("httpServletResponce.getCharacterEncoding() :" + httpServletResponce.getCharacterEncoding());
+//            log4j.info("httpServletResponce.getContentType() :" + httpServletResponce.getContentType());
+//            log4j.info(" httpServletResponce.getStatus() :" + httpServletResponce.getStatus());
+//            log4j.info("httpServletResponce.getBufferSize() :" + httpServletResponce.getBufferSize());
+//            log4j.info("httpServletResponce - get status :" + String.valueOf(httpServletResponce.getStatus()));
+//            log4j.info("httpServletResponce.isCommitted() :" + String.valueOf(httpServletResponce.isCommitted()));
+
+        } catch (NullPointerException ex) {
+            log4j.error("================ check full data block :" + ex.fillInStackTrace().getLocalizedMessage());
+            log4j.error("================ check full data block :" + ex.getStackTrace().toString());
+        }
+        return new String("data");
+    }
+
+
+    @GetMapping("admin/navigation")
+    ModelAndView navigation(ModelAndView modal) {
+
+
+        modal.setViewName("admin");
+        return modal;
+    }
+
+    @GetMapping("incDel/all")
+    ModelAndView incDelAll(ModelAndView modal) {
+
+        modal.addObject("incDelsList", incDelRepository.findAll());
+        modal.setViewName("admin");
+        return modal;
+    }
+
 
     @GetMapping("/incDel/new")
     public String newDelivery(Model model) {
         model.addAttribute("incDel", new IncDel());
-
-
-
-
-
-
-
 
 
 //        model.addAttribute("incDel", new IncDel());
@@ -89,25 +144,29 @@ public class IncDelController {
 
 
         if (errors.getErrorCount() == 0) {
-            log4j.info("errors == 0");
-            log4j.info(errors.toString());
+            log4j.info(" /incDel/new - BindingResult errors == 0");
 
 
-             incDel.setNumber(String.valueOf(System.nanoTime()));
-             incDelRepository.save(incDel);
+            incDel.setNumber(String.valueOf(System.nanoTime()));
+            incDelRepository.save(incDel);
+            log4j.info("incDel was saved succes - id is :" + incDel.getId());
 
-             httpSession.setAttribute("incDelNumber", incDel.getNumber());                                incDelRepository.save(incDel);
-             log4j.info("http incDelNumber set :" + httpSession.getAttribute("incDelNumber").toString());
-              return "redirect:/incDel/registred";
+            httpSession.setAttribute("incDelNumber", incDel.getNumber());
+
+            try {
+                log4j.info("http incDelNumber set :" + httpSession.getAttribute("incDelNumber").toString());
+            } catch (NullPointerException ex) {
+                log4j.error("httpSession incDel was not found");
+            }
+            return "redirect:/incDel/registred";
+
         } else {
 
-            log4j.warn(errors.toString());
+            log4j.warn("incDel/new : " + errors.toString());
+
             return "admin";
 
-
         }
-
-
     }
 
 
@@ -117,12 +176,39 @@ public class IncDelController {
         try {
             modal.addObject("incDel", incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString()));
         } catch (NullPointerException nex) {
-            log4j.error(nex.toString());
+            log4j.error("incDel/registred :" + nex.toString());
         }
 
         modal.setViewName("admin");
         return modal;
     }
+
+    @GetMapping("incDel/edit")
+    ModelAndView registredParam(ModelAndView modal, @RequestParam String incDelNumber) {
+
+        log4j.info("------------------------1--------------------------------------");
+        log4j.info(incDelNumber);
+        log4j.info("------------------------2--------------------------------------");
+
+//           log4j.info(httpSession.getAttribute("incDelNumber").toString());
+//           httpSession.removeAttribute("incDelNumber");
+        IncDel incDel = incDelRepository.findByNumber(incDelNumber);
+//        log4j.info("incDel/edit{incDelNumber} - find number :" + incDel.getNumber());
+        httpSession.setAttribute("incDelNumber", incDel.getNumber());
+        log4j.info("get httpSession.getAttribute(incDelNumber) :" + httpSession.getAttribute("incDelNumber").toString());
+
+        modal.setViewName("redirect:/incDel/registred");
+        return modal;
+    }
+
+    @GetMapping("incDel/del")
+    ModelAndView delIncDel(ModelAndView modal, @RequestParam String incDelNumber) {
+        incDelRepository.delete(incDelRepository.findByNumber(incDelNumber));
+        log4j.info("incDel/del - was delete succes , number is :" + incDelNumber);
+        modal.setViewName("redirect:/incDel/all");
+        return modal;
+    }
+
 
     @PostMapping("incDel/registred")
     ModelAndView registredPOST(ModelAndView modal) {
@@ -172,16 +258,34 @@ public class IncDelController {
         try {
             incDel = incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString());
             orderIncDel.setIncDelJOIN(incDel);
+            double amountOrder = orderIncDel.getPrice() * orderIncDel.getQty();
+            orderIncDel.setAmount(amountOrder);
+
+            if (incDel.equals(null) || amountOrder == 0)
+                log4j.error("incDel.equals(null) || amount == 0");
+
             orderIncDelRepository.save(orderIncDel);
 
-
+            double amountIncDel = 0.0;
             for (OrderIncDel order : orderIncDelRepository.findByIncDelJOIN(incDel)
                     ) {
                 qtyProductQty += order.getQty();
+                amountIncDel += order.getAmount();
             }
-
             httpSession.setAttribute("qtyProductQty", qtyProductQty);
-            log4j.info("httpSession qtyProductQty set : " + qtyProductQty);
+            httpSession.setAttribute("amountIncDel", amountIncDel);
+
+            incDel.setAmount(amountIncDel);
+            incDelRepository.save(incDel);
+            log4j.info("incDel save : " + incDel.getId() + " - " + incDel.getNumber());
+
+            log4j.info("a=======================mountIncDel : " + amountIncDel);
+            try {
+                log4j.info("httpSession qtyProductQty set : " + httpSession.getAttribute("qtyProductQty"));
+            } catch (NullPointerException ex) {
+                log4j.error("httpSession qtyProductQty set :" + ex.toString());
+                ex.printStackTrace();
+            }
 //            modal.addObject("qtyProductQty", qtyProductQty);
 
             if (qtyProductQty == 0) {
@@ -207,9 +311,19 @@ public class IncDelController {
 
     @GetMapping("/incDel/orderProduct/del")
     ModelAndView delOrderFromIncDel(ModelAndView modal, @RequestParam String orderId) {
+
         log4j.info(" @PathVariable String orderId : " + orderId);
         orderIncDelRepository.delete(Long.valueOf(orderId));
         modal.setViewName("redirect:/incDel/registred");
+        return modal;
+    }
+
+
+    @GetMapping("/incDel/succes")
+    ModelAndView incDelSucces(ModelAndView modal, @RequestParam String incDelNumber) {
+        httpSession.removeAttribute("incDelNumber");
+        log4j.info(" http - incDelNumber was removed");
+        modal.setViewName("redirect:/incDel/all");
         return modal;
     }
 
@@ -246,6 +360,20 @@ public class IncDelController {
 //            return new IncDel("Generate automaticly");
 //        }
 //    }
+
+    @ModelAttribute("amountIncDel")
+    public double amountIncDel() {
+        try {
+            return incDelRepository
+                    .findByNumber(httpSession.getAttribute("incDelNumber").toString())
+                    .getAmount();
+
+        } catch (NullPointerException ex) {
+            log4j.error(" @ModelAttribute('amountIncDel') :" + ex.toString());
+            return 0;
+        }
+    }
+
     @ModelAttribute("qtyProductQty")
     public int qtyProductQty() {
         try {
@@ -287,7 +415,6 @@ public class IncDelController {
             ordersIncDelList.add(orderIncDel);
             return ordersIncDelList;
         }
-
     }
 
     @ModelAttribute("orderIncDel")
@@ -297,18 +424,17 @@ public class IncDelController {
 
     @ModelAttribute("urlReq")
     public String urlReq() {
-        log4j.info("urlReq : " + httpServletRequest.getRequestURL());
+        log4j.info("urlReq :" + httpServletRequest.getRequestURL());
         return String.valueOf(httpServletRequest.getRequestURL());
     }
 
     @ModelAttribute("uriReq")
     public String uriReq() {
+        log4j.info("uriReq :" + httpServletRequest.getRequestURI());
+        String uri = httpServletRequest.getRequestURI();
 
+        return uri.substring(1, uri.length());
 
-        log4j.info("uriReq : " + httpServletRequest.getRequestURI());
-
-        return String.valueOf(
-                httpServletRequest.getRequestURI());
     }
 
     @ModelAttribute("uriReqSecondParametr")
@@ -326,8 +452,11 @@ public class IncDelController {
         result = uri.substring(positionSearchingCh + 1, uri.length());
 
         httpSession.setAttribute("uriReqSecondParametr", result);
-        log4j.info("httpSession set uriReqSecondParametr: " + result);
-
+        try {
+            log4j.info("httpSession uriReqSecondParametr set :" + result);
+        } catch (NullPointerException ex) {
+            log4j.error("httpSession uriReqSecondParametr set :" + ex.toString());
+        }
         return result;
     }
 

@@ -54,8 +54,10 @@ public class RootController  {
         } catch (Exception n) {
             httpSession.setAttribute("locale", "rus");
         }
-        return "root";
+        return "admin";
+//        return "root";
     }
+
 
 
     @RequestMapping("/home/new")

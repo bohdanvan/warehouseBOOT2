@@ -9,6 +9,7 @@ import com.warehouse.service.LangRepository;
 import com.warehouse.service.OrderIncDelRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.web.client.RestTemplate;
 
 import javax.servlet.http.HttpSession;
 import java.util.Collection;
@@ -50,6 +51,8 @@ public class GreetingController {
 
     @GetMapping("/order")
     public OrderIncDel orderGET() {
+        RestTemplate restTemplate = new RestTemplate();
+
 //        OrderIncDel orderIncDel = orderIncDelRepository.findOne(Long.valueOf(id));
         OrderIncDel orderIncDel = new OrderIncDel();
         orderIncDel.setProductName("progr name : counter is " + counter.incrementAndGet());

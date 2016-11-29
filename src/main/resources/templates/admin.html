@@ -98,20 +98,30 @@
                 <!-- page content -->
                 <!--<#&#45;&#45;=========================================================================================&ndash;&gt;-->
 
+                <!--<div th:if="${uriReq} == 'incDel/new'" >-->
+                <!--<div th:include="incDel/new :: frag (client,${locale})"> </div>-->
+
+                <!--</div>-->
+
+                <!--<div th:if="${uriReq} == 'incDel/registred'" >-->
+                <!--<div th:include="incDel/registred:: frag (client,${locale})"></div>-->
+
+                <!--</div>-->
+
+                <!--<div th:if="${uriReq} == 'incDel/all'" >-->
+                <!--<div th:include="incDel/all :: frag (client,${locale})"> </div>-->
+                <!--</div>-->
+
+                <div th:if="${uriReq} == 'admin'">
+                    <div th:include="/incDel/all :: frag (client,${locale})"></div>
+
+                </div>
+                <div th:if="${uriReq} != 'admin'">
+                    <div th:include="${uriReq} :: frag (client,${locale})"></div>
+
+                </div>
 
 
-                <!--<div th:include="admin/incDel/new ::eng"></div>-->
-                <!--<div th:include="admin/incDel/new :: ${locale}"></div>-->
-        <!---->
-
-
-                <!--<div th:include="admin/incDel/new ::frag (registred,${locale})">registred not found</div>-->
-                <!--<div th:include="${uriReq} :: frag (client,${locale})">...</div>-->
-
-                <!--<div th:include="/incDel/new :: frag (client,${locale})">...</div>-->
-
-                <!--<div th:include="/incDel/registred :: frag (client,${locale})">...</div>-->
-                <div th:include="${uriReq} :: frag (client,${locale})">...</div>
 
 
                 <!--<div th:include="admin/incDel/new ::frag (onevar=${value1},twovar=${value2})">...</div>-->

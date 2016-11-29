@@ -12,14 +12,13 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
-import org.springframework.transaction.annotation.EnableTransactionManagement;
-import org.springframework.web.servlet.ViewResolver;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
+import javax.persistence.EntityManagerFactory;
+import javax.sql.DataSource;
+
 //import org.thymeleaf.TemplateEngine;
 //import org.thymeleaf.spring4.SpringTemplateEngine;
 //import org.thymeleaf.spring4.templateresolver.SpringResourceTemplateResolver;
@@ -27,9 +26,6 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 //import org.thymeleaf.templatemode.TemplateMode;
 //import org.thymeleaf.templateresolver.ClassLoaderTemplateResolver;
 //import org.thymeleaf.templateresolver.ITemplateResolver;
-
-import javax.persistence.EntityManagerFactory;
-import javax.sql.DataSource;
 
 
 @Configuration
@@ -70,7 +66,7 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         ds.setUrl("jdbc:mysql://localhost:3306/app" + url);
         ds.setUsername("root");
         ds.setPassword("admin");
-//
+
 //        ds.setUrl("jdbc:mysql://warehouse-mysql:3306/demo");
 //        ds.setUsername("demo_user");
 //        ds.setPassword("demo_pass");

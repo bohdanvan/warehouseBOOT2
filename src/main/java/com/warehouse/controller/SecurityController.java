@@ -86,7 +86,8 @@ public class SecurityController {
             Authentication result = am.authenticate(request);
             SecurityContextHolder.getContext().setAuthentication(result);
 
-            model.setViewName("redirect:/admin");
+//            model.setViewName("redirect:/admin");
+            model.setViewName("redirect:/incDel/new");  // FIXME: 28.11.2016 BAG - change to erdirect:/incDel/new"
 //            model.setViewName("admin");
 
 

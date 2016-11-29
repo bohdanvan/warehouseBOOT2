@@ -17,7 +17,9 @@ public class OrderIncDel {
     private String productName;
     private String url;
     private int qty;
-    private int price;
+    private double price;
+    private double amount;
+
 
     @JsonIgnore
     @ManyToOne/*(targetEntity = IncDel.class)/*(fetch = FetchType.EAGER)*/
@@ -25,12 +27,17 @@ public class OrderIncDel {
 
 
     public OrderIncDel() {
+
     }
 
     public OrderIncDel(String productName, String url) {  // FIXME: 24.11.2016 DELETE this constr
         this.productName = productName;
         this.url = url;
     }
+
+
+
+
 
     public IncDel getIncDelJOIN() {
         return incDelJOIN;
@@ -72,11 +79,18 @@ public class OrderIncDel {
         this.qty = qty;
     }
 
-    public int getPrice() {
+    public double getPrice() {
         return price;
     }
-
-    public void setPrice(int price) {
+    public void setPrice(double price) {
         this.price = price;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
     }
 }

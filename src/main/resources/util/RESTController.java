@@ -23,3 +23,28 @@
 //}
 //
 //
+
+
+page 540 Spring в действии
+
+public void updateSpittle(Spittle spittle) throws SpitterException {
+        try {
+        String url =
+        "http://localhost:8080/Spitter/spittles/"+ spittle.getId();
+        new RestTemplate().put(new URI(url), spittle);
+        } catch (URISyntaxException e) {
+        throw new SpitterUpdateException("Unable to update Spittle", e);
+        }
+        }
+
+public void updateSpittle(Spittle spittle) throws SpitterException {
+        restTemplate.put("http://localhost:8080/Spitter/spittles/{id}",
+        spittle, spittle.getId());
+        }
+
+public void updateSpittle(Spittle spittle) throws SpitterException {
+        Map<String, String> params = new HashMap<String, String>();
+        params.put("id", spittle.getId());
+        restTemplate.put("http://localhost:8080/Spitter/spittles/{id}",
+        spittle, params);
+        }

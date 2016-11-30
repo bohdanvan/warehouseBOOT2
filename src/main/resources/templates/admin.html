@@ -41,6 +41,21 @@
     <!--<script src="../static/js/custom.min.js" th:src="@{../js/custom.min.js}"></script>-->
 
 
+
+    <script src="../static/js/raphael.min.js" th:src="@{../js/raphael.min.js}"></script>
+    <script src="../static/js/morris.min.js" th:src="@{../js/morris.min.js}"></script>
+    <script src="../static/js/bootstrap-progressbar.min.js" th:src="@{../js/bootstrap-progressbar.min.js}"></script>
+    <script src="../static/js/moment.min.js" th:src="@{../js/moment.min.js}"></script>
+    <script src="../static/js/daterangepicker.js" th:src="@{../js/daterangepicker.js}"></script>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"
+            th:src="@{https://code.jquery.com/jquery-2.1.4.min.js}"
+            th:if="false"></script>
+    <script src="http://blackpeppersoftware.github.io/thymeleaf-fragment.js/thymeleaf-fragment.js"
+            th:src="@{http://blackpeppersoftware.github.io/thymeleaf-fragment.js/thymeleaf-fragment.js}"
+            defer="defer"
+            th:if="false"></script>
+
     <!--<link rel="stylesheet" type="text/css" media="all"-->
     <!--href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
 
@@ -87,46 +102,45 @@
         <div th:include="admin/navigation :: eng"></div>
 
 
-        <div class="right_col" role="main">
+        <div class="right_col" role="main" style="height: 800px">
             <div class=" ">
                 <div class="page-title">
-                    <div class="title_left">
 
+                    <div class="title_left">
+                        
+                      <div th:if="${uriReqSecondParametr == 'registred'}">
+                          <h2> customs declaration CN23 &nbsp;&nbsp;&nbsp;<small th:text="${incDel.number}">#  <span ></span></small> </h2>
+                      </div>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
                     </div>
-                </div>
+
+                    <div class="title_right">
+                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for...">
+                    <span class="input-group-btn">
+                      <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>  <!--/page titile-->
+
+                <div class="clearfix"></div>
                 <!-- page content -->
                 <!--<#&#45;&#45;=========================================================================================&ndash;&gt;-->
+                <div th:if="${uriReq} == 'admin'">
+                    <div th:include="profile/eng :: frag (client,${locale})"></div>
 
-                <!--<div th:if="${uriReq} == 'incDel/new'" >-->
-                <!--<div th:include="incDel/new :: frag (client,${locale})"> </div>-->
-
-                <!--</div>-->
-
-                <!--<div th:if="${uriReq} == 'incDel/registred'" >-->
-                <!--<div th:include="incDel/registred:: frag (client,${locale})"></div>-->
-
-                <!--</div>-->
-
-                <!--<div th:if="${uriReq} == 'incDel/all'" >-->
-                <!--<div th:include="incDel/all :: frag (client,${locale})"> </div>-->
-                <!--</div>-->
-
-                <!--<div th:if="${uriReq} == 'admin'">-->
-
-                    <!--<div th:include="/incDel/all :: frag (client,${locale})"></div>-->
-
-                <!--</div>-->
+                </div>
 
                 <div th:if="${uriReq} != 'admin'">
                     <div th:include="${uriReq} :: frag (client,${locale})"></div>
 
                 </div>
 
-
-
-
-                <!--<div th:include="admin/incDel/new ::frag (onevar=${value1},twovar=${value2})">...</div>-->
 
 
                 <!--<#&#45;&#45;============================================================================================&ndash;&gt;-->
@@ -144,3 +158,33 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+<!--<div th:include="admin/incDel/new ::frag (onevar=${value1},twovar=${value2})">...</div>-->
+
+
+<!--<div th:if="${uriReq} == 'incDel/new'" >-->
+<!--<div th:include="incDel/new :: frag (client,${locale})"> </div>-->
+
+<!--</div>-->
+
+<!--<div th:if="${uriReq} == 'incDel/registred'" >-->
+<!--<div th:include="incDel/registred:: frag (client,${locale})"></div>-->
+
+<!--</div>-->
+
+<!--<div th:if="${uriReq} == 'incDel/all'" >-->
+<!--<div th:include="incDel/all :: frag (client,${locale})"> </div>-->
+<!--</div>-->
+
+<!--<div th:if="${uriReq} == 'admin'">-->
+
+<!--<div th:include="/incDel/all :: frag (client,${locale})"></div>-->
+
+<!--</div>-->

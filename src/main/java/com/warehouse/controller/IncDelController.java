@@ -1,9 +1,6 @@
 package com.warehouse.controller;
 
-import com.warehouse.model.IncDel;
-import com.warehouse.model.OrderIncDel;
-import com.warehouse.model.User;
-import com.warehouse.model.UserRepository;
+import com.warehouse.model.*;
 import com.warehouse.service.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -41,6 +38,10 @@ public class IncDelController {
     @Autowired
     IncDelService incDelService;
     @Autowired
+    WhRepository whRepository;
+    @Autowired
+    CountryRepository countryRepository;
+    @Autowired
     LangRepository langRepository;
     @Autowired
     UserRepository userRepository;
@@ -48,8 +49,8 @@ public class IncDelController {
     HttpSession httpSession;
     @Autowired
     HttpServletRequest httpServletRequest;
-    @Autowired
-    HttpServletResponse httpServletResponce;
+//    @Autowired
+//    HttpServletResponse httpServletResponce;
 
     private final String INCDEL_PATH = "/incDel/new";
 
@@ -97,16 +98,6 @@ public class IncDelController {
 
     @GetMapping("admin/navigation")
     ModelAndView navigation(ModelAndView modal) {
-
-
-        modal.setViewName("admin");
-        return modal;
-    }
-
-    @GetMapping("incDel/all")
-    ModelAndView incDelAll(ModelAndView modal) {
-
-        modal.addObject("incDelsList", incDelRepository.findAll());
         modal.setViewName("admin");
         return modal;
     }
@@ -115,32 +106,16 @@ public class IncDelController {
     @GetMapping("/incDel/new")
     public String newDelivery(Model model) {
         model.addAttribute("incDel", new IncDel());
-         try {
-             httpSession.removeAttribute("incDelNumber");
-         }catch (Exception ex){
-             log4j.warn(" @GetMapping(/incDel/new) -  incDelNumber was not found :"+ex.toString() );
-         }
-//        model.addAttribute("incDel", new IncDel());
-//        log4j.info("Create new IncDel ");
-//        log4j.info("IncDel set number / GET " + incDel.getNumber());
-//        incDelRepository.save(incDel);
+        model.addAttribute("countrysList", countryRepository.findAll());
 
-//        if (null != httpSession.getAttribute("incDelNumber")) {
-//            httpSession.removeAttribute("incDelNumber");
-//            log4j.warn("http incDelNumber  : "+httpSession.getAttribute("incDelNumber").toString()+" was remove");
-//
-//        } else {
-//
-//        }
+        try {
+            httpSession.removeAttribute("incDelNumber");
+        } catch (Exception ex) {
+            log4j.warn(" @GetMapping(/incDel/new) -  incDelNumber was not found :" + ex.toString());
+        }
 
         return "admin";
     }
-
-//    model.addAttribute("topTitle", "New Delivery");
-//    model.addAttribute("sideBarTitle", "Admin Panel");
-//    model.addAttribute("sideBarSubTitle", "General");
-//    model.addAttribute("switch", "incDel");
-
 
     @PostMapping("/incDel/new")
     public String newIncDelReg(Model model, @Valid IncDel incDel, BindingResult errors) {
@@ -151,6 +126,7 @@ public class IncDelController {
 
 
             incDel.setNumber(String.valueOf(System.nanoTime()));
+            incDel.setStatus("new");
             incDelRepository.save(incDel);
             log4j.info("incDel was saved succes - id is :" + incDel.getId());
 
@@ -178,14 +154,14 @@ public class IncDelController {
 
         try {
             IncDel incDel = incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString());
-            modal.addObject("incDel",incDel );
-            int qty = 0 ;
-            for (OrderIncDel order:  orderIncDelRepository.findByIncDelJOIN(incDel)
-                 ) {
-                  qty += order.getQty();
+            modal.addObject("incDel", incDel);
+            int qty = 0;
+            for (OrderIncDel order : orderIncDelRepository.findByIncDelJOIN(incDel)
+                    ) {
+                qty += order.getQty();
             }
-            modal.addObject("qtyProductQty",qty);
-            log4j.info("qtyProductQty refresh :"+qty );
+            modal.addObject("qtyProductQty", qty);
+            log4j.info("qtyProductQty refresh :" + qty);
         } catch (NullPointerException nex) {
             log4j.error("incDel/registred :" + nex.toString());
         }
@@ -193,7 +169,6 @@ public class IncDelController {
         modal.setViewName("admin");
         return modal;
     }
-
 
 
     @GetMapping("incDel/edit")
@@ -292,14 +267,14 @@ public class IncDelController {
             incDelRepository.save(incDel);
             log4j.info("incDel save : " + incDel.getId() + " - " + incDel.getNumber());
 
-            log4j.info("a=======================mountIncDel : " + amountIncDel);
+            log4j.info("=======================amountIncDel : " + amountIncDel);
             try {
                 log4j.info("httpSession qtyProductQty set : " + httpSession.getAttribute("qtyProductQty"));
             } catch (NullPointerException ex) {
                 log4j.error("httpSession qtyProductQty set :" + ex.toString());
                 ex.printStackTrace();
             }
-//            modal.addObject("qtyProductQty", qtyProductQty);
+//            model.addObject("qtyProductQty", qtyProductQty);
 
             if (qtyProductQty == 0) {
                 log4j.error("qtyProductQty = 0 ");
@@ -315,32 +290,35 @@ public class IncDelController {
 
         }
         modal.addObject("incDel", incDel);
-//        modal.setViewName("forward:/incDel/registred");
+//        model.setViewName("forward:/incDel/registred");
         modal.setViewName("redirect:/incDel/registred");
-//        modal.setViewName("admin");
+//        model.setViewName("admin");
         return modal;
     }
 
-
+    //    <a th:href="@{/order/{id}/details(id=3,action='show_all')}">
+//    <a th:href="@{'/incDel/orderProduct/del'(orderId=${order.id})}"
+//    /incDel/orderProduct/del?orderId=7
     @GetMapping("/incDel/orderProduct/del")
     ModelAndView delOrderFromIncDel(ModelAndView modal, @RequestParam String orderId) {
 
         OrderIncDel orderIncDel = orderIncDelRepository.getOne(Long.valueOf(orderId));
         IncDel incDel = incDelRepository.findByNumber(httpSession.getAttribute("incDelNumber").toString());
-        double amount = incDel.getAmount()- orderIncDel.getAmount();
+        double amount = incDel.getAmount() - orderIncDel.getAmount();
 
-        if(amount >= 0){
+        if (amount >= 0) {
             incDel.setAmount(amount);
             incDelRepository.save(incDel);
-            log4j.info("incDel.amount set : "+ incDel.getAmount() );
-        }  else {
+            log4j.info("incDel.amount set : " + incDel.getAmount());
+        } else {
             incDel.setAmount(0);
-            log4j.error("@GetMapping(/incDel/orderProduct/del)  - amount less then 0 :" +amount);
+            log4j.error("@GetMapping(/incDel/orderProduct/del)  - amount less then 0 :" + amount);
         }
         log4j.info("@RequestParam String orderId is :" + orderId);
         orderIncDelRepository.delete(Long.valueOf(orderId));
 
-        modal.setViewName("redirect:/incDel/registred");
+//        modal.setViewName("redirect:/incDel/registred");
+        modal.setViewName("admin");
         return modal;
     }
 
@@ -348,7 +326,7 @@ public class IncDelController {
     @GetMapping("/incDel/succes")
     ModelAndView incDelSucces(ModelAndView modal, @RequestParam String incDelNumber) {
         httpSession.removeAttribute("incDelNumber");
-        log4j.info(" http - incDelNumber was removed :"+incDelNumber);
+        log4j.info(" http - incDelNumber was removed :" + incDelNumber);
         modal.setViewName("redirect:/incDel/all");
         return modal;
     }
@@ -375,6 +353,130 @@ public class IncDelController {
         model.setViewName("admin");
         return model;
     }
+//
+//
+//@GetMapping("/incDel/orderProduct/del")
+//ModelAndView delOrderFromIncDel(ModelAndView modal, @RequestParam String orderId) {
+
+    @GetMapping("incDel/all")
+    ModelAndView incDelAll(ModelAndView model) {
+
+
+        double weightNew = 0;
+        double weightRepack = 0;
+        double weightOnTheWay = 0;
+        double weightDamage = 0;
+
+        double amountOrders = 0;
+        double weightOrders = 0;
+
+        for (IncDel incDel : incDelRepository.findAll()
+                ) {
+
+           String incDelStatus = incDel.getStatus();
+
+          if(null != incDel.getStatus()) {
+
+              if (incDelStatus.equals("new")) {
+                  weightNew += incDel.getWeight();
+              }
+              if (incDelStatus.equals("repacking")) {
+                  weightRepack += incDel.getWeight();
+              }
+              if (incDelStatus.equals("on the way")) {
+                  weightOnTheWay += incDel.getWeight();
+              }
+              if (incDelStatus.equals("damage")) {
+                  weightDamage += incDel.getWeight();
+              }
+          }
+
+
+                    for (OrderIncDel order : orderIncDelRepository.findAll()
+                            ) {
+                        amountOrders += order.getAmount();
+                    }
+//                    log4j.info("incDel each for parametr :" + incDel.getStatus());
+//                    log4j.info("reqParam :" + statusIncDel);
+                }
+
+        model.addObject("weightNew", weightNew);
+        model.addObject("weightRepack", weightRepack);
+        model.addObject("weightOnTheWay", weightOnTheWay);
+        model.addObject("weightDamage", weightDamage);
+
+        model.addObject("weightOrders", weightOrders);
+        model.addObject("incDelsLists", incDelRepository.findAll());
+//        model.setViewName("forward:/incDel/dashboard");
+        model.setViewName("admin");
+        return model;
+    }
+
+
+
+    @GetMapping("incDel/dashboard")
+    ModelAndView incDelDashboard(ModelAndView model,
+                                 @RequestParam(name = "statusIncDel") String statusIncDel) {
+
+        double weightNew = 0;
+        double weightRepack = 0;
+        double weightOnTheWay = 0;
+        double weightDamage = 0;
+
+        double amountOrders = 0;
+        double weightOrders = 0;
+
+        for (IncDel incDel : incDelRepository.findAll()
+                ) {
+
+            String incDelStatus = incDel.getStatus();
+
+            if(incDelStatus.equals("new")){
+                weightNew += incDel.getWeight();
+            }
+            if(incDelStatus.equals("repacking")){
+                weightRepack += incDel.getWeight();
+            }
+            if(incDelStatus.equals("on the way")){
+                weightOnTheWay += incDel.getWeight();
+            }
+            if(incDelStatus.equals("damage")){
+                weightDamage += incDel.getWeight();
+            }
+
+
+            for (OrderIncDel order : orderIncDelRepository.findAll()
+                    ) {
+                amountOrders += order.getAmount();
+            }
+//                    log4j.info("incDel each for parametr :" + incDel.getStatus());
+//                    log4j.info("reqParam :" + statusIncDel);
+        }
+
+        model.addObject("weightNew", weightNew);
+        model.addObject("weightRepack", weightRepack);
+        model.addObject("weightOnTheWay", weightOnTheWay);
+        model.addObject("weightDamage", weightDamage);
+
+        model.addObject("weightOrders", weightOrders);
+
+
+
+        List<IncDel> incDelsList = new ArrayList<>();
+        for (IncDel incDel : incDelRepository.findAll()
+                ) {
+            try {
+                if (statusIncDel.equals(incDel.getStatus())) {
+                    incDelsList.add(incDel);
+                }
+            } catch (NullPointerException e) {
+                log4j.error(e.toString());
+            }
+        }
+        model.addObject("incDelsList", incDelsList);
+        model.setViewName("admin");
+        return model;
+    }
 
 
     //    @ModelAttribute("incDel")
@@ -386,6 +488,13 @@ public class IncDelController {
 //            return new IncDel("Generate automaticly");
 //        }
 //    }
+
+
+
+    @ModelAttribute("whLists")
+    public List<Warehouse> whLists(){
+        return  whRepository.findAll();
+    }
 
     @ModelAttribute("amountIncDel")
     public double amountIncDel() {
@@ -427,6 +536,7 @@ public class IncDelController {
         productsList.add("Shorts");
         return productsList;
     }
+
 
     @ModelAttribute("ordersIncDelList")
     public List<OrderIncDel> ordersIncDelList() {

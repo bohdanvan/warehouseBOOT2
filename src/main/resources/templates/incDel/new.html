@@ -48,6 +48,55 @@
 
                         <div class="row" style="margin-top:5px">
                             <label class="control-label col-md-2 col-sm-2 col-xs-6">
+                                <a href="#" data-toggle="tooltip" title="  ">
+                                    <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>
+                                Destination From
+                            </label>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+
+                                <!--<select th:field="*{destFROM}">-->
+                                    <!--<option th:each="p : ${whLists}" th:value="${p.number}"  th:text="${p.country}"></option>-->
+                                <!--</select>-->
+                                <div class="form-group">
+
+                                    <select th:field="*{destFROM}"class="form-control" id="sel1">
+
+                                        <option th:each="p : ${whLists}" th:value="${p.number}"  th:text="${p.country}"></option>
+
+                                    </select>
+                                </div>
+
+
+                                <!--<ul>-->
+                                    <!--<li style="color:red;" th:each="err : ${#fields.errors('supplier')}"-->
+                                        <!--th:text="${err}"></li>-->
+
+                                <!--</ul>-->
+                            </div>
+
+
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <div class="form-group">
+
+                                    <select th:field="*{destTO}"class="form-control" >
+
+                                        <option th:each="p : ${whLists}" th:value="${p.number}"  th:text="${p.country}"></option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <label class="col-md-2 col-sm-2 col-xs-6">Destination To
+                                <a href="#" data-toggle="tooltip" title="'
+                                Important ! ">
+                                    <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i>
+                                </a>
+                            </label>
+                        </div>
+
+
+
+                        <div class="row" style="margin-top:5px">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-6">
                                 <a href="#" data-toggle="tooltip" title="
                                 select the supplier of your product">
                                     <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>
@@ -90,7 +139,7 @@
                             </label>
                             <div class="col-md-4 col-sm-4 col-xs-6">
                                 <input type="text" class="form-control" required="required"
-                                       placeholder="City Street House Room" th:field="*{destinationFROM}">
+                                       placeholder="City Street House Room" >   <!--th:field="*{destFROM}"-->
                             </div>
 
                             <div class="col-md-4 col-sm-4 col-xs-6">
@@ -119,10 +168,10 @@
                                 &nbsp; Shipping Type :
                             </label>
 
-                            <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback text-center">
+                            <div class="col-md-4 col-sm-4 col-xs-12 form-userGroup has-feedback text-center">
 
 
-                                <input type="radio" name="shippingType" value="air" checked="true"/>
+                                <input type="radio" name="shippingType" value="air" required="true"/>  <!--checked="true"-->
                                 <i class="fa fa-plane fa-2x" aria-hidden="true"> </i> &nbsp;air&nbsp;
                                 &nbsp;&nbsp;&nbsp;&nbsp;
                                 <input type="radio" name="shippingType" value="sea"/>
@@ -134,7 +183,7 @@
 
                             </div>
 
-                            <div class="col-md-4 col-sm-4 col-xs-12 form-group has-feedback text-center">
+                            <div class="col-md-4 col-sm-4 col-xs-12 form-userGroup has-feedback text-center">
 
                                 <input type="radio" name="customsType" value="post" checked="true"/>
                                 <i class="fa fa-envelope fa-2x" aria-hidden="true"></i>&nbsp; Post &nbsp;
@@ -149,7 +198,7 @@
 
                                 Customs Type : &nbsp;
                                 <a href="#" data-toggle="tooltip" title="
-                                Please select the type of customs clearance">
+                                Please select the typeUser of customs clearance">
                                     <i class="fa fa-info-circle fa-1x" aria-hidden="true"></i></a>
                             </label>
 
@@ -177,7 +226,7 @@
                             <div class="ln_solid"></div>
 
 
-                            <div class="form-group">
+                            <div class="form-userGroup">
                                 <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3" style="margin-top:1%">
 
                                     <!--<input type="text" name="id" th:field="*{id}"/>-->

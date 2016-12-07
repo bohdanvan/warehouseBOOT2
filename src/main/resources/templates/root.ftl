@@ -10,7 +10,7 @@
 
     <title>AZEMEX 24h delivery</title>
 
-    <#include "static/cssROOT.html">
+    <#include "static/cssROOTnew.html">
     <#include "static/fonts.html">
 
 
@@ -21,29 +21,60 @@
 <body>
 
     <#include "root/navigation/${locale}.html">
-
     <#include "header.html">
-
-    <#include "root/about/${locale}.html">
-
-    <#include "portfolio.html">
-
     <#include "services.html">
-
+    <#include "portfolio.html">
+    <#include "root/about/${locale}.html">
+    <#include "team.html">
     <#include "clientsS.html">
-
     <#include "root/contact/${locale}.html">
-
     <#include "footer.html">
 
-
     <#include "root/modal/truck/${locale}.html">
-    <#include "root/modal/ship/${locale}.html">
-    <#include "root/modal/plane/${locale}.html">
+    <#--<#include "root/modal/ship/${locale}.html">-->
+    <#--<#include "root/modal/plane/${locale}.html">-->
 
-    <#include "static/scriptsGr.html">
-    <#--<#include "static/scripts.html">-->
-    <#include "static/javaScripts.html">
+
+    <!-- scroll up -->
+    <div class="scroll-bottom">
+        <a href="#page-top">
+            <img src="img/about/up-scroll.svg" class="scroll-up">
+        </a>
+    </div>
+
+
+    <#include "static/scriptsNew.html">
+
+
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex-1].style.display = "block";
+            dots[slideIndex-1].className += " active";
+        }
+    </script>
 
 </body>
 </html>

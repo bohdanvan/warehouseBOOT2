@@ -10,7 +10,7 @@
 
                     <h1>Login Form</h1>
                     <div>
-                        <input name="userName" th:field="*{userName}" type="text" class="form-control" placeholder="login" required=""/>
+                        <input name="userName" th:field="*{userName}" type"text" class="form-control" placeholder="login" required=""/>
                     </div>
                     <ul>
                         <li style="color:red;" th:each="err : ${#fields.errors('userName')}" th:text="${err}" ></li>

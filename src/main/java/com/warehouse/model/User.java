@@ -7,6 +7,8 @@ import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
+import static javax.swing.text.StyleConstants.Size;
+
 @Entity
 @Table(name = "users")
 public class User implements Serializable {
@@ -37,6 +39,8 @@ public class User implements Serializable {
     @OneToMany(mappedBy = "userJOIN", cascade = CascadeType.ALL, orphanRemoval = true)
     public List<UserRole> userRolesList = new ArrayList<>();
 
+//    @OneToOne
+//    public UserFullInfo userFullInfo;
 
     public void addRole(String role) { // FIXME: 16.11.2016
 
@@ -54,6 +58,14 @@ public class User implements Serializable {
         this.password = user.password;
         this.enabled = user.enabled;
     }
+
+//    public UserFullInfo getUserFullInfo() {
+//        return userFullInfo;
+//    }
+//
+//    public void setUserFullInfo(UserFullInfo userFullInfo) {
+//        this.userFullInfo = userFullInfo;
+//    }
 
     public boolean isEnabled() {
         return enabled;

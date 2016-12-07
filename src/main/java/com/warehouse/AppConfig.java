@@ -12,12 +12,15 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.web.multipart.MultipartResolver;
+import org.springframework.web.multipart.support.StandardServletMultipartResolver;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import java.io.IOException;
 
 //import org.thymeleaf.TemplateEngine;
 //import org.thymeleaf.spring4.SpringTemplateEngine;
@@ -31,7 +34,6 @@ import javax.sql.DataSource;
 @Configuration
 @EnableJpaRepositories
 public class AppConfig extends WebMvcConfigurerAdapter {
-
 
 
     @Bean
@@ -61,15 +63,15 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         DriverManagerDataSource ds = new DriverManagerDataSource();
         ds.setDriverClassName("com.mysql.jdbc.Driver");
 
-        String url =
-                "?useLegacyDatetimeCode=false&serverTimezone=America/New_York";
-        ds.setUrl("jdbc:mysql://localhost:3306/app" + url);
-        ds.setUsername("root");
-        ds.setPassword("admin");
+//       String url =
+//                "?useLegacyDatetimeCode=false&serverTimezone=America/New_York";
+//        ds.setUrl("jdbc:mysql://localhost:3306/app" + url);
+//        ds.setUsername("root");
+//        ds.setPassword("admin");
 
-//        ds.setUrl("jdbc:mysql://warehouse-mysql:3306/demo");
-//        ds.setUsername("demo_user");
-//        ds.setPassword("demo_pass");
+        ds.setUrl("jdbc:mysql://warehouse-mysql:3306/demo");
+        ds.setUsername("demo_user");
+        ds.setPassword("demo_pass");
 
         return ds;
     }
@@ -82,11 +84,12 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 
 
     @Bean
-    public IncDelService incDelService (){
-        return new IncDelServiceImpl();}
+    public IncDelService incDelService() {
+        return new IncDelServiceImpl();
+    }
 
     @Bean
-    public Logger logger (){
+    public Logger logger() {
         return new Logger();
     }
 
@@ -101,19 +104,25 @@ public class AppConfig extends WebMvcConfigurerAdapter {
         registry.addViewController("/403").setViewName("403");
     }
 
-/*    @Bean
-    public InternalResourceViewResolver viewResolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
-        resolver.setPrefix("/webapp.WEB-INF/jsp/");
-        resolver.setSuffix(".jsp");
-        return resolver;
-    }*/
-
-
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/webjars/");
+    @Bean
+    public MultipartResolver multipartResolver() throws IOException {
+        return new StandardServletMultipartResolver();
     }
+
+
+    /*    @Bean
+        public InternalResourceViewResolver viewResolver() {
+            InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+            resolver.setPrefix("/webapp.WEB-INF/jsp/");
+            resolver.setSuffix(".jsp");
+            return resolver;
+        }*/
+
+//    @Override
+//    public void addResourceHandlers(ResourceHandlerRegistry registry) {
+//        registry.addResourceHandler("/webjars/**").addResourceLocations("classpath:/webjars/");
+//    }
+
 
 //    @Override
 //    public void addResourceHandlers(ResourceHandlerRegistry registry) {
@@ -136,8 +145,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 //
 //        return emailTemplateResolver;
 //    }
-
-
 
 
 //   Version 2
@@ -168,7 +175,6 @@ public class AppConfig extends WebMvcConfigurerAdapter {
 //        springResourceTemplateResolver().setTemplateMode(TemplateMode.HTML);
 //        return springResourceTemplateResolver();
 //    }
-
 
 
 }

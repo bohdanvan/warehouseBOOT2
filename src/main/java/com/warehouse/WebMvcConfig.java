@@ -1,4 +1,4 @@
-//package com.warehouse;
+package com.warehouse;//package com.warehouse;
 //
 ///**
 // * Created by user on 11.11.2016.

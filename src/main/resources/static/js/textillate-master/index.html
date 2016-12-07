@@ -28,14 +28,14 @@
             Tweet
           </a>&nbsp;&nbsp;
           <iframe 
-            src="https://ghbtns.com/github-btn.html?user=jschr&repo=textillate&type=star&count=true&v=2" 
+            src="https://ghbtns.com/github-btn.html?user=jschr&repo=textillate&type=star&count=true&v=2"
             frameborder="0" 
             scrolling="0" 
             width="100px" 
             height="20px">
           </iframe>
           <iframe 
-            src="https://ghbtns.com/github-btn.html?user=jschr&repo=textillate&type=fork&count=true" 
+            src="https://ghbtns.com/github-btn.html?user=jschr&repo=textillate&type=fork&count=true"
             frameborder="0" 
             scrolling="0" 
             width="90px" 
@@ -86,7 +86,7 @@
                   <div class="control col-1-2">
                     <label>In Animation</label>
                     <select data-key="effect" data-type="in"></select>
-                    <select data-key="type" data-type="in">
+                    <select data-key="typeUser" data-type="in">
                       <option value="">sequence</option>
                       <option value="reverse">reverse</option>
                       <option value="sync">sync</option>
@@ -96,7 +96,7 @@
                   <div class="control col-1-2">
                     <label>Out Animation</label>
                     <select data-key="effect" data-type="out"></select>
-                    <select data-key="type" data-type="out">
+                    <select data-key="typeUser" data-type="out">
                       <option value="">sequence</option>
                       <option value="reverse">reverse</option>
                       <option value="sync">sync</option>
@@ -156,37 +156,37 @@
       $form.find('[data-key="effect"]').each(function () {
         var $this = $(this)
           , key = $this.data('key')
-          , type = $this.data('type');
+          , typeUser = $this.data('typeUser');
 
-          data[type][key] = $this.val();
+          data[typeUser][key] = $this.val();
       });
 
-      $form.find('[data-key="type"]').each(function () {
+      $form.find('[data-key="typeUser"]').each(function () {
         var $this = $(this)
           , key = $this.data('key')
-          , type = $this.data('type')
+          , typeUser = $this.data('typeUser')
           , val = $this.val();
 
-          data[type].shuffle = (val === 'shuffle');
-          data[type].reverse = (val === 'reverse');
-          data[type].sync = (val === 'sync');
+          data[typeUser].shuffle = (val === 'shuffle');
+          data[typeUser].reverse = (val === 'reverse');
+          data[typeUser].sync = (val === 'sync');
       });
 
       return data;
     };
 
     $.each(animateClasses.split(' '), function (i, value) {
-      var type = '[data-type]'
+      var typeUser = '[data-typeUser]'
         , option = '<option value="' + value + '">' + value + '</option>';
 
       if (/Out/.test(value) || value === 'hinge') {
-        type = '[data-type="out"]';
+        typeUser = '[data-type="out"]';
       } else if (/In/.test(value)) {
-        type = '[data-type="in"]';
+        typeUser = '[data-type="in"]';
       } 
 
-      if (type) {
-        $form.find('[data-key="effect"]' + type).append(option);        
+      if (typeUser) {
+        $form.find('[data-key="effect"]' + typeUser).append(option);
       }
     });
 

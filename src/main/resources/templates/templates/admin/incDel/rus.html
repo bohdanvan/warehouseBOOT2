@@ -1,0 +1,120 @@
+<!--<div class="container">-->
+    <div class="row">
+        <div class="col-lg-2 col-md-2 col-sm-0 col-xs-0"></div>
+        <div class="col-md-8 col-sm-12 col-xs-12">
+
+            <div class="x_panel">
+
+                <div class="x_title">
+                    <h2>
+                        customs declaration CN23
+
+                    </h2>
+                    <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button"
+                               aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="#">Settings 1</a>
+                                </li>
+                                <li><a href="#">Settings 2</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                    </ul>
+                    <div class="clearfix"></div>
+                </div>  <!-- x-title -->
+
+                <div class="x_content">
+
+
+                    <form method="POST" class="form-horizontal ">  <!--form-label-left input_mask-->
+
+
+                        <div class="row" style="margin-top:5px">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-6">Supplier </label>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <input type="text" class="form-control" required="required"
+                                       placeholder="Supplier company name" name="supplier"/>
+                            </div>
+
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <input type="text" class="form-control" required="required"
+                                       placeholder="Tracking number your orderIncDel on supplier" name="currierTrackNumber"/>
+                            </div>
+                            <label class="col-md-2 col-sm-2 col-xs-6">Tracking #</label>
+                        </div>
+
+
+                        <div class="row" style="margin-top:5px">
+                            <label class="control-label col-md-2 col-sm-2 col-xs-6">Adress </label>
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <input type="text" class="form-control" required="required"
+                                       placeholder="City Street House Room">
+                            </div>
+
+                            <div class="col-md-4 col-sm-4 col-xs-6">
+                                <input type="text" class="form-control" required="required"
+                                       placeholder="Invoice number from supplier" name="supplierInvoice"/>
+                            </div>
+                            <label class="col-md-2 col-sm-2 col-xs-6">Invoice #</label>
+                        </div>
+
+
+                        <div class="row" style="margin-top:2%">
+
+                            <div class="col-md-2"></div>
+
+                            <div class="col-md-4 col-sm-4 col-xs-12 form-userGroup has-feedback">
+
+                                Shipped Type : &nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="shippingType" value="air" checked="true"/>
+                                <i class="fa fa-plane" aria-hidden="true"> air </i>&nbsp;&nbsp;
+
+                                <input type="radio" name="shippingType" value="sea"/>
+                                <i class="fa fa-ship" aria-hidden="true"> sea </i>&nbsp;&nbsp;
+
+
+                                <input type="radio" name="shippingType" value="land"/>
+                                <i class="fa fa-truck" aria-hidden="true">truck</i>&nbsp;&nbsp;
+
+                            </div>
+
+                            <div class="col-md-6 col-sm-6 col-xs-12 form-userGroup has-feedback">
+                                Customs Type : &nbsp;&nbsp;&nbsp;
+                                <input type="radio" name="customsType" value="post" checked="true"/>
+                                Post &nbsp;&nbsp;
+                                <input type="radio" name="customsType" value="official" disabled="true"/>
+                                Official
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="ln_solid"></div>
+
+                        <div class="form-userGroup">
+                            <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3" style="margin-top:1%">
+
+                                <button type="reset" class="btn btn-primary">Cancel</button>
+                                <button type="submit" class="btn btn-success">Submit</button>
+                            </div>
+                        </div>
+
+
+                    </form>
+
+
+                </div> <!-- x-content -->
+
+            </div>   <!-- x-panel -->
+
+        </div>
+        <div class="col-lg-2 col-md-2 "></div>
+    </div>
+<!--</div>-->

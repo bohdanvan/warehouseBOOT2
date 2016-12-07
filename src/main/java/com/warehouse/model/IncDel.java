@@ -1,10 +1,7 @@
 package com.warehouse.model;
 
 
-import org.hibernate.validator.constraints.Length;
-
 import javax.persistence.*;
-import javax.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.HashSet;
@@ -24,7 +21,8 @@ public class IncDel implements Serializable {
     private double amount;
     private int boxQty;
     private String warehouseID;
-    private String destinationFROM;
+    private String destFROM;
+    private String destTO;
     private String employeeID;
     private String userID;                      // employee login
     private String date;
@@ -72,6 +70,14 @@ public class IncDel implements Serializable {
 
 
     public IncDel() {
+    }
+
+    public String getDestTO() {
+        return destTO;
+    }
+
+    public void setDestTO(String destTO) {
+        this.destTO = destTO;
     }
 
     public double getAmount() {
@@ -142,12 +148,12 @@ public class IncDel implements Serializable {
         this.warehouseID = warehouseID;
     }
 
-    public String getDestinationFROM() {
-        return destinationFROM;
+    public String getDestFROM() {
+        return destFROM;
     }
 
-    public void setDestinationFROM(String destinationFROM) {
-        this.destinationFROM = destinationFROM;
+    public void setDestFROM(String destinationFROM) {
+        this.destFROM = destinationFROM;
     }
 
     public String getEmployeeID() {
@@ -288,7 +294,7 @@ public class IncDel implements Serializable {
                 ", volWeight=" + volWeight +
                 ", boxQty=" + boxQty +
                 ", warehouseID='" + warehouseID + '\'' +
-                ", destinationFROM='" + destinationFROM + '\'' +
+                ", destinationFROM='" + destFROM + '\'' +
                 ", employeeID='" + employeeID + '\'' +
                 ", userID='" + userID + '\'' +
                 ", date='" + date + '\'' +

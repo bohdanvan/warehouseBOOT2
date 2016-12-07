@@ -1,0 +1,207 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+<div th:fragment="frag (client,eng)">
+
+
+
+
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Dashboard <small>Statistics Overview</small>
+            </h1>
+            <ol class="breadcrumb">
+                <li class="active">
+                    <i class="fa fa-dashboard"></i> Dashboard
+                </li>
+            </ol>
+        </div>
+    </div>
+    <!-- /.row -->
+
+    <!--<div class="row">-->
+    <!--<div class="col-lg-12">-->
+    <!--<div class="alert alert-info alert-dismissable">-->
+    <!--<button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>-->
+    <!--<i class="fa fa-info-circle"></i>  <strong>Like SB Admin?</strong> Try out <a href="http://startbootstrap.com/template-overviews/sb-admin-2" class="alert-link">SB Admin 2</a> for additional features!-->
+    <!--</div>-->
+    <!--</div>-->
+    <!--</div>-->
+    <!-- /.row -->
+
+    <div class="row">
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-cube fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><div th:text="${weightNew}"></div> </div>
+                            <div>On Warehouse Recivied New kg</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--<a th:href="@{/incDel/dashboard(statusIncDel='new' )}">Click</a>-->
+                <!--<a th:href="@{'/incDel/dashboard/'(statusIncDel='new' )}"> ...Click2</a>-->
+                <!--<a href="/incDel/dashboard?statusIncDel=new">....Click3</a>-->
+
+                <a th:href="@{'/incDel/dashboard'(statusIncDel='new')}">
+                    <!--style="margin-left: 10px"><i class="fa fa-trash-o" aria-hidden="true"></i>-->
+                    <!--</a>-->
+
+                    <!--<a th:href="@{'/incDel/dashboard'(status='new')}">-->
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-tasks fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><div th:text="${weightRepack}"></div></div>
+                            <div>On Warehouse Repacking Status kg</div>
+                        </div>
+                    </div>
+                </div>
+                <a th:href="@{'/incDel/dashboard'(statusIncDel='repacking')}">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-yellow">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-plane fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><div th:text="${weightOnTheWay}"></div></div>
+                            <div>On the Way</div>
+                        </div>
+                    </div>
+                </div>
+                <a th:href="@{'/incDel/dashboard'(statusIncDel='on the way')}">
+
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-3 col-md-6">
+            <div class="panel panel-red">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-support fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge"><div th:text="${weightDamage}"></div></div>
+                            <div>Damage Status</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="#">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!-- /.row -->
+
+
+
+    <div class="table-responsive" style="margin-top:5px">
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+            <tr class="headings">
+                <th class="column-title">Number</th>
+                <th class="column-title">Track Number</th>
+                <th class="column-title">Destination From</th>
+                <th class="column-title">Destination To</th>
+                <th class="column-title">Shipping Type</th>
+                <th class="column-title">Customs Type</th>
+                <th class="column-title">Weight</th>
+
+                <th class="column-title">
+                    <i class="fa fa-usd" aria-hidden="true"></i>
+                    Amount
+                </th>
+                <th class="column-title">Status</th>
+                <th class="column-title no-link last"><span class="nobr">Action</span>
+                </th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="incDel,iterationStatus  : ${incDelsList} ">
+
+                <td class=" " th:text="${incDel.number}"></td>
+                <td class=" " th:text="${incDel.currierTrackNumber}"></td>
+                <td class=" " th:text="${incDel.destFROM}"></td>
+                <td class=" " th:text="${incDel.destTO}"></td>
+                <td class=" " th:text="${incDel.shippingType}"></td>
+                <td class=" " th:text="${incDel.customsType}"></td>
+                <td class=" " th:text="${incDel.weight}"></td>
+                <td class=" " th:text="${incDel.amount}"> </td>
+                <td class=" " th:text="${incDel.status}"></td>
+
+                <td class="last">
+                    <a th:href="@{'/incDel/edit'(incDelNumber=${incDel.number})}">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </a>
+
+
+                    <a th:href="@{'/incDel/del'(incDelNumber=${incDel.number})}"
+                       style="margin-left: 10px"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+
+                </td>
+
+            </tr>
+
+
+            <!--</div>   ng-reapit -->
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+</div> <!--////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+</body>
+
+</html>

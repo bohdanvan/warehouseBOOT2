@@ -54,11 +54,14 @@ public class RootController  {
         } catch (Exception n) {
             httpSession.setAttribute("locale", "rus");
         }
-        return "redirect:/log";
-//        return "root";
+//        return "redirect:/log";
+        return "root";
     }
 
-
+    @RequestMapping("/root")
+    String root(Model model) {
+        return "root";
+    }
 
     @RequestMapping("/home/new")
     public ModelAndView home(ModelAndView model){
@@ -89,48 +92,9 @@ public class RootController  {
         model.addObject("user",new User());
 
         model.addObject("usersList",userRepository.findAll());
-
-
-//
-//        model.addObject("req_getName",request.getName() );
-//        model.addObject("req_getPrincipal",request.getPrincipal().toString() );
-//        model.addObject("req_getCredentials",request.getCredentials().toString() );
-//        model.addObject("am",am.toString() );
-//        model.addObject("r3",result.toString() );
-//        model.addObject("r2",request.toString() );
-//        model.addObject("r4",httpServletRequest.authenticate(httpServletResponse) );
-        model.addObject("changeSessionId",httpServletRequest.changeSessionId() );
-        model.addObject("getAuthType",httpServletRequest.getAuthType() );
-        model.addObject("getContextPath",httpServletRequest.getContextPath() );
-        model.addObject("getCookies",httpServletRequest.getCookies() );
-        model.addObject("getMethod",httpServletRequest.getMethod() );
-        model.addObject("getPathInfo",httpServletRequest.getPathInfo() );
-        model.addObject("getPathTranslated",httpServletRequest.getPathTranslated() );
-        model.addObject("getQueryString",httpServletRequest.getQueryString() );
-        model.addObject("getRequestedSessionId",httpServletRequest.getRequestedSessionId() );
-        model.addObject("isRequestedSessionIdFromCookie",httpServletRequest.isRequestedSessionIdFromCookie() );
-        model.addObject("isRequestedSessionIdFromURL",httpServletRequest.isRequestedSessionIdFromURL() );
-        model.addObject("isUserInRole",httpServletRequest.isUserInRole("ADMIN") );
-        model.addObject("isUserInRoleUser",httpServletRequest.isUserInRole("USER") );
-        model.addObject("isUserInRoleROLE_ADMIN",httpServletRequest.isUserInRole("ROLE_ADMIN") );
-        model.addObject("isUserInRoleROLE_USER",httpServletRequest.isUserInRole("ROLE_USER") );
-
-        model.addObject("isAsyncStarted",httpServletRequest.isAsyncStarted() );
-        model.addObject("isAsyncSupported",httpServletRequest.isAsyncSupported() );
-        model.addObject("isSecure",httpServletRequest.isSecure() );
-        model.addObject("getRemoteUser",httpServletRequest.getRemoteUser() );
-        model.addObject("getRequestURI",httpServletRequest.getRequestURI() );
-        model.addObject("getRequestURL",httpServletRequest.getRequestURL() );
-//            model.addObject("r ",httpServletRequest );
-//            model.addObject("r ",httpServletRequest );
-
-//        model.addObject("r5",httpServletResponse.toString() );
         model.addObject("http",httpSession.getLastAccessedTime() );
 
         model.addObject("tryLogginCount",httpSession.getAttribute("tryLogginCount"));
-
-
-
         model.setViewName("home");
         return model;
     }
@@ -224,18 +188,18 @@ public ModelAndView fixed(ModelAndView model) {
                 httpSession.setAttribute("locale", "eng");
             }
         } catch (Exception n) {
-            httpSession.setAttribute("locale", "rus");
+            httpSession.setAttribute("locale", "eng");
         }
 
-        try {
-            String locale = (String) httpSession.getAttribute("locale");
-            if (locale.equals("")) {
-                httpSession.setAttribute("locale", "rus");
-            }
-
-        } catch (Exception ex) {
-            httpSession.setAttribute("locale", "rus");
-        }
+//        try {
+//            String locale = (String) httpSession.getAttribute("locale");
+//            if (locale.equals("")) {
+//                httpSession.setAttribute("locale", "rus");
+//            }
+//
+//        } catch (Exception ex) {
+//            httpSession.setAttribute("locale", "rus");
+//        }
 
         return (String) httpSession.getAttribute("locale");
     }

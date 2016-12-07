@@ -1,0 +1,105 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+
+<div th:fragment="frag (client,eng)">
+
+    <div class="row top_tiles">
+
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="tile-stats">
+                <div class="icon"><i class="fa fa-cube"></i></div>
+                <div class="count"><div th:text="${weight}">0</div> </div>
+                <h3>Weight</h3>
+                <!--<p>Lorem ipsum psdea itgum rixt.</p>-->
+            </div>
+        </div>
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="tile-stats">
+                <div class="icon"><i class="fa fa-usd"></i></div>
+                <div class="count"><div th:text="${amount}">0</div></div>
+                <h3>Amount</h3>
+                <!--<p>Lorem ipsum psdea itgum rixt.</p>-->
+            </div>
+        </div>
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="tile-stats">
+                <div class="icon"><i class="fa fa-sort-amount-desc"></i></div>
+                <div class="count"><div th:text="${weightOrders}">0</div></div>
+                <h3>New Sign ups</h3>
+                <!--<p>Lorem ipsum psdea itgum rixt.</p>-->
+            </div>
+        </div>
+        <div class="animated flipInY col-lg-3 col-md-3 col-sm-6 col-xs-12">
+            <div class="tile-stats">
+                <div class="icon"><i class="fa fa-check-square-o"></i></div>
+                <div class="count">
+                    <div th:text="${amountOrders}">0</div>
+                </div>
+                <h3>New Sign ups</h3>
+                <!--<p>Lorem ipsum psdea itgum rixt.</p>-->
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    <div class="table-responsive" style="margin-top:5px">
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+            <tr class="headings">
+                <th class="column-title">Id</th>
+                <th class="column-title">Login</th>
+                <th class="column-title">Password</th>
+                <th class="column-title">Email</th>
+                <th class="column-title">Enable</th>
+                <th class="column-title no-link last">
+                    <span class="nobr">Action</span>
+                </th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+
+            <tr th:each="user,iterationStatus  : ${usersList} ">
+
+                <td class=" " th:text="${user.userId}"></td>
+                <td class=" " th:text="${user.userName}"></td>
+                <td class=" " th:text="${user.password}"></td>
+                <td class=" " th:text="${user.email}"></td>
+                <td class=" " th:text="${user.enabled}"></td>
+                <td class="last">
+                    <a th:href="@{'/user/edit'(userId=${user.userId})}">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </a>
+
+                    <a th:href="@{'/user/del'(userId=${user.userId})}"
+                       style="margin-left: 10px"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+
+                </td>
+
+            </tr>
+
+
+            <!--</div>   ng-reapit -->
+            </tbody>
+        </table>
+    </div>
+
+
+</div> <!--////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+</body>
+
+</html>

@@ -149,7 +149,7 @@
 <div th:fragment="eng2">
 
 
-    <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+    <div class="panel-userGroup" id="accordion" role="tablist" aria-multiselectable="true">
 
 
         <!--<div class="panel panel-default">-->
@@ -183,7 +183,7 @@
             <div class="panel-heading" role="tab" id="headingTwo">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        <i class="fa fa-cube fa-2x"></i> Delivery <span class="fa fa-chevron-down"></span>
+                        <i class="fa fa-cube fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp; Delivery <span class="fa fa-chevron-down"></span>
                     </a>
                 </h4>
             </div>
@@ -193,11 +193,11 @@
                     <ul >
                        <p>
 
-                           <a href="/incDel/new" style="margin-top: 10%"><i class="fa fa-pencil-square-o" aria-hidden="true"></i>&nbsp;n e w</a>
+                           <a href="/incDel/new" style="margin-top: 10%"><i class="fa fa-plus-square" aria-hidden="true"></i>&nbsp;&nbsp;create new</a>
                         </p>
                         <br/>
                         <p>
-                            <a href="/incDel/all" style="margin-top: 10%"><i class="fa fa-clone" aria-hidden="true"> </i>&nbsp; a l l</a>
+                            <a href="/incDel/all" style="margin-top: 10%"><i class="fa fa-cubes" aria-hidden="true"> </i>&nbsp;&nbsp;show all</a>
 
                         </p>
 
@@ -209,11 +209,13 @@
 
 
 
+
+
         <div class="panel panel-default">
             <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="panel-title">
                     <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        <i class="fa fa-money fa-2x"></i> Balance <span class="fa fa-chevron-down"></span>
+                        <i class="fa fa-money fa-2x"></i> &nbsp;&nbsp;&nbsp;&nbsp;Balance <span class="fa fa-chevron-down"></span>
                     </a>
                 </h4>
             </div>
@@ -224,7 +226,72 @@
                 </div>
             </div>
         </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="fa fa-user fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp; Users <span class="fa fa-chevron-down"></span>
+                    </a>
+                </h4>
+            </div>
+
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="panel-body">
+                    <ul >
+                        <p>
+
+                            <a href="/incDelUser/new" style="margin-top: 10%"><i class="fa fa-user-plus" aria-hidden="true"></i>&nbsp;&nbsp;create new</a>
+                        </p>
+                        <br/>
+                        <p>
+                            <a href="/incDelUser/all" style="margin-top: 10%"><i class="fa fa-clone" aria-hidden="true"> </i>&nbsp; &nbsp;show all </a>
+
+                        </p>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFife">
+                <h4 class="panel-title">
+                    <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFife" aria-expanded="false" aria-controls="collapseTwo">
+                        <i class="fa fa-university fa-2x"></i>&nbsp;&nbsp;&nbsp;&nbsp; Warehouses <span class="fa fa-chevron-down"></span>
+                    </a>
+                </h4>
+            </div>
+
+            <div id="collapseFife" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                <div class="panel-body">
+                    <ul >
+                        <p>
+
+                            <a href="/warehouse/new" style="margin-top: 10%"><i class="fa fa-plus" aria-hidden="true"></i>&nbsp;&nbsp;create new</a>
+                        </p>
+                        <br/>
+                        <p>
+                            <a href="/warehouse/all" style="margin-top: 10%"><i class="fa fa-clone" aria-hidden="true"> </i>&nbsp; &nbsp;show all </a>
+
+                        </p>
+
+
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
     </div>
+
+
+
 </div> <!--////////////////////////////////////////////////////////////////////////////////////-->
 
 <div th:fragment="aze">

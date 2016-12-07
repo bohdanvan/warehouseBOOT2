@@ -1,11 +1,9 @@
 package com.warehouse.controller;
 
-import com.warehouse.model.IncDel;
 import com.warehouse.model.User;
+import com.warehouse.model.UserFullInfo;
 import com.warehouse.model.UserRepository;
-import com.warehouse.service.IncDelRepository;
-import com.warehouse.service.IncDelService;
-import com.warehouse.service.LangRepository;
+import com.warehouse.service.UserFullInfoRepository;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +13,6 @@ import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -29,83 +26,125 @@ import javax.validation.Valid;
 import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * Created by user on 06.10.2016.
+ * Created by userFullInfo on 06.10.2016.
  */
 @Controller
 public class UserController {
     final static Logger log4j = LoggerFactory.getLogger(UserController.class);
     private final AtomicLong counter = new AtomicLong();
-    @Autowired
-    IncDelRepository incDelRepository;
-    @Autowired
-    IncDelService incDelService;
-    @Autowired
-    LangRepository langRepository;
+
     @Autowired
     UserRepository userRepository;
+    @Autowired
+    UserFullInfoRepository userFullInfoRepository;
     @Autowired
     HttpSession httpSession;
     @Autowired
     HttpServletRequest httpServletRequest;
 
 
-    @GetMapping("/user/new")
-    public ModelAndView userNewGet(ModelAndView model) {
 
+    @GetMapping("/user/new")
+    public ModelAndView userTempl(ModelAndView model) {
+
+        model.addObject("user", new User());
+        model.addObject("userFullInfo", new UserFullInfo());
 
         model.setViewName("admin");
         return model;
     }
 
+    @GetMapping("/user/allIncDel")
+    public ModelAndView usersAll(ModelAndView model) {
+        model.addObject("usersList", userRepository.findAll());
+        model.setViewName("admin");
+        return model;
+    }
+
+
+    @GetMapping("/user/all")
+    public ModelAndView userTemplAll(ModelAndView model) {
+
+        model.addObject("usersList", userRepository.findAll());
+        model.setViewName("admin");
+        return model;
+    }
+
+
+
+
+
+
     @PostMapping("/user/new")
     public ModelAndView userNewPost(ModelAndView model,
-                                    @Valid User user ,
+                                    @Valid User user,
                                     BindingResult errors,
                                     @RequestParam("passwordRepit") String passwordRepit) {
 
 
-       if(!errors.hasErrors()) {
+        if (!errors.hasErrors()) {
 
-           try {
-               User userF = userRepository.findByUserName(user.getUserName());
-               log4j.error("user already registred");
-               model.addObject("error", "Login "+userF.getUserName() +"already registred ");
-               model.setViewName("loginReset");
+            try {
+                User userF = userRepository.findByUserName(user.getUserName());
+                log4j.error("userFullInfo already registred");
+                model.addObject("error", "Login " + userF.getUserName() + " already registred ");
+                model.setViewName("loginReset");
 
-           } catch (Exception ex) {
+            } catch (Exception ex) {
 
-               if ((user.getPassword()).equals(passwordRepit)) {
+                if ((user.getPassword()).equals(passwordRepit)) {
 
-                   user.addRole("ROLE_USER");
-                   userRepository.save(user);
-                   final AuthenticationManager am = new SampleAuthenticationManager();
+                    user.addRole("ROLE_ADMIN");  // FIXME: 05.12.2016
+                    userRepository.save(user);
+                    final AuthenticationManager am = new SampleAuthenticationManager();
 
-                   Authentication request = new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword());
-                   Authentication resultat = am.authenticate(request);
-                   SecurityContextHolder.getContext().setAuthentication(resultat);
+                    Authentication request = new UsernamePasswordAuthenticationToken(user.getUserName(), user.getPassword());
+                    Authentication resultat = am.authenticate(request);
+                    SecurityContextHolder.getContext().setAuthentication(resultat);
 
-                   model.addObject("pass", true);
-                   model.addObject("congratulation", "Congratulation you was registred in system. Please open below link ");
-                   model.setViewName("redirect:/admin");
+                    model.addObject("pass", true);
+                    model.addObject("congratulation", "Congratulation you was registred in system. Please open below link ");
+                    model.setViewName("redirect:/admin");
 
-               } else {
-                   model.addObject("error", "password incorrect");
+                } else {
+                    model.addObject("error", "password incorrect");
 //                   model.setViewName("redirect:/log#signup");
-                   model.setViewName("loginReset");
+                    model.setViewName("loginReset");
 
-               }
-           }
-       }else {
+                }
+            }
+        } else {
 
-           model.setViewName("loginReset");
-       }
-
-
-        return model;
+            model.setViewName("loginReset");
         }
 
 
+        return model;
+    }
 
+
+
+
+    @PostMapping("/userFullInfo/new")
+    public ModelAndView userNewPost(ModelAndView model,
+                                    @Valid User user,
+                                    @Valid UserFullInfo userFullInfo,
+                                    BindingResult errors) {
+
+
+        if (!errors.hasErrors()) {
+            userRepository.save(user);
+            userFullInfoRepository.save(userFullInfo);
+            model.setViewName("redirect:/user/all");
+        } else {
+            log4j.error(errors.toString());
+            model.setViewName("admin");
+
+        }
+
+
+        return model;
+    }
 
 
 
@@ -115,11 +154,14 @@ public class UserController {
         return String.valueOf(httpServletRequest.getRequestURL());
     }
 
+
     @ModelAttribute("uriReq")
     public String uriReq() {
-        return String.valueOf(httpServletRequest.getRequestURI());
-    }
+        log4j.info("uriReq :" + httpServletRequest.getRequestURI());
+        String uri = httpServletRequest.getRequestURI();
 
+        return uri.substring(1, uri.length());
+    }
 
     @ModelAttribute("url")
     public String url() {

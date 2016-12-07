@@ -472,7 +472,7 @@
 
               // Were there any errors?
               if (errorsFound.length) {
-                // Better flags it up as a warning.
+                // Better flag it up as a warning.
                 $controlGroup.removeClass("success error").addClass("warning");
 
                 // How many errors did we find?

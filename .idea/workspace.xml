@@ -2,18 +2,299 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05470a97-a7cc-45b2-8779-c4e595e9ed06" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/index2_master.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile/eng.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/profile_master.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/public/print.gif" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/earth.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/earth_night.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/header-bg-img.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/header-image-esas.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/night_jk.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/sklad.jpg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__avalon_framework_avalon_framework_impl_4_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_barcode4j_barcode4j_2_0.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/com_sun_jna_jna_3_0_9.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/IncDelControllerSnap.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/UploadController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/WarehouseController.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/main/MAIN.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/main/MAIN_print.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/main/env.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/model/Country.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/model/UserFullInfo.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/model/Warehouse.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/print/CN23_Vertical.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/print/PrintLableService.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/service/CountryRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/service/UserFullInfoRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/service/WhRepository.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap-rtl.min.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/sb-admin-rtl.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/css/sb-admin.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/24-hours-delivery.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/24-hours-symbol.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/a-b.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/air-transport.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/arrow-down.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/box.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/commercial-delivery-symbol-of-a-list-on-clipboard-on-a-box-package.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/delivery-box-and-timer.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/delivery-box-on-a-hand.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/path-a-to-b.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/transport.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/up-scroll.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/about/verification-of-delivery-list-clipboard-symbol.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/newlogo/azemex_colored.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/static/img/newlogo/azemex_white.svg" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/clientsSOld.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/footerOld.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/headerOld.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/incDel/dashboard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/portfolioOld.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/about/engOld.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/contact/engOld.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/modal/truck/engOld.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/navigation/engOld.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/rootOld.ftl" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/servicesOld.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/static/cssROOTnew.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/static/scriptsNew.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/tables_dynamic_master.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/teamOld.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/template.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/upload.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/all.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/allIncDel.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/new.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/user/template.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/warehouse/all.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/templates/warehouse/new.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Warehouse.jar" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/static/img/portfolio/ship.png" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/incDel/eng.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/incDel/eng1.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/incDel/new.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/incDel/registred.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/incDel/rus.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/home_en.properties" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/index2_master.html" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/resources/templates/profile_master.html" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.ids" afterPath="$PROJECT_DIR$/.idea/dataSources.ids" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dataSources.xml" afterPath="$PROJECT_DIR$/.idea/dataSources.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/AppConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/AppConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/WarehouseApplication.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/WarehouseApplication.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/WebMvcConfig.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/WebMvcConfig.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/IncDelController.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/IncDelController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/IncDelControllerOLD.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/IncDelControllerOLD.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/RootController.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/RootController.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/SecurityController.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/SecurityController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/UserController.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/controller/UserController.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/model/Box.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/model/Box.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/model/IncDel.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/model/IncDel.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/model/MAIN.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/model/MAIN.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/model/User.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/model/User.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/model/User_workVersion.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/model/User_workVersion.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/com/warehouse/service/UserServiceImpl.java" afterPath="$PROJECT_DIR$/src/main/java/com/warehouse/service/UserServiceImpl.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/public/loginForm.html" afterPath="$PROJECT_DIR$/src/main/resources/public/loginForm.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/agency.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/agency.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/.editorconfig" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/.editorconfig" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/LICENSE" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/README.md" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/animate-config.json" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/animate-config.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/animate.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/animate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/animate.min.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/animate.min.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/bower.json" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/gulpfile.js" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/gulpfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/package.json" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/_base.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/_base.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/bounce.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/bounce.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/flash.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/flash.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/headShake.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/headShake.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/jello.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/jello.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/pulse.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/pulse.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/rubberBand.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/rubberBand.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/shake.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/shake.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/swing.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/swing.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/tada.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/tada.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/wobble.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/attention_seekers/wobble.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_entrances/bounceIn.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_entrances/bounceIn.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_entrances/bounceInDown.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_entrances/bounceInDown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_entrances/bounceInLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_entrances/bounceInLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_entrances/bounceInRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_entrances/bounceInRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_entrances/bounceInUp.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_entrances/bounceInUp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_exits/bounceOut.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_exits/bounceOut.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_exits/bounceOutDown.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_exits/bounceOutDown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_exits/bounceOutLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_exits/bounceOutLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_exits/bounceOutRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_exits/bounceOutRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_exits/bounceOutUp.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/bouncing_exits/bounceOutUp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeIn.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeIn.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInDown.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInDown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInDownBig.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInDownBig.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInLeftBig.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInLeftBig.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInRightBig.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInRightBig.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInUp.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInUp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInUpBig.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_entrances/fadeInUpBig.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOut.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOut.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutDown.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutDown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutDownBig.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutDownBig.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutLeftBig.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutLeftBig.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutRightBig.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutRightBig.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutUp.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutUp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutUpBig.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/fading_exits/fadeOutUpBig.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/flippers/flip.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/flippers/flip.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/flippers/flipInX.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/flippers/flipInX.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/flippers/flipInY.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/flippers/flipInY.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/flippers/flipOutX.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/flippers/flipOutX.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/flippers/flipOutY.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/flippers/flipOutY.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/lightspeed/lightSpeedIn.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/lightspeed/lightSpeedIn.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/lightspeed/lightSpeedOut.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/lightspeed/lightSpeedOut.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_entrances/rotateIn.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_entrances/rotateIn.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_entrances/rotateInDownLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_entrances/rotateInDownLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_entrances/rotateInDownRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_entrances/rotateInDownRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_entrances/rotateInUpLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_entrances/rotateInUpLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_entrances/rotateInUpRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_entrances/rotateInUpRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_exits/rotateOut.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_exits/rotateOut.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_exits/rotateOutDownLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_exits/rotateOutDownLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_exits/rotateOutDownRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_exits/rotateOutDownRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_exits/rotateOutUpLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_exits/rotateOutUpLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_exits/rotateOutUpRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/rotating_exits/rotateOutUpRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_entrances/slideInDown.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_entrances/slideInDown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_entrances/slideInLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_entrances/slideInLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_entrances/slideInRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_entrances/slideInRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_entrances/slideInUp.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_entrances/slideInUp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_exits/slideOutDown.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_exits/slideOutDown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_exits/slideOutLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_exits/slideOutLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_exits/slideOutRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_exits/slideOutRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_exits/slideOutUp.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/sliding_exits/slideOutUp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/specials/hinge.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/specials/hinge.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/specials/rollIn.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/specials/rollIn.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/specials/rollOut.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/specials/rollOut.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_entrances/zoomIn.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_entrances/zoomIn.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_entrances/zoomInDown.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_entrances/zoomInDown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_entrances/zoomInLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_entrances/zoomInLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_entrances/zoomInRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_entrances/zoomInRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_entrances/zoomInUp.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_entrances/zoomInUp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_exits/zoomOut.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_exits/zoomOut.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_exits/zoomOutDown.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_exits/zoomOutDown.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_exits/zoomOutLeft.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_exits/zoomOutLeft.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_exits/zoomOutRight.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_exits/zoomOutRight.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_exits/zoomOutUp.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/animate.css-master/source/zooming_exits/zoomOutUp.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/bicubik-fonts.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bicubik-fonts.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/custom.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/main.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/main.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/shine.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/shine.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/css/styleCard.css" afterPath="$PROJECT_DIR$/src/main/resources/static/css/styleCard.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome/less/icons.less" afterPath="$PROJECT_DIR$/src/main/resources/static/font-awesome/less/icons.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome/less/list.less" afterPath="$PROJECT_DIR$/src/main/resources/static/font-awesome/less/list.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/font-awesome/less/variables.less" afterPath="$PROJECT_DIR$/src/main/resources/static/font-awesome/less/variables.less" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/CONTRIBUTING.md" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/CONTRIBUTING.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/README.md" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/bower.json" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/examples/index.html" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/examples/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/examples/style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/examples/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/jquery.lettering.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/Lettering.js-master/jquery.lettering.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/agency.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/agency.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/cbpAnimatedHeader.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/cbpAnimatedHeader.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/cbpAnimatedHeader.min.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/cbpAnimatedHeader.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/classie.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/classie.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/contact_me.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/contact_me.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/indexCard.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/indexCard.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/jqBootstrapValidation.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jqBootstrapValidation.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.fancybox.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.fancybox.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.lettering.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.lettering.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.maskedinput.min.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.maskedinput.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.stellar.min.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.stellar.min.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/jquery.textillate.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery.textillate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/mask.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/mask.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/services.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/services.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/Gruntfile.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/Gruntfile.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/LICENSE" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/README.md" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/bower.json" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/auto-pilot-children.html" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/auto-pilot-children.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/auto-pilot.html" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/auto-pilot.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/auto-pilot.non-min.html" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/auto-pilot.non-min.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/change-text.html" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/change-text.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/css/demo.css" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/css/demo.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/mouse-follow.html" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/mouse-follow.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/requirejs.html" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/requirejs.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/requirejs.non-min.html" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/demos/requirejs.non-min.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/amd.module.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/amd.module.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/namespace.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/namespace.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.color.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.color.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.config.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.config.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.light.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.light.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.point.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.point.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.shadow.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.shadow.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.splitter.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.splitter.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.style-injector.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.style-injector.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.timing.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/shine.timing.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/util/function.bind.polyfill.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/util/function.bind.polyfill.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/util/performance.now.polyfill.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/lib/util/performance.now.polyfill.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/shine/package.json" afterPath="$PROJECT_DIR$/src/main/resources/static/js/shine/package.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/smoothscroll.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/smoothscroll.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/test/mask.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/test/mask.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/.gitattributes" afterPath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/.gitattributes" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/LICENSE" afterPath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/LICENSE" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/README.md" afterPath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/assets/animate.css" afterPath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/assets/animate.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/assets/jquery.fittext.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/assets/jquery.fittext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/assets/jquery.lettering.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/assets/jquery.lettering.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/assets/style.css" afterPath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/assets/style.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/bower.json" afterPath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/bower.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/index.html" afterPath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/index.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/jquery.textillate.js" afterPath="$PROJECT_DIR$/src/main/resources/static/js/textillate-master/jquery.textillate.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/static/less/agency.less" afterPath="$PROJECT_DIR$/src/main/resources/static/less/agency.less" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/content.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/content.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/eng.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/eng.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/navigation.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/navigation.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/profile.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/rus.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/rus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/sidebar.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/sidebar.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/templ.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/admin/templ.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/adminHTML1.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/adminHTML1.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/clientsS.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/clientsS.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/footer.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/footer.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/header.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/header.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/incDel/all.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/incDel/all.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/incDel/new.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/incDel/new.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/incDel/registred.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/incDel/registred.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/portfolio.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/portfolio.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root.ftl" afterPath="$PROJECT_DIR$/src/main/resources/templates/root.ftl" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root/about/about.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/about/about.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root/about/aze.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/about/aze.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root/about/eng.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/about/eng.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root/about/rus.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/about/rus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root/contact/aze.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/contact/aze.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root/contact/eng.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/contact/eng.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root/contact/rus.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/contact/rus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root/modal/truck/eng.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/modal/truck/eng.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root/navigation/aze.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/navigation/aze.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root/navigation/eng.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/navigation/eng.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/root/navigation/rus.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/root/navigation/rus.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/services.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/services.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/templates/team.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/team.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/util/MAIN.java" afterPath="$PROJECT_DIR$/src/main/resources/util/MAIN.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/util/Thymeleaf.html" afterPath="$PROJECT_DIR$/src/main/resources/util/Thymeleaf.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/util/плюшки.html" afterPath="$PROJECT_DIR$/src/main/resources/util/плюшки.html" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/Dockerfile1" afterPath="$PROJECT_DIR$/Dockerfile" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/src/main/resources/templates/admin/incDel/modal/eng.html" afterPath="$PROJECT_DIR$/src/main/resources/templates/incDel/modal/eng.html" />
     </list>
     <ignored path="warehouseBOOT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -43,69 +324,98 @@
     <favorites_list name="warehouseBOOT" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.50618184">
+    <splitter split-orientation="horizontal" split-proportion="0.5073389">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="IncDelController.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="IncDelController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/IncDelController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-51">
-                  <caret line="119" column="26" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="admin.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin.html">
-              <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
-                  <caret line="104" column="65" selection-start-line="104" selection-start-column="65" selection-end-line="104" selection-end-column="65" />
+                  <caret line="108" column="72" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="72" />
                   <folding>
-                    <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                    <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="imports" expanded="true" />
+                    <element signature="e#19213#19214#0" expanded="true" />
+                    <element signature="e#19259#19260#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="navigation.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/navigation.html">
+          <file leaf-file-name="WarehouseController.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/WarehouseController.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="255">
-                  <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+                <state relative-caret-position="412">
+                  <caret line="94" column="72" selection-start-line="94" selection-start-column="72" selection-end-line="94" selection-end-column="72" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="плюшки.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/util/плюшки.html">
+          <file leaf-file-name="WarehouseApplication.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/WarehouseApplication.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="170">
-                  <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="6" />
+                <state relative-caret-position="474">
+                  <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="sidebar.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/sidebar.html">
+          <file leaf-file-name="Country.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/model/Country.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="3111">
-                  <caret line="183" column="40" selection-start-line="183" selection-start-column="40" selection-end-line="183" selection-end-column="40" />
-                  <folding>
-                    <marker date="1480431626493" expanded="false" signature="6684:6699" ph="..." />
-                  </folding>
+                <state relative-caret-position="221">
+                  <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="registred.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/registred.html">
+          <file leaf-file-name="CountryRepository.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/service/CountryRepository.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-255">
-                  <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
+                <state relative-caret-position="187">
+                  <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="all.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/all.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="102">
+                  <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/UserController.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="442">
+                  <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AppConfig.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/AppConfig.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="459">
+                  <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="persistence.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="318">
+                  <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
                   <folding />
                 </state>
               </provider>
@@ -115,126 +425,44 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="IncDel.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/model/IncDel.java">
+          <file leaf-file-name="dashboard.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/dashboard.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="595">
-                  <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
+                <state relative-caret-position="509">
+                  <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
                   <folding>
-                    <element signature="imports" expanded="false" />
-                    <element signature="e#1810#1818#0" expanded="false" />
-                    <element signature="e#2443#2444#0" expanded="false" />
-                    <element signature="e#2479#2480#0" expanded="false" />
-                    <element signature="e#2533#2534#0" expanded="false" />
-                    <element signature="e#2573#2574#0" expanded="false" />
-                    <element signature="e#2646#2647#0" expanded="false" />
-                    <element signature="e#2701#2702#0" expanded="false" />
-                    <element signature="e#2728#2729#0" expanded="false" />
-                    <element signature="e#2753#2754#0" expanded="false" />
-                    <element signature="e#2787#2788#0" expanded="false" />
-                    <element signature="e#2815#2816#0" expanded="false" />
-                    <element signature="e#2848#2849#0" expanded="false" />
-                    <element signature="e#2877#2878#0" expanded="false" />
-                    <element signature="e#2921#2922#0" expanded="false" />
-                    <element signature="e#2957#2958#0" expanded="false" />
-                    <element signature="e#2990#2991#0" expanded="false" />
-                    <element signature="e#3019#3020#0" expanded="false" />
-                    <element signature="e#3063#3064#0" expanded="false" />
-                    <element signature="e#3099#3100#0" expanded="false" />
-                    <element signature="e#3135#3136#0" expanded="false" />
-                    <element signature="e#3167#3168#0" expanded="false" />
-                    <element signature="e#3217#3218#0" expanded="false" />
-                    <element signature="e#3259#3260#0" expanded="false" />
-                    <element signature="e#3289#3290#0" expanded="false" />
-                    <element signature="e#3318#3319#0" expanded="false" />
-                    <element signature="e#3359#3360#0" expanded="false" />
-                    <element signature="e#3395#3396#0" expanded="false" />
-                    <element signature="e#3433#3434#0" expanded="false" />
-                    <element signature="e#3467#3468#0" expanded="false" />
-                    <element signature="e#3521#3522#0" expanded="false" />
-                    <element signature="e#3567#3568#0" expanded="false" />
-                    <element signature="e#3609#3610#0" expanded="false" />
-                    <element signature="e#3647#3648#0" expanded="false" />
-                    <element signature="e#3709#3710#0" expanded="false" />
-                    <element signature="e#3763#3764#0" expanded="false" />
-                    <element signature="e#3800#3801#0" expanded="false" />
-                    <element signature="e#3833#3834#0" expanded="false" />
-                    <element signature="e#3885#3886#0" expanded="false" />
-                    <element signature="e#3929#3930#0" expanded="false" />
-                    <element signature="e#3962#3963#0" expanded="false" />
-                    <element signature="e#3991#3992#0" expanded="false" />
-                    <element signature="e#4035#4036#0" expanded="false" />
-                    <element signature="e#4071#4072#0" expanded="false" />
-                    <element signature="e#4102#4103#0" expanded="false" />
-                    <element signature="e#4129#4130#0" expanded="false" />
-                    <element signature="e#4169#4170#0" expanded="false" />
-                    <element signature="e#4201#4202#0" expanded="false" />
-                    <element signature="e#4236#4237#0" expanded="false" />
-                    <element signature="e#4267#4268#0" expanded="false" />
-                    <element signature="e#4315#4316#0" expanded="false" />
-                    <element signature="e#4355#4356#0" expanded="false" />
-                    <element signature="e#4397#4398#0" expanded="false" />
-                    <element signature="e#4435#4436#0" expanded="false" />
-                    <element signature="e#4497#4498#0" expanded="false" />
-                    <element signature="e#4551#4552#0" expanded="false" />
-                    <element signature="e#4594#4595#0" expanded="false" />
-                    <element signature="e#4633#4634#0" expanded="false" />
-                    <element signature="e#4697#4698#0" expanded="false" />
-                    <element signature="e#4753#4754#0" expanded="false" />
-                    <element signature="e#4794#4795#0" expanded="false" />
-                    <element signature="e#4831#4832#0" expanded="false" />
-                    <element signature="e#4891#4892#0" expanded="false" />
-                    <element signature="e#4943#4944#0" expanded="false" />
-                    <element signature="e#4988#4989#0" expanded="false" />
-                    <element signature="e#5029#5030#0" expanded="false" />
-                    <element signature="e#5097#5098#0" expanded="false" />
-                    <element signature="e#5157#5158#0" expanded="false" />
-                    <element signature="e#5195#5196#0" expanded="false" />
-                    <element signature="e#5229#5230#0" expanded="false" />
-                    <element signature="e#5283#5284#0" expanded="false" />
-                    <element signature="e#5329#5330#0" expanded="false" />
-                    <element signature="e#5364#5365#0" expanded="false" />
-                    <element signature="e#5395#5396#0" expanded="false" />
-                    <element signature="e#5443#5444#0" expanded="false" />
-                    <element signature="e#5483#5484#0" expanded="false" />
-                    <element signature="e#5516#5517#0" expanded="false" />
-                    <element signature="e#5545#5546#0" expanded="false" />
-                    <element signature="e#5589#5590#0" expanded="false" />
-                    <element signature="e#5625#5626#0" expanded="false" />
-                    <element signature="e#5663#5664#0" expanded="false" />
-                    <element signature="e#5697#5698#0" expanded="false" />
-                    <element signature="e#5751#5752#0" expanded="false" />
-                    <element signature="e#5797#5798#0" expanded="false" />
-                    <element signature="e#5836#5837#0" expanded="false" />
-                    <element signature="e#5871#5872#0" expanded="false" />
-                    <element signature="e#5927#5928#0" expanded="false" />
-                    <element signature="e#5975#5976#0" expanded="false" />
-                    <element signature="e#6021#6022#0" expanded="false" />
-                    <element signature="e#6065#6066#0" expanded="false" />
-                    <element signature="e#6417#6418#0" expanded="false" />
-                    <element signature="e#6455#6456#0" expanded="false" />
-                    <element signature="e#6523#6524#0" expanded="false" />
-                    <element signature="e#6577#6578#0" expanded="false" />
+                    <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                    <element signature="n#style#0;n#a#1;n#td#9;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="RootController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/RootController.java">
+          <file leaf-file-name="new.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouse/new.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-2533">
-                  <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+                <state relative-caret-position="227">
+                  <caret line="43" column="93" selection-start-line="43" selection-start-column="93" selection-end-line="43" selection-end-column="93" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="IncDelController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/IncDelController.java">
+          <file leaf-file-name="all.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouse/all.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="4165">
-                  <caret line="268" column="25" selection-start-line="268" selection-start-column="12" selection-end-line="268" selection-end-column="25" />
+                <state relative-caret-position="442">
+                  <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="sidebar.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/sidebar.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="267">
+                  <caret line="271" column="0" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -243,19 +471,11 @@
           <file leaf-file-name="new.html" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/new.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="profile_master.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/main/resources/templates/profile_master.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="724">
-                  <caret line="566" column="61" selection-start-line="566" selection-start-column="61" selection-end-line="566" selection-end-column="61" />
-                  <folding />
+                <state relative-caret-position="502">
+                  <caret line="85" column="38" selection-start-line="78" selection-start-column="31" selection-end-line="85" selection-end-column="38" />
+                  <folding>
+                    <marker date="1481103160506" expanded="false" signature="2907:2917" ph="..." />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -269,8 +489,8 @@
       <list>
         <option value="Interface" />
         <option value="HTML File" />
-        <option value="Class" />
         <option value="JUnit4 Test Class" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -285,57 +505,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/customs/appStatic.js" />
-        <option value="$PROJECT_DIR$/src/test/java/com/warehouse/controller/GreetingControllerTest.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/WarehouseApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/util/Angular.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/controller/OrderProductIncDelController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/adminHTML.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/static/js/customs/appPublic.js" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/homeFragment.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/testingData.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin.ftl" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/sidebar/homeFragment.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/templ.html" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/home.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/fixed_sidebar.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/util/Thymeleaf.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/util/MAIN.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/service/IncDelCrudRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/service/IncDelRepository.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/controller/UserController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/incDel/new/eng.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/incDel/registred.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/incDel/new.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/content.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/footer.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/util/плюшки.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/SecurityConfiguration.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/incDel/new.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/public/incDel/all.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/AppConfig1.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/controller/GreetingController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/util/RESTController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
-        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/model/OrderIncDel.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/model/IncDel.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/sidebar.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/static/scriptsNew.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/root.ftl" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/static/cssROOTnew.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/root/navigation/eng.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/root/navigation/engOld.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/warehouse/controller/RootController.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/controller/IncDelController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/profile/templ.html" />
-        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/controller/SecurityController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/profile_master.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/index2_master.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/incDel/registred.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/root/about/rus.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/main/env.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/template.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/template.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/model/User.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/model/UserFullInfo2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/model/UserRole2.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/model/UserFullInfo.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/login.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/public/loginForm.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/service/UserFullInfoRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/new.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/dashboard/board.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/dasboard.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/templ.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/dashboard.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/incDel/dashboard.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/user/all.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/util/плюшки.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/tables_dynamic_master.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/model/MAIN.java" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/incDel/all.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/profile/eng.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userTempl/new.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/userTempl/all.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/controller/UserController.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/service/WhRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/incDelUser/new.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/util/Thymeleaf.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/model/Warehouse.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/model/IncDel.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/incDel/new.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/incDel/dashboard.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/WarehouseApplication.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/model/Country.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/service/CountryRepository.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/controller/IncDelController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/warehouses/new.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/warehouses/all.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/sidebar.html" />
+        <option value="$PROJECT_DIR$/src/main/resources/templates/warehouse/new.html" />
         <option value="$PROJECT_DIR$/src/main/java/com/warehouse/AppConfig.java" />
         <option value="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/incDel/registred.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/incDel/new.html" />
-        <option value="$PROJECT_DIR$/src/main/resources/templates/admin/navigation.html" />
+        <option value="$PROJECT_DIR$/src/main/java/com/warehouse/controller/WarehouseController.java" />
       </list>
     </option>
   </component>
@@ -365,10 +585,10 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="7" />
-    <option name="y" value="3" />
-    <option name="width" value="1922" />
-    <option name="height" value="970" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1056" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -395,9 +615,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -429,14 +646,6 @@
               <option name="myItemId" value="src" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -457,96 +666,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="util" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warehouseBOOT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warehouseBOOT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warehouseBOOT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warehouseBOOT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="profile" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warehouseBOOT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="warehouseBOOT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="incDel" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -605,6 +724,13 @@
         </subPane>
         <option name="show-excluded-files" value="false" />
       </pane>
+      <pane id="Scope">
+        <subPane subId="Project Files" />
+      </pane>
+      <pane id="PackagesPane">
+        <subPane />
+      </pane>
+      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -612,11 +738,11 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js-jscs-nodeInterpreter" value="C:\Program Files\nodejs\node.exe" />
     <property name="com.intellij.database.dataSource.DataSourceTemplate" value="MySQL" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.20072727" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../MavenSecurity" />
     <property name="Downloaded.Files.Path.Enabled" value="false" />
     <property name="Repository.Attach.JavaDocs" value="false" />
     <property name="Repository.Attach.Sources" value="false" />
@@ -625,6 +751,9 @@
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
   </component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.warehouse.service" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="com.warehouse.controller" />
     </key>
@@ -634,47 +763,41 @@
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.warehouse" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\workspace\warehouseBOOT\src\main\resources\templates\admin\incDel" />
-      <recent name="D:\workspace\warehouseBOOT\src\main\resources\util" />
-      <recent name="D:\workspace\warehouseBOOT\src\main\resources\templates\navigation" />
-      <recent name="D:\workspace\warehouseBOOT\src\main\resources\templates\login" />
-      <recent name="D:\workspace\warehouseBOOT\src\main\java\com\warehouse\util" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\workspace\warehouseBOOT\src\main\resources\templates\warehouses" />
+      <recent name="D:\workspace\warehouseBOOT\src\main\resources\templates\incDelUser" />
       <recent name="D:\workspace\warehouseBOOT\src\main\resources\templates" />
-      <recent name="D:\workspace\warehouseBOOT\src\main\resources\templates\profile" />
-      <recent name="D:\workspace\warehouseBOOT\src\main\resources" />
-      <recent name="D:\workspace\warehouseBOOT\src\main\resources\public" />
-      <recent name="D:\workspace\warehouseBOOT\src\main\resources\templates\incDel" />
+      <recent name="D:\workspace\warehouseBOOT\src\main\resources\templates\user" />
+      <recent name="D:\workspace\warehouseBOOT\src\main\resources\static\js" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.warehouse" />
-      <recent name="com.warehouse.service" />
-      <recent name="util" />
       <recent name="com.warehouse.controller" />
-      <recent name="com.warehouse.util" />
-    </key>
-    <key name="CreateClassDialog.RecentsKey">
       <recent name="com.warehouse.service" />
+      <recent name="com.warehouse.model" />
+      <recent name="com.warehouse" />
+      <recent name="util" />
+    </key>
+    <key name="OPEN_URL_DIALOG">
+      <recent name="http://google.com" />
+      <recent name="http://azemex.com" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\workspace\warehouseBOOT\src\main\resources\static\css" />
+      <recent name="D:\workspace\warehouseBOOT\src\main\java\com\warehouse\main" />
+      <recent name="D:\workspace\warehouseBOOT\src\main\java\com\warehouse" />
+      <recent name="D:\workspace\warehouseBOOT\src\main\resources\templates\admin\incDel" />
+      <recent name="D:\workspace\warehouseBOOT\src\main\resources\util" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.WarehouseApplication">
-    <configuration default="false" name="WarehouseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.warehouse.WarehouseApplication" />
-      <module name="warehouse" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="LangType" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration default="false" name="WinSpoolTest" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
           <option name="PATTERN" value="com.warehouse.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.warehouse.model.LangType" />
+      <option name="MAIN_CLASS_NAME" value="com.warehouse.model.WinSpoolTest" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -683,6 +806,45 @@
       <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
       <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="warehouse" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="env" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="com.warehouse.main.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="com.warehouse.main.env" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="warehouse" />
+      <envs />
+      <method />
+    </configuration>
+    <configuration default="false" name="Docker Deployment" type="docker-deploy" factoryName="Docker Deployment" temporary="true">
+      <deployment type="dockerfile" path="$PROJECT_DIR$/Dockerfile">
+        <settings>
+          <option name="startBrowserSettings">
+            <browser url="http://192.168.99.100" />
+          </option>
+        </settings>
+      </deployment>
+      <method />
+    </configuration>
+    <configuration default="false" name="WarehouseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.warehouse.WarehouseApplication" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="ALTERNATIVE_JRE_PATH" value="C:\Program Files\Java\jdk1.8.0_101\jre" />
       <module name="warehouse" />
       <envs />
       <method />
@@ -690,51 +852,11 @@
     <configuration default="false" name="MAIN" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="com.warehouse.controller.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.warehouse.util.MAIN" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="warehouse" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Box" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
           <option name="PATTERN" value="com.warehouse.model.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="com.warehouse.model.Box" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="warehouse" />
-      <envs />
-      <method />
-    </configuration>
-    <configuration default="false" name="Initializator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="com.warehouse.util.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="com.warehouse.util.Initializator" />
+      <option name="MAIN_CLASS_NAME" value="com.warehouse.model.MAIN" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -892,6 +1014,20 @@
       <option name="PARAMETERS" value="" />
       <module name="" />
       <envs />
+      <method />
+    </configuration>
+    <configuration default="true" type="CBConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+      <deployment />
+      <server-settings>
+        <option name="HTTP_PORT_X" value="8080" />
+        <option name="JNDI_PORT" value="1099" />
+        <option name="USERNAME" value="" />
+        <option name="PASSWORD" value="" />
+      </server-settings>
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
+      <method />
+    </configuration>
+    <configuration default="true" type="ChromiumRemoteDebugType" factoryName="Chromium Remote">
       <method />
     </configuration>
     <configuration default="true" type="CucumberJavaRunConfigurationType" factoryName="Cucumber java">
@@ -1177,6 +1313,9 @@
       <listeners />
       <method />
     </configuration>
+    <configuration default="true" type="docker-deploy" factoryName="Docker Deployment">
+      <method />
+    </configuration>
     <configuration default="true" type="executeSpecs" factoryName="Gauge Execution">
       <setting name="environment" value="" />
       <setting name="specsToExecute" value="" />
@@ -1221,19 +1360,19 @@
     </configuration>
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Spring Boot.DemoApplication" />
-      <item index="1" class="java.lang.String" itemvalue="Spring Boot.WarehouseApplication" />
-      <item index="2" class="java.lang.String" itemvalue="Application.LangType" />
-      <item index="3" class="java.lang.String" itemvalue="Application.MAIN" />
-      <item index="4" class="java.lang.String" itemvalue="Application.Box" />
-      <item index="5" class="java.lang.String" itemvalue="Application.Initializator" />
+      <item index="1" class="java.lang.String" itemvalue="Application.WinSpoolTest" />
+      <item index="2" class="java.lang.String" itemvalue="Application.env" />
+      <item index="3" class="java.lang.String" itemvalue="Docker Deployment.Docker Deployment" />
+      <item index="4" class="java.lang.String" itemvalue="Spring Boot.WarehouseApplication" />
+      <item index="5" class="java.lang.String" itemvalue="Application.MAIN" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Spring Boot.WarehouseApplication" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Initializator" />
-        <item index="2" class="java.lang.String" itemvalue="Application.Box" />
-        <item index="3" class="java.lang.String" itemvalue="Application.MAIN" />
-        <item index="4" class="java.lang.String" itemvalue="Application.MAIN" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MAIN" />
+        <item index="2" class="java.lang.String" itemvalue="Docker Deployment.Docker Deployment" />
+        <item index="3" class="java.lang.String" itemvalue="Application.env" />
+        <item index="4" class="java.lang.String" itemvalue="Application.WinSpoolTest" />
       </list>
     </recent_temporary>
   </component>
@@ -1267,13 +1406,25 @@
       <workItem from="1479681352482" duration="18361000" />
       <workItem from="1479753002911" duration="103282000" />
       <workItem from="1480065263031" duration="82283000" />
-      <workItem from="1480230471823" duration="85321000" />
-      <workItem from="1480484067194" duration="2918000" />
+      <workItem from="1480230471823" duration="74601000" />
+      <workItem from="1480590655847" duration="16365000" />
+      <workItem from="1480711641985" duration="22653000" />
+      <workItem from="1480856234899" duration="1542000" />
+      <workItem from="1480884214008" duration="162000" />
+      <workItem from="1480884400539" duration="359000" />
+      <workItem from="1480884776112" duration="846000" />
+      <workItem from="1480887345403" duration="425000" />
+      <workItem from="1472763241061" duration="15839000" />
+      <workItem from="1478034933177" duration="246000" />
+      <workItem from="1478035214371" duration="96000" />
+      <workItem from="1480974201025" duration="27000" />
+      <workItem from="1480974351353" duration="636000" />
+      <workItem from="1480996314658" duration="61218000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="811808000" />
+    <option name="totallyTimeSpent" value="918584000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1284,64 +1435,66 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="7" y="3" width="1922" height="970" extended-state="0" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31863979" sideWeight="0.48933902" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31385282" sideWeight="0.48720682" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18151447" sideWeight="0.5170576" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.082706764" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33766234" sideWeight="0.14179105" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25426438" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.103896104" sideWeight="0.85820895" order="5" side_tool="false" content_ui="tabs" x="141" y="362" width="1085" height="312" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36525613" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21937639" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16380237" sideWeight="0.84521157" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16471216" sideWeight="0.84521157" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08968851" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25426438" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40367964" sideWeight="0.4978678" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25426438" sideWeight="0.15478842" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20948827" sideWeight="0.14365256" order="6" side_tool="true" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33741647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23605707" sideWeight="0.48294243" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35902852" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33964366" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40596628" sideWeight="0.4978678" order="9" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18151447" sideWeight="0.5170576" order="0" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.082706764" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33766234" sideWeight="0.14179105" order="0" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08208955" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.08968851" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13006397" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25426438" sideWeight="0.15478842" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33741647" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962137" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31863979" sideWeight="0.48933902" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.31385282" sideWeight="0.48720682" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32993197" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23605707" sideWeight="0.48294243" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.36525613" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="REST Client" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.35902852" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32925472" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17424242" sideWeight="0.85820895" order="6" side_tool="false" content_ui="tabs" x="141" y="362" width="1085" height="312" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32850778" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.21937639" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33964366" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16380237" sideWeight="0.84521157" order="4" side_tool="false" content_ui="combo" />
+      <window_info id="Database Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33964366" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19402985" sideWeight="0.84521157" order="4" side_tool="false" content_ui="combo" />
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40596628" sideWeight="0.4978678" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.40367964" sideWeight="0.4978678" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20948827" sideWeight="0.14365256" order="6" side_tool="true" content_ui="tabs" />
     </layout-to-restore>
   </component>
@@ -1367,474 +1520,475 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="dbDummy://dbtable:/c30c6bc8/92aeb269-09a7-42c1-9b06-9ba7b69fb142/app.orderincdel">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1173">
+          <caret line="69" column="20" selection-start-line="69" selection-start-column="20" selection-end-line="69" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/model/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="289">
+          <caret line="24" column="27" selection-start-line="24" selection-start-column="19" selection-end-line="24" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c30c6bc8/bb0507dc-6f02-49a5-bb00-4d8cdd9e1c46/app.userfullinfo">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c30c6bc8/bb0507dc-6f02-49a5-bb00-4d8cdd9e1c46/app.users">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/c30c6bc8/92aeb269-09a7-42c1-9b06-9ba7b69fb142/app.incdel">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
           <filtering enabled="true" />
         </state>
       </provider>
-      <provider editor-type-id="text-editor">
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/bootstrap-rtl.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="16" selection-start-line="22" selection-start-column="16" selection-end-line="22" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/model/UserFullInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="19" column="28" selection-start-line="19" selection-start-column="19" selection-end-line="19" selection-end-column="28" />
+          <folding>
+            <element signature="e#707#708#0" expanded="false" />
+            <element signature="e#746#747#0" expanded="false" />
+            <element signature="e#2403#2404#0" expanded="false" />
+            <element signature="e#2434#2435#0" expanded="false" />
+            <element signature="e#2480#2481#0" expanded="false" />
+            <element signature="e#2520#2521#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/dashboard/board.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="49" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/sidebar/eng.html">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/c30c6bc8/92aeb269-09a7-42c1-9b06-9ba7b69fb142/app.incdel">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/c30c6bc8/92aeb269-09a7-42c1-9b06-9ba7b69fb142/app.incdel">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/incDel/new/eng.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/apache/tomcat/embed/tomcat-embed-core/8.5.5/tomcat-embed-core-8.5.5-sources.jar!/org/apache/catalina/core/StandardEngineValve.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="327">
-          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/util/Thymeleaf.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-510">
-          <caret line="99" column="10" selection-start-line="98" selection-start-column="40" selection-end-line="99" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/content.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="31" selection-start-line="8" selection-start-column="31" selection-end-line="8" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-webmvc/4.3.3.RELEASE/spring-webmvc-4.3.3.RELEASE.jar!/org/springframework/web/servlet/ModelAndView.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="65" column="16" selection-start-line="65" selection-start-column="16" selection-end-line="65" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="dbDummy://dbtable:/c30c6bc8/92aeb269-09a7-42c1-9b06-9ba7b69fb142/app.orderincdel">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/eng.html" />
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/4.3.3.RELEASE/spring-web-4.3.3.RELEASE.jar!/org/springframework/web/bind/annotation/ModelAttribute.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="19" column="11" selection-start-line="19" selection-start-column="11" selection-end-line="19" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/modal/eng.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/incDel/registred.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="5151">
-          <caret line="303" column="0" selection-start-line="303" selection-start-column="0" selection-end-line="303" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/incDel/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="14" selection-start-line="14" selection-start-column="14" selection-end-line="14" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/incDel/eng.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1632">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/footer/eng.html">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/footer.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/incDel/new.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/resources/public/incDel/all.html" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/AppConfig2.java" />
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/UserController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="34" column="13" selection-start-line="34" selection-start-column="13" selection-end-line="34" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar!/org/slf4j/Logger.class">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="134">
-          <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="113" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="70" selection-start-line="5" selection-start-column="70" selection-end-line="5" selection-end-column="70" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/util/RESTController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="26" column="0" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/GreetingController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/model/OrderIncDel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+        <state relative-caret-position="119">
+          <caret line="7" column="62" selection-start-line="7" selection-start-column="62" selection-end-line="7" selection-end-column="62" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="dbDummy://dbtable:/c30c6bc8/92aeb269-09a7-42c1-9b06-9ba7b69fb142/app.incdel">
-      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
-        <state>
-          <filtering enabled="true" />
-        </state>
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/WarehouseApplication.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/incDel/dashboard.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="556">
-          <caret line="71" column="34" selection-start-line="71" selection-start-column="34" selection-end-line="71" selection-end-column="34" />
+        <state relative-caret-position="153">
+          <caret line="9" column="14" selection-start-line="9" selection-start-column="14" selection-end-line="9" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/model/IncDel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="595">
-          <caret line="43" column="0" selection-start-line="43" selection-start-column="0" selection-end-line="43" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#1810#1818#0" expanded="false" />
-            <element signature="e#2443#2444#0" expanded="false" />
-            <element signature="e#2479#2480#0" expanded="false" />
-            <element signature="e#2533#2534#0" expanded="false" />
-            <element signature="e#2573#2574#0" expanded="false" />
-            <element signature="e#2646#2647#0" expanded="false" />
-            <element signature="e#2701#2702#0" expanded="false" />
-            <element signature="e#2728#2729#0" expanded="false" />
-            <element signature="e#2753#2754#0" expanded="false" />
-            <element signature="e#2787#2788#0" expanded="false" />
-            <element signature="e#2815#2816#0" expanded="false" />
-            <element signature="e#2848#2849#0" expanded="false" />
-            <element signature="e#2877#2878#0" expanded="false" />
-            <element signature="e#2921#2922#0" expanded="false" />
-            <element signature="e#2957#2958#0" expanded="false" />
-            <element signature="e#2990#2991#0" expanded="false" />
-            <element signature="e#3019#3020#0" expanded="false" />
-            <element signature="e#3063#3064#0" expanded="false" />
-            <element signature="e#3099#3100#0" expanded="false" />
-            <element signature="e#3135#3136#0" expanded="false" />
-            <element signature="e#3167#3168#0" expanded="false" />
-            <element signature="e#3217#3218#0" expanded="false" />
-            <element signature="e#3259#3260#0" expanded="false" />
-            <element signature="e#3289#3290#0" expanded="false" />
-            <element signature="e#3318#3319#0" expanded="false" />
-            <element signature="e#3359#3360#0" expanded="false" />
-            <element signature="e#3395#3396#0" expanded="false" />
-            <element signature="e#3433#3434#0" expanded="false" />
-            <element signature="e#3467#3468#0" expanded="false" />
-            <element signature="e#3521#3522#0" expanded="false" />
-            <element signature="e#3567#3568#0" expanded="false" />
-            <element signature="e#3609#3610#0" expanded="false" />
-            <element signature="e#3647#3648#0" expanded="false" />
-            <element signature="e#3709#3710#0" expanded="false" />
-            <element signature="e#3763#3764#0" expanded="false" />
-            <element signature="e#3800#3801#0" expanded="false" />
-            <element signature="e#3833#3834#0" expanded="false" />
-            <element signature="e#3885#3886#0" expanded="false" />
-            <element signature="e#3929#3930#0" expanded="false" />
-            <element signature="e#3962#3963#0" expanded="false" />
-            <element signature="e#3991#3992#0" expanded="false" />
-            <element signature="e#4035#4036#0" expanded="false" />
-            <element signature="e#4071#4072#0" expanded="false" />
-            <element signature="e#4102#4103#0" expanded="false" />
-            <element signature="e#4129#4130#0" expanded="false" />
-            <element signature="e#4169#4170#0" expanded="false" />
-            <element signature="e#4201#4202#0" expanded="false" />
-            <element signature="e#4236#4237#0" expanded="false" />
-            <element signature="e#4267#4268#0" expanded="false" />
-            <element signature="e#4315#4316#0" expanded="false" />
-            <element signature="e#4355#4356#0" expanded="false" />
-            <element signature="e#4397#4398#0" expanded="false" />
-            <element signature="e#4435#4436#0" expanded="false" />
-            <element signature="e#4497#4498#0" expanded="false" />
-            <element signature="e#4551#4552#0" expanded="false" />
-            <element signature="e#4594#4595#0" expanded="false" />
-            <element signature="e#4633#4634#0" expanded="false" />
-            <element signature="e#4697#4698#0" expanded="false" />
-            <element signature="e#4753#4754#0" expanded="false" />
-            <element signature="e#4794#4795#0" expanded="false" />
-            <element signature="e#4831#4832#0" expanded="false" />
-            <element signature="e#4891#4892#0" expanded="false" />
-            <element signature="e#4943#4944#0" expanded="false" />
-            <element signature="e#4988#4989#0" expanded="false" />
-            <element signature="e#5029#5030#0" expanded="false" />
-            <element signature="e#5097#5098#0" expanded="false" />
-            <element signature="e#5157#5158#0" expanded="false" />
-            <element signature="e#5195#5196#0" expanded="false" />
-            <element signature="e#5229#5230#0" expanded="false" />
-            <element signature="e#5283#5284#0" expanded="false" />
-            <element signature="e#5329#5330#0" expanded="false" />
-            <element signature="e#5364#5365#0" expanded="false" />
-            <element signature="e#5395#5396#0" expanded="false" />
-            <element signature="e#5443#5444#0" expanded="false" />
-            <element signature="e#5483#5484#0" expanded="false" />
-            <element signature="e#5516#5517#0" expanded="false" />
-            <element signature="e#5545#5546#0" expanded="false" />
-            <element signature="e#5589#5590#0" expanded="false" />
-            <element signature="e#5625#5626#0" expanded="false" />
-            <element signature="e#5663#5664#0" expanded="false" />
-            <element signature="e#5697#5698#0" expanded="false" />
-            <element signature="e#5751#5752#0" expanded="false" />
-            <element signature="e#5797#5798#0" expanded="false" />
-            <element signature="e#5836#5837#0" expanded="false" />
-            <element signature="e#5871#5872#0" expanded="false" />
-            <element signature="e#5927#5928#0" expanded="false" />
-            <element signature="e#5975#5976#0" expanded="false" />
-            <element signature="e#6021#6022#0" expanded="false" />
-            <element signature="e#6065#6066#0" expanded="false" />
-            <element signature="e#6417#6418#0" expanded="false" />
-            <element signature="e#6455#6456#0" expanded="false" />
-            <element signature="e#6523#6524#0" expanded="false" />
-            <element signature="e#6577#6578#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/SecurityConfiguration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="55" column="17" selection-start-line="55" selection-start-column="17" selection-end-line="55" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/sidebar.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3111">
-          <caret line="183" column="40" selection-start-line="183" selection-start-column="40" selection-end-line="183" selection-end-column="40" />
-          <folding>
-            <marker date="1480431626493" expanded="false" signature="6684:6699" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/profile/templ.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/templ.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="37" selection-start-line="7" selection-start-column="37" selection-end-line="7" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/all.html">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/navigation/eng.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/portfolio.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/profile/eng.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="38" column="30" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/index2_master.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="311">
-          <caret line="305" column="18" selection-start-line="270" selection-start-column="11" selection-end-line="305" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/AppConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="77" column="0" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="37" column="0" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/util/плюшки.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="6" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/registred.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="69" column="0" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/IncDelControllerOLD.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-765">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#6672#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/SecurityController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="89" column="35" selection-start-line="89" selection-start-column="35" selection-end-line="89" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/RootController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2533">
-          <caret line="59" column="0" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="104" column="65" selection-start-line="104" selection-start-column="65" selection-end-line="104" selection-end-column="65" />
-          <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#2;n#div#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/profile_master.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="724">
-          <caret line="566" column="61" selection-start-line="566" selection-start-column="61" selection-end-line="566" selection-end-column="61" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/new.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="49" selection-start-line="20" selection-start-column="49" selection-end-line="20" selection-end-column="49" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/navigation.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="48" column="22" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
+        <state relative-caret-position="153">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/util/плюшки.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/responsive.bootstrap.min.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/tables_dynamic_master.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="126">
+          <caret line="2574" column="22" selection-start-line="2574" selection-start-column="22" selection-end-line="2574" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/model/MAIN.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="95" column="29" selection-start-line="95" selection-start-column="29" selection-end-line="95" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3077">
+          <caret line="181" column="21" selection-start-line="181" selection-start-column="21" selection-end-line="181" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/registred.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3519">
+          <caret line="207" column="40" selection-start-line="207" selection-start-column="40" selection-end-line="207" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="106" column="54" selection-start-line="106" selection-start-column="54" selection-end-line="106" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/homeFragment.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="94" column="58" selection-start-line="94" selection-start-column="58" selection-end-line="94" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/loginReset.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="50" column="54" selection-start-line="50" selection-start-column="54" selection-end-line="50" selection-end-column="54" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/allIncDel.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/incDel/registred.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/incDel/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/service/WhRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="11" column="61" selection-start-line="11" selection-start-column="61" selection-end-line="11" selection-end-column="61" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="48" column="43" selection-start-line="48" selection-start-column="43" selection-end-line="48" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/user/all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="867">
+          <caret line="60" column="0" selection-start-line="60" selection-start-column="0" selection-end-line="60" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/model/Warehouse.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="22" column="3" selection-start-line="22" selection-start-column="3" selection-end-line="22" selection-end-column="3" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#447#448#0" expanded="false" />
+            <element signature="e#472#473#0" expanded="false" />
+            <element signature="e#506#507#0" expanded="false" />
+            <element signature="e#534#535#0" expanded="false" />
+            <element signature="e#567#568#0" expanded="false" />
+            <element signature="e#596#597#0" expanded="false" />
+            <element signature="e#640#641#0" expanded="false" />
+            <element signature="e#676#677#0" expanded="false" />
+            <element signature="e#710#711#0" expanded="false" />
+            <element signature="e#740#741#0" expanded="false" />
+            <element signature="e#786#787#0" expanded="false" />
+            <element signature="e#824#825#0" expanded="false" />
+            <element signature="e#868#869#0" expanded="false" />
+            <element signature="e#904#905#0" expanded="false" />
+            <element signature="e#966#967#0" expanded="false" />
+            <element signature="e#1016#1017#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="164" column="29" selection-start-line="164" selection-start-column="29" selection-end-line="164" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/model/IncDel.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
+          <folding>
+            <element signature="e#2224#2225#0" expanded="true" />
+            <element signature="e#2253#2254#0" expanded="true" />
+            <element signature="e#2297#2298#0" expanded="true" />
+            <element signature="e#2333#2334#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/WarehouseApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="474">
+          <caret line="106" column="31" selection-start-line="106" selection-start-column="31" selection-end-line="106" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/service/CountryRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="13" column="0" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c30c6bc8/bb0507dc-6f02-49a5-bb00-4d8cdd9e1c46/app.warehouse">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c30c6bc8/bb0507dc-6f02-49a5-bb00-4d8cdd9e1c46/app.incdel">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/util/Thymeleaf.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="605">
+          <caret line="197" column="0" selection-start-line="197" selection-start-column="0" selection-end-line="197" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="509">
+          <caret line="173" column="0" selection-start-line="173" selection-start-column="0" selection-end-line="173" selection-end-column="0" />
+          <folding>
+            <element signature="n#style#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#a#1;n#td#9;n#tr#0;n#tbody#0;n#table#0;n#div#2;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouse/all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="32" column="58" selection-start-line="32" selection-start-column="58" selection-end-line="32" selection-end-column="58" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/IncDelController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-51">
-          <caret line="119" column="26" selection-start-line="119" selection-start-column="26" selection-end-line="119" selection-end-column="26" />
+        <state relative-caret-position="255">
+          <caret line="108" column="72" selection-start-line="108" selection-start-column="7" selection-end-line="108" selection-end-column="72" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#19213#19214#0" expanded="true" />
+            <element signature="e#19259#19260#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/admin/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="267">
+          <caret line="271" column="0" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/c30c6bc8/bb0507dc-6f02-49a5-bb00-4d8cdd9e1c46/app.countrycode">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
+        <state>
+          <filtering enabled="true" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/all.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="36" column="43" selection-start-line="36" selection-start-column="43" selection-end-line="36" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/warehouse/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="227">
+          <caret line="43" column="93" selection-start-line="43" selection-start-column="93" selection-end-line="43" selection-end-column="93" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/UserController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="54" column="5" selection-start-line="54" selection-start-column="5" selection-end-line="54" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="32" column="38" selection-start-line="32" selection-start-column="38" selection-end-line="32" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/AppConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="459">
+          <caret line="74" column="0" selection-start-line="74" selection-start-column="0" selection-end-line="74" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/model/Country.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="16" column="25" selection-start-line="16" selection-start-column="25" selection-end-line="16" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/warehouse/controller/WarehouseController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="412">
+          <caret line="94" column="72" selection-start-line="94" selection-start-column="72" selection-end-line="94" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/templates/incDel/new.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="502">
+          <caret line="85" column="38" selection-start-line="78" selection-start-column="31" selection-end-line="85" selection-end-column="38" />
+          <folding>
+            <marker date="1481103160506" expanded="false" signature="2907:2917" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1845,10 +1999,10 @@
         <settings>
           <artifact-editor>
             <show-content>
-              <type id="artifact" />
-              <type id="library" />
               <type id="jpa-descriptors" />
               <type id="javaee-facet-resources" />
+              <type id="artifact" />
+              <type id="library" />
             </show-content>
           </artifact-editor>
           <last-edited>warehouse:Web exploded</last-edited>
@@ -1864,7 +2018,7 @@
       </state>
       <state key="FacetStructureConfigurable.UI">
         <settings>
-          <last-edited>Spring (warehouse)|Spring</last-edited>
+          <last-edited>No facets are configured</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
@@ -1924,7 +2078,7 @@
       </state>
       <state key="ProjectLibrariesConfigurable.UI">
         <settings>
-          <last-edited>Maven: antlr:antlr:2.7.7</last-edited>
+          <last-edited>com.sun.jna:jna:3.0.9</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

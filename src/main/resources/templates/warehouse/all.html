@@ -1,0 +1,62 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<body>
+
+
+<div th:fragment="frag (client,eng)">
+
+
+    <div class="table-responsive" style="margin-top:5px">
+        <table class="table table-striped jambo_table bulk_action">
+            <thead>
+            <tr class="headings">
+                <th class="column-title">Id</th>
+                <th class="column-title">Number</th>
+                <th class="column-title">Country</th>
+
+                <th class="column-title no-link last">
+                    <span class="nobr">Action</span>
+                </th>
+
+            </tr>
+            </thead>
+
+            <tbody>
+
+            <tr th:each="wh,iterationStatus  : ${whLists} ">
+
+                <td class=" " th:text="${wh.id}"></td>
+                <td class=" " th:text="${wh.number}"></td>
+                <td class=" " th:text="${wh.country}"></td>
+
+                <td class="last">
+                    <a th:href="@{'/wh/edit'(whId=${wh.id})}">
+                        <i class="fa fa-pencil" aria-hidden="true"></i>
+                    </a>
+
+                    <a th:href="@{'/wh/del'(whId=${wh.id})}"
+                       style="margin-left: 10px"><i class="fa fa-trash-o" aria-hidden="true"></i>
+                    </a>
+
+                </td>
+
+            </tr>
+
+
+            <!--</div>   ng-reapit -->
+            </tbody>
+        </table>
+    </div>
+
+
+</div> <!--////////////////////////////////////////////////////////////////////////////////////-->
+
+
+
+
+</body>
+
+</html>

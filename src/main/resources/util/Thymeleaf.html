@@ -1,5 +1,8 @@
-<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec=
+              "http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
 <head>
 
 
@@ -64,12 +67,12 @@
             <input type="text" th:field="*{login}" />
         </div>
         <div>
-            <label th:text="#{subscription.type}">Type: </label>
+            <label th:text="#{subscription.typeUser}">Type: </label>
             <ul>
-                <li th:each="type : ${allTypes}">
-                    <input type="radio" th:field="*{subscriptionType}" th:value="${type}" />
+                <li th:each="typeUser : ${allTypes}">
+                    <input type="radio" th:field="*{subscriptionType}" th:value="${typeUser}" />
                     <label th:for="${#ids.prev('subscriptionType')}"
-                           th:text="#{|subscriptionType.${type}|}">First type</label>
+                           th:text="#{|subscriptionType.${typeUser}|}">First typeUser</label>
                 </li>
                 <li th:remove="all"><input type="radio" /> <label>Second Type</label></li>
             </ul>
@@ -177,10 +180,19 @@ In your situation. I assume linea.estado is a boolean value
    th:if="${not #strings.startsWith(writer.name,'K')}">Profile</a>
 
 1. For "if" condition, Thymeleaf provides th:if.
-2. th:if="${not #strings.startsWith(writer.name,'K')} means that if writer name does not start with letter 'K', it displays the anchor otherwise not.
+2. th:if="${not #strings.startsWith(writer.name,'K')}
+means that if writer name does not start with letter 'K',
+it displays the anchor otherwise not.
 Output
 <a href="/concretepage-1/profile/writer?id=1">Profile</a>
 
+
+
+
+<select id="product" th:field="*{product.id}">
+    <option value="" th:text="#{common.select.prompt}"></option>
+    <option th:each="p : ${productList}" th:value="${p.id}"  th:text="${p.name}"></option>
+</select>
 
 
 

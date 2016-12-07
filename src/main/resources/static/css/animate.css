@@ -1503,7 +1503,7 @@
   -webkit-animation-name: fadeInUpBig;
   animation-name: fadeInUpBig;
 }
-
+/*
 @-webkit-keyframes fadeOut {
   from {
     opacity: 1;
@@ -1527,7 +1527,7 @@
 .fadeOut {
   -webkit-animation-name: fadeOut;
   animation-name: fadeOut;
-}
+}*/
 
 @-webkit-keyframes fadeOutDown {
   from {

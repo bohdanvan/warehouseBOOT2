@@ -1,4 +1,4 @@
-//package com.warehouse.model;
+package com.warehouse.model;//package com.warehouse.model;
 //
 //import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 //

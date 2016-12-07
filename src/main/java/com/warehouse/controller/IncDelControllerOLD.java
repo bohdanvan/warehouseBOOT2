@@ -1,4 +1,4 @@
-//package com.warehouse.controller;
+package com.warehouse.controller;//package com.warehouse.controller;
 //
 //import org.slf4j.Logger;
 //import org.slf4j.LoggerFactory;
@@ -107,16 +107,16 @@
 //
 //
 //        User userF = userRepository.findOne(principal.getUserId());
-//        if(userF.getType().equals("client")){
+//        if(userF.getTypeUser().equals("client")){
 //
 //            model.setViewName("incDelNew");
 //
-//        }else if(userF.getType().equals("employee")){
+//        }else if(userF.getTypeUser().equals("employee")){
 //
 //            model.setViewName("incDelNew");              // TODO: 18.10.2016 BAG reafactor to employee
 //        }
 //
-//        model.addObject("principalType", userF.getType());
+//        model.addObject("principalType", userF.getTypeUser());
 //
 //        ModelAndView modelAndViewForEmploee = new ModelAndView();
 //

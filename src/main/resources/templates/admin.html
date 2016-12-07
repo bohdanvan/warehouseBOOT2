@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:th="http://www.thymeleaf.org"
-      ng-app="admin">
+      xmlns:sec=
+              "http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+
 
 <head>
 
@@ -25,6 +27,15 @@
     <link rel="stylesheet" type="text/css" media="all"
           href="../css/customn.min.css" th:href="@{../css/custom.min.css}"/>
 
+
+    <!-- Custom CSS -->
+    <link href="../css/sb-admin.css" rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/sb-admin.css}"/>
+
+    <!-- Morris Charts CSS -->
+    <link href="../css/plugins/morris.css" rel="stylesheet" type="text/css" media="all"
+          th:href="@{../css/morris.css}"/>
+
     <!--&lt;!&ndash;<script th:src="@{../static/js/customs/appPublic.js}"></script>&ndash;&gt;-->
     <!--<script src="../appPublic.js" th:src="@{../public/appPublic.js}"></script>-->
 
@@ -41,20 +52,50 @@
     <!--<script src="../static/js/custom.min.js" th:src="@{../js/custom.min.js}"></script>-->
 
 
+    <script src="../static/js/jquery.dataTables.min.js"
+            th:src="@{../js/jquery.dataTables.min.js}"></script>
 
-    <script src="../static/js/raphael.min.js" th:src="@{../js/raphael.min.js}"></script>
-    <script src="../static/js/morris.min.js" th:src="@{../js/morris.min.js}"></script>
-    <script src="../static/js/bootstrap-progressbar.min.js" th:src="@{../js/bootstrap-progressbar.min.js}"></script>
-    <script src="../static/js/moment.min.js" th:src="@{../js/moment.min.js}"></script>
-    <script src="../static/js/daterangepicker.js" th:src="@{../js/daterangepicker.js}"></script>
+    <script src="../static/js/dataTables.bootstrap.min.js"
+            th:src="@{../js/dataTables.bootstrap.min.js}"></script>
 
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"
-            th:src="@{https://code.jquery.com/jquery-2.1.4.min.js}"
-            th:if="false"></script>
-    <script src="http://blackpeppersoftware.github.io/thymeleaf-fragment.js/thymeleaf-fragment.js"
-            th:src="@{http://blackpeppersoftware.github.io/thymeleaf-fragment.js/thymeleaf-fragment.js}"
-            defer="defer"
-            th:if="false"></script>
+    <script src="../static/js/dataTables.buttons.min.js"
+            th:src="@{../js/dataTables.buttons.min.js}"></script>
+
+    <script src="../static/js/buttons.bootstrap.min.js"
+            th:src="@{../js/buttons.bootstrap.min.js}"></script>
+
+    <script src="../static/js/buttons.flash.min.js"
+            th:src="@{../js/buttons.flash.min.js}"></script>
+
+    <script src="../static/js/buttons.html5.min.js"
+            th:src="@{../js/buttons.html5.min.js}"></script>
+
+    <script src="../static/js/buttons.print.min.js"
+            th:src="@{../js/buttons.print.min.js}"></script>
+
+    <script src="../static/js/dataTables.fixedHeader.min.js"
+            th:src="@{../js/dataTables.fixedHeader.min.js}"></script>
+
+    <script src="../static/js/dataTables.keyTable.min.js"
+            th:src="@{../js/dataTables.keyTable.min.js}"></script>
+
+    <script src="../static/js/dataTables.responsive.min.js"
+            th:src="@{../js/dataTables.responsive.min.js}"></script>
+
+    <script src="../static/js/responsive.bootstrap.js"
+            th:src="@{../js/responsive.bootstrap.js}"></script>
+
+    <script src="../static/js/datatables.scroller.min.js"
+            th:src="@{../js/datatables.scroller.min.js}"></script>
+
+    <script src="../static/js/jszip.min.js"
+            th:src="@{../js/jszip.min.js}"></script>
+
+    <script src="../static/js/pdfmake.min.js"
+            th:src="@{../js/pdfmake.min.js}"></script>
+
+    <script src="../static/js//vfs_fonts.js"
+            th:src="@{../jss/vfs_fonts.js}"></script>
 
     <!--<link rel="stylesheet" type="text/css" media="all"-->
     <!--href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>-->
@@ -86,6 +127,7 @@
                     <a href="/admin" class="site_title"><i class="fa fa-cube" aria-hidden="false"></i>
                         <span>AZEMEX</span></a>
 
+
                 </div>
 
                 <div class="clearfix"></div>
@@ -102,49 +144,29 @@
         <div th:include="admin/navigation :: eng"></div>
 
 
-        <div class="right_col" role="main" style="height: 800px">
+        <div class="right_col" role="main" style="min-height: 800px">
             <div class=" ">
                 <div class="page-title">
-
                     <div class="title_left">
-                        
-                      <div th:if="${uriReqSecondParametr == 'registred'}">
-                          <h2> customs declaration CN23 &nbsp;&nbsp;&nbsp;<small th:text="${incDel.number}">#  <span ></span></small> </h2>
-                      </div>
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
 
                     </div>
-
-                    <div class="title_right">
-                        <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
-                            <div class="input-group">
-                                <input type="text" class="form-control" placeholder="Search for...">
-                    <span class="input-group-btn">
-                      <button class="btn btn-default" type="button">Go!</button>
-                    </span>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>  <!--/page titile-->
-
-                <div class="clearfix"></div>
-                <!-- page content -->
-                <!--<#&#45;&#45;=========================================================================================&ndash;&gt;-->
-                <div th:if="${uriReq} == 'admin'">
-                    <div th:include="profile/eng :: frag (client,${locale})"></div>
-
                 </div>
+                <!-- page content -->
+                <!--=========================================================================================&ndash;&gt;-->
+
 
                 <div th:if="${uriReq} != 'admin'">
-                    <div th:include="${uriReq} :: frag (client,${locale})"></div>
-
+                    <div th:if="${uriReq} != 'upload'">
+                        <div th:include="${uriReq} :: frag (client,${locale})"></div>
+                    </div>
                 </div>
 
+                <div th:if="${uriReq} == 'admin'">
+                    Established locale country: <span th:text="${#locale.country}">US</span>
 
-
-                <!--<#&#45;&#45;============================================================================================&ndash;&gt;-->
-
+                </div>
+                <!--============================================================================================&ndash;&gt;-->
             </div>
         </div>
 
@@ -158,33 +180,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-<!--<div th:include="admin/incDel/new ::frag (onevar=${value1},twovar=${value2})">...</div>-->
-
-
-<!--<div th:if="${uriReq} == 'incDel/new'" >-->
-<!--<div th:include="incDel/new :: frag (client,${locale})"> </div>-->
-
-<!--</div>-->
-
-<!--<div th:if="${uriReq} == 'incDel/registred'" >-->
-<!--<div th:include="incDel/registred:: frag (client,${locale})"></div>-->
-
-<!--</div>-->
-
-<!--<div th:if="${uriReq} == 'incDel/all'" >-->
-<!--<div th:include="incDel/all :: frag (client,${locale})"> </div>-->
-<!--</div>-->
-
-<!--<div th:if="${uriReq} == 'admin'">-->
-
-<!--<div th:include="/incDel/all :: frag (client,${locale})"></div>-->
-
-<!--</div>-->
